@@ -1,0 +1,21 @@
+CASA AMARA - TIENDA WEB CON CHAT GEMINI
+=======================================
+
+Contenido:
+- index.html, assets/, img/ ........ la tienda completa
+- netlify/functions/chat.js ......... función del servidor que habla con Google Gemini
+- netlify/functions/catalog.json .... catálogo que usa el chat para recomendar
+- netlify.toml ...................... configuración de Netlify
+
+La clave de Gemini NO va en ningún archivo. Se guarda en Netlify como
+variable de entorno llamada GEMINI_API_KEY.
+
+1) Crear la clave: https://aistudio.google.com  ->  "Get API key"  ->  "Create API key".
+2) Subir esta carpeta a un repositorio de GitHub (github.com -> New repository -> "uploading an existing file").
+3) En Netlify (netlify.com): "Add new site" -> "Import an existing project" -> GitHub -> elegir el repositorio -> Deploy.
+4) En Netlify: Site configuration -> Environment variables -> Add a variable:
+      Key:   GEMINI_API_KEY
+      Value: (pega aquí tu clave)
+   Opcional: GEMINI_MODEL = gemini-2.5-flash (o el modelo vigente que indique Google AI Studio).
+5) Deploys -> "Trigger deploy" -> "Deploy site" para que tome la clave.
+6) Abre tu web y prueba el chat. Si la función falla, el chat usa el modo guiado automáticamente.

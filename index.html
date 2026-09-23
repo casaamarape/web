@@ -1,0 +1,981 @@
+<title>Casa Amara Tienda</title>
+<meta name="description" content="Casa Amara — flores, gift boxes y desayunos personalizados con entrega en Lima.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Poppins:wght@300;400;500;600&display=swap">
+<style>
+:root{
+  color-scheme: light;
+  --beige:#F5E8D5; --beige-lt:#F3E9E0; --paper:#FCF7F0; --line:#E6D6BF; --taupe:#CEC7BE;
+  --carmin:#C13D49; --carmin-dk:#84202C; --rosa:#CB6677;
+  --celeste:#94B6CF; --celeste-lt:#C3DBE7; --azul:#567F99;
+  --ink:#3B2527; --ink-2:#6E5557; --ink-3:#9A8583;
+  --display:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;
+  --body:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --r-sm:10px; --r-md:16px; --r-lg:28px;
+  --shadow:0 18px 50px -24px rgba(90,30,36,.35);
+  --ease:cubic-bezier(.2,.7,.2,1);
+  --g:clamp(16px,4vw,40px);
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 15px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--carmin);outline-offset:2px}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:var(--g)}
+.eyebrow{font:500 11.5px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--azul)}
+h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:-.01em;text-wrap:balance;margin:0}
+.price{font-variant-numeric:tabular-nums}
+
+/* ── Header ── */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:color-mix(in srgb,var(--beige) 92%,transparent);backdrop-filter:saturate(1.2) blur(10px)}
+.top .bar{display:flex;align-items:center;gap:20px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand .iso{width:30px;height:auto;transition:transform .5s var(--ease)}
+.brand:hover .iso{transform:rotate(-8deg) scale(1.06)}
+.brand .word{height:22px;width:auto}
+.cartbtn{margin-left:auto;display:flex;align-items:center;gap:8px;border:1px solid var(--carmin);background:transparent;color:var(--carmin);border-radius:999px;padding:8px 16px;font-weight:500;font-size:13.5px;transition:background .2s,color .2s,transform .2s var(--ease)}
+.cartbtn:hover{background:var(--carmin);color:#fff;transform:translateY(-1px)}
+.cartbtn .n{min-width:20px;height:20px;border-radius:999px;background:var(--carmin);color:#fff;font-size:11.5px;display:grid;place-items:center;padding:0 6px;transition:background .2s,color .2s}
+.cartbtn:hover .n{background:#fff;color:var(--carmin)}
+.cartbtn.bump{animation:bump .5s var(--ease)}
+@keyframes bump{0%{transform:scale(1)}35%{transform:scale(1.12)}100%{transform:scale(1)}}
+.tabs{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper)}
+.tabs .wrap{display:flex;align-items:center;gap:14px;height:52px}
+.tabrow{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;flex:1;min-width:0}
+.tabrow::-webkit-scrollbar{display:none}
+.tab{position:relative;flex:none;text-decoration:none;font-size:13.5px;color:var(--ink-2);padding:8px 12px;white-space:nowrap;transition:color .2s}
+.tab::after{content:"";position:absolute;left:12px;right:12px;bottom:2px;height:1.5px;background:var(--carmin);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+.tab:hover{color:var(--carmin)}
+.tab:hover::after,.tab.on::after{transform:scaleX(1)}
+.tab.on{color:var(--carmin-dk);font-weight:500}
+.search{display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 14px;width:220px;flex:none;transition:border-color .2s,box-shadow .2s,width .35s var(--ease)}
+.search:focus-within{border-color:var(--celeste);box-shadow:0 0 0 3px color-mix(in srgb,var(--celeste) 30%,transparent);width:260px}
+.search input{border:0;outline:0;background:transparent;width:100%;font-size:13.5px;min-width:0}
+@media (max-width:720px){.tabs .wrap{flex-direction:column-reverse;align-items:stretch;height:auto;gap:4px;padding-block:8px 2px}.search,.search:focus-within{width:100%}.brand .word{height:18px}}
+
+/* ── View transitions ── */
+#view{min-height:60vh}
+.enter{animation:enter .45s var(--ease) both}
+@keyframes enter{from{opacity:.001;transform:translateY(10px)}to{opacity:1;transform:none}}
+.reveal{transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.pre{opacity:.001;transform:translateY(22px)}
+
+/* ── Banner carousel ── */
+.hero{padding-top:clamp(16px,2.5vw,28px)}
+.carousel{position:relative;border-radius:var(--r-lg);overflow:hidden;height:clamp(420px,42vw,470px);background:var(--carmin-dk)}
+.slide{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1.05fr;align-items:center;gap:24px;padding:clamp(28px,4.5vw,64px);opacity:0;visibility:hidden;transition:opacity .9s var(--ease),visibility .9s}
+.slide.on{opacity:1;visibility:visible}
+.slide .txt{position:relative;z-index:2;max-width:460px}
+.slide .kick{font:500 11.5px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;opacity:.85}
+.slide h2{font-size:clamp(32px,4.4vw,56px);line-height:1.02;margin-top:14px}
+.slide h2 em{font-style:italic}
+.slide p{margin:14px 0 24px;font-size:15px;max-width:38ch;opacity:.9}
+.slide .txt>*{transform:translateY(14px);opacity:0;transition:transform .8s var(--ease),opacity .8s var(--ease)}
+.slide.on .txt>*{transform:none;opacity:1}
+.slide.on .txt>*:nth-child(2){transition-delay:.08s}.slide.on .txt>*:nth-child(3){transition-delay:.16s}.slide.on .txt>*:nth-child(4){transition-delay:.24s}
+.s-carmin{background:radial-gradient(120% 90% at 85% 20%,#CB6677 0%,var(--carmin) 45%,var(--carmin-dk) 100%);color:var(--beige)}
+.s-celeste{background:radial-gradient(120% 90% at 85% 15%,#DCE9F1 0%,var(--celeste-lt) 40%,var(--celeste) 100%);color:#2a3f50}
+.s-celeste h2{color:var(--carmin-dk)}
+.s-beige{background:radial-gradient(120% 90% at 80% 20%,#FBF3E8 0%,var(--beige) 50%,#EBD8BD 100%);color:var(--ink)}
+.s-beige h2{color:var(--carmin-dk)}
+.btn{display:inline-flex;align-items:center;gap:10px;border:0;border-radius:999px;padding:13px 24px;font-weight:500;font-size:14.5px;text-decoration:none;transition:transform .25s var(--ease),box-shadow .25s,background .2s,color .2s}
+.btn svg{transition:transform .3s var(--ease)}
+.btn:hover{transform:translateY(-2px)}
+.btn:hover svg{transform:translateX(4px)}
+.btn.light{background:var(--beige);color:var(--carmin-dk);box-shadow:0 12px 28px -14px rgba(0,0,0,.5)}
+.btn.red{background:var(--carmin);color:#fff;box-shadow:0 12px 26px -14px rgba(193,61,73,.8)}
+.btn.red:hover{background:var(--carmin-dk)}
+.btn.line{background:transparent;color:inherit;border:1px solid currentColor;opacity:.9}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.collage{position:relative;height:100%;min-height:0}
+.collage .f{position:absolute;border-radius:999px 999px 18px 18px;overflow:hidden;background:var(--paper);box-shadow:0 26px 50px -24px rgba(40,10,15,.55);border:5px solid rgba(255,255,255,.85)}
+.collage .f img{width:100%;height:100%;object-fit:cover}
+.collage .f1{width:48%;height:92%;left:26%;top:4%;z-index:2}
+.collage .f2{width:34%;height:62%;left:0;top:26%;transform:rotate(-5deg)}
+.collage .f3{width:34%;height:62%;right:0;top:14%;transform:rotate(5deg)}
+.slide.on .collage .f1{animation:kb 7s ease-out both}
+.slide.on .collage .f2{animation:fl2 1.1s var(--ease) both}
+.slide.on .collage .f3{animation:fl3 1.1s var(--ease) .1s both}
+@keyframes kb{from{transform:scale(.94) translateY(12px)}to{transform:none}}
+@keyframes fl2{from{transform:rotate(-12deg) translate(-30px,20px);opacity:0}to{transform:rotate(-5deg);opacity:1}}
+@keyframes fl3{from{transform:rotate(12deg) translate(30px,20px);opacity:0}to{transform:rotate(5deg);opacity:1}}
+.dots{position:absolute;left:clamp(28px,4.5vw,64px);bottom:22px;display:flex;gap:8px;z-index:3}
+.dots button{width:26px;height:4px;border-radius:9px;border:0;padding:0;background:rgba(255,255,255,.45);overflow:hidden;position:relative}
+.dots button span{position:absolute;inset:0;background:#fff;transform:scaleX(0);transform-origin:left}
+.dots button.on span{animation:prog 6s linear forwards}
+.carousel.paused .dots button.on span{animation-play-state:paused}
+@keyframes prog{to{transform:scaleX(1)}}
+.arrows{position:absolute;right:18px;bottom:16px;display:flex;gap:8px;z-index:3}
+.arrows button{width:40px;height:40px;border-radius:999px;border:0;background:rgba(255,255,255,.85);color:var(--carmin-dk);display:grid;place-items:center;transition:transform .2s var(--ease),background .2s}
+.arrows button:hover{transform:scale(1.08);background:#fff}
+@media (max-width:760px){
+  .carousel{height:auto;min-height:520px}
+  .slide{grid-template-columns:1fr;grid-template-rows:auto 1fr;padding:26px 22px 60px;gap:10px;align-content:start}
+  .slide h2{font-size:32px}
+  .slide p{margin:10px 0 18px;font-size:14px}
+  .collage{height:230px}
+  .arrows{display:none}
+}
+
+/* ── Birthday ── */
+.s-bday{background:radial-gradient(90% 120% at 90% 10%,#F7DADF 0%,#F3E4D6 45%,var(--beige) 100%);color:var(--ink)}
+.s-bday h2{color:var(--carmin-dk)} .s-bday .kick{color:var(--carmin)}
+.confetti{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1}
+.confetti i{position:absolute;border-radius:2px;opacity:.75;animation:drift 7s ease-in-out infinite alternate}
+@keyframes drift{from{translate:0 -6px;rotate:0deg}to{translate:0 8px;rotate:40deg}}
+.slide .collage{z-index:2}
+.bday{position:relative;overflow:hidden;border-radius:var(--r-lg);margin:12px 0 22px;padding:clamp(24px,4vw,44px);min-height:220px;display:flex;align-items:center;background:radial-gradient(90% 140% at 95% 0%,#F7DADF 0%,#F3E4D6 45%,var(--beige) 100%);border:1px solid var(--line)}
+.bday-txt{position:relative;z-index:2;max-width:560px}
+.bday .kick{font:500 11.5px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--carmin)}
+.bday h1{font-size:clamp(30px,4vw,48px);color:var(--carmin-dk);margin-top:10px;line-height:1.05}
+.bday h1 em{font-style:italic;color:var(--carmin)}
+.bday p{margin:10px 0 0;color:var(--ink-2);font-size:14.5px;max-width:48ch}
+.balloons{position:absolute;right:clamp(8px,4vw,56px);top:6px;height:calc(100% + 20px);width:auto;z-index:1}
+.balloons g{animation:float 5s ease-in-out infinite alternate;transform-box:fill-box;transform-origin:bottom}
+.balloons .b2{animation-delay:-1.6s}.balloons .b3{animation-delay:-3s}
+@keyframes float{from{transform:translateY(0) rotate(-2deg)}to{transform:translateY(-10px) rotate(2deg)}}
+@media (max-width:640px){.balloons{opacity:.35;right:-30px}}
+.ctile.special .ci{box-shadow:0 0 0 2px var(--paper),0 0 0 3px var(--rosa)}
+
+/* ── Home blocks ── */
+.block{padding-block:clamp(36px,5vw,56px) 0}
+.bhead{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:20px}
+.bhead h2{font-size:clamp(26px,3vw,36px);color:var(--carmin-dk)}
+.bhead p{margin:4px 0 0;font-size:14px;color:var(--ink-2)}
+.link{display:inline-flex;align-items:center;gap:6px;color:var(--carmin);text-decoration:none;font-weight:500;font-size:13.5px;white-space:nowrap}
+.link svg{transition:transform .3s var(--ease)}
+.link:hover svg{transform:translateX(4px)}
+.cats{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:12px}
+@media (max-width:1100px){.cats{grid-template-columns:repeat(5,minmax(0,1fr))}}
+@media (max-width:640px){.cats{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.ctile{text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.ctile .ci{width:100%;aspect-ratio:1/1.12;border-radius:999px 999px 18px 18px;overflow:hidden;background:var(--beige-lt);position:relative;transition:transform .45s var(--ease),box-shadow .45s var(--ease)}
+.ctile .ci img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.ctile:hover .ci{transform:translateY(-4px);box-shadow:0 18px 30px -20px rgba(90,30,36,.55)}
+.ctile:hover .ci img{transform:scale(1.07)}
+.ctile b{font:400 16px/1.2 var(--display);color:var(--ink)}
+.ctile small{font-size:11.5px;color:var(--ink-3);margin-top:-8px}
+.promos{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(170px,1fr);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;scrollbar-width:thin}
+.promos .card{scroll-snap-align:start}
+.band{margin-top:clamp(40px,6vw,64px);background:var(--beige);border-top:1px solid var(--line)}
+.howto{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding-block:32px}
+.howto div{display:flex;gap:12px;align-items:flex-start;font-size:13.5px;color:var(--ink-2)}
+.howto i{flex:none;font-style:normal;display:grid;place-items:center;width:30px;height:30px;border-radius:999px;background:var(--celeste-lt);color:#27465a;font-weight:600;font-size:13px}
+.howto b{display:block;color:var(--ink);font-weight:500}
+@media (max-width:860px){.howto{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.howto{grid-template-columns:1fr}}
+
+/* ── Product cards ── */
+.grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:22px 16px}
+@media (max-width:1100px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:760px){.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px 10px}.grid.best .card:nth-child(n+10){display:none}}
+@media (min-width:761px) and (max-width:1100px){.grid.best .card:nth-child(n+9){display:none}}
+.card{display:flex;flex-direction:column;text-decoration:none;color:inherit;min-width:0}
+.ph{position:relative;aspect-ratio:4/5;border-radius:14px;overflow:hidden;background:linear-gradient(165deg,#FBF4EA 0%,var(--beige-lt) 55%,#EEE2D3 100%);display:grid;place-items:center;transition:transform .45s var(--ease),box-shadow .45s var(--ease)}
+.ph>img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:10px;transition:transform .6s var(--ease)}
+.card:hover .ph{transform:translateY(-4px);box-shadow:0 20px 34px -22px rgba(90,30,36,.55)}
+.card:hover .ph>img{transform:scale(1.04)}
+.ph .ph-fallback{position:absolute;inset:0;display:grid;place-items:center}
+.ph .ph-fallback img{width:34%;height:auto;opacity:.5}
+.badge{position:absolute;left:8px;top:8px;background:var(--carmin);color:#fff;font-size:10.5px;font-weight:500;border-radius:999px;padding:3px 9px;white-space:nowrap}
+.badge.soft{background:var(--paper);color:var(--carmin-dk)}
+.ver{position:absolute;left:8px;right:8px;bottom:8px;background:rgba(252,247,240,.94);color:var(--carmin-dk);border-radius:999px;padding:7px;font-size:12px;font-weight:500;text-align:center;opacity:0;transform:translateY(10px);transition:opacity .3s var(--ease),transform .35s var(--ease)}
+.card:hover .ver,.card:focus-visible .ver{opacity:1;transform:none}
+@media (hover:none){.ver{display:none}}
+.card .meta{padding:10px 2px 0}
+.card .nm{font:400 16px/1.2 var(--display);color:var(--ink);overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.card .pr{display:flex;align-items:baseline;flex-wrap:wrap;gap:0 7px;margin-top:4px;font-weight:500;font-size:14px;color:var(--carmin)}
+.card .pr s{color:var(--ink-3);font-weight:400;font-size:12px}
+.card .pr .from{font-size:11px;color:var(--ink-3);font-weight:400}
+@media (max-width:760px){.card .nm{font-size:13.5px}.card .pr{font-size:12.5px}.card .pr s{font-size:11px}.badge{font-size:9.5px;padding:2px 7px;left:6px;top:6px}.ph>img{padding:5px}.card .meta{padding-top:7px}}
+
+/* ── Category page ── */
+.crumb{display:flex;gap:8px;align-items:center;font-size:12.5px;color:var(--ink-3);padding-top:26px}
+.crumb a{color:var(--ink-2);text-decoration:none}
+.crumb a:hover{color:var(--carmin)}
+.phead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:14px;margin:10px 0 18px}
+.phead h1{font-size:clamp(32px,4vw,46px);color:var(--carmin-dk)}
+.phead p{margin:6px 0 0;color:var(--ink-2);font-size:14.5px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;margin-bottom:22px}
+.subs{display:flex;gap:6px;flex-wrap:wrap}
+.sub{border:1px solid var(--line);background:transparent;border-radius:999px;padding:6px 14px;font-size:12.5px;color:var(--ink-2);transition:all .2s}
+.sub:hover{border-color:var(--carmin);color:var(--carmin)}
+.sub[aria-pressed="true"]{background:var(--carmin-dk);border-color:var(--carmin-dk);color:#fff}
+.select{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;font-size:13px}
+.count{font-size:12.5px;color:var(--ink-3)}
+
+/* ── Product page ── */
+.pd{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,4vw,56px);align-items:start;margin-top:16px}
+@media (max-width:860px){.pd{grid-template-columns:1fr}}
+.pd-media{position:sticky;top:140px;display:flex;flex-direction:column;align-items:center;gap:10px}
+@media (max-width:860px){.pd-media{position:relative;top:0}}
+.pd-img{position:relative;width:100%;max-width:440px;aspect-ratio:4/5;border-radius:24px;padding:18px;background:linear-gradient(160deg,#FBF4EA 0%,var(--beige) 60%,#EFDFC8 100%);box-shadow:0 1px 0 rgba(255,255,255,.7) inset,0 24px 44px -28px rgba(90,30,36,.45),0 2px 8px -4px rgba(90,30,36,.12);border:1px solid var(--line);display:grid;place-items:center;cursor:zoom-in;transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.pd-img:hover{transform:translateY(-3px);box-shadow:0 1px 0 rgba(255,255,255,.7) inset,0 30px 50px -28px rgba(90,30,36,.55),0 2px 8px -4px rgba(90,30,36,.12)}
+.pd-img::before{content:"";position:absolute;inset:9px;border:1px solid rgba(193,61,73,.18);border-radius:17px;pointer-events:none}
+.pd-img>img{position:absolute;inset:18px;width:calc(100% - 36px);height:calc(100% - 36px);object-fit:contain;border-radius:10px}
+@media (max-width:860px){.pd-img>img{inset:14px;width:calc(100% - 28px);height:calc(100% - 28px)}}
+@media (max-width:860px){.pd-img{max-width:340px;padding:14px}}
+.zoomhint{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--ink-3)}
+.pd-img .ph-fallback{display:grid;place-items:center}
+.pd-img .ph-fallback img{width:30%;opacity:.5}
+.lb{position:fixed;inset:0;z-index:80;background:rgba(40,22,24,.86);display:grid;place-items:center;padding:calc(20px + env(safe-area-inset-top,0px)) 16px calc(20px + env(safe-area-inset-bottom,0px));opacity:0;transition:opacity .3s var(--ease);cursor:zoom-out}
+.lb.on{opacity:1}
+.lb img{max-width:min(92vw,900px);max-height:86vh;width:auto;height:auto;object-fit:contain;border-radius:14px;background:var(--beige-lt);box-shadow:0 30px 60px -20px rgba(0,0,0,.6);transform:scale(.96);transition:transform .35s var(--ease)}
+.lb.on img{transform:none}
+.lb.big{place-items:start center;overflow:auto;cursor:zoom-out}
+.lb.big img{max-width:none;max-height:none;width:min(1600px,200vw);cursor:zoom-out}
+.lb .lbx{position:fixed;top:calc(16px + env(safe-area-inset-top,0px));right:16px;background:var(--paper)}
+.lb .lbcap{position:fixed;bottom:calc(14px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);color:var(--beige);font-size:12.5px;opacity:.85;white-space:nowrap}
+.pd-info{display:flex;flex-direction:column;gap:16px;min-width:0}
+.pd-info h1{font-size:clamp(30px,3.6vw,42px);color:var(--carmin-dk);line-height:1.08}
+.pd-code{font-size:11.5px;letter-spacing:.1em;color:var(--ink-3);margin-top:-8px}
+.pd-price{font-size:24px;font-weight:500;color:var(--carmin)}
+.pd-price s{font-size:15px;color:var(--ink-3);font-weight:400;margin-left:8px}
+.pd-tag{display:inline-block;background:var(--celeste-lt);color:#27465a;font-size:12px;border-radius:999px;padding:4px 12px;font-weight:500}
+ul.items{margin:0;padding:0;list-style:none;display:grid;gap:6px;font-size:14px;color:var(--ink-2)}
+ul.items li{display:flex;gap:10px}
+ul.items li::before{content:"";flex:none;width:6px;height:6px;border-radius:99px;background:var(--rosa);margin-top:9px}
+.box{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:18px;display:grid;gap:14px}
+.fld{display:grid;gap:6px}
+.fld label,.fld .lbl{font-size:11.5px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-2)}
+.fld input,.fld select,.fld textarea{border:1px solid var(--line);border-radius:var(--r-sm);background:#fff;padding:11px 13px;font-size:14.5px;width:100%;min-width:0;transition:border-color .2s,box-shadow .2s}
+.fld textarea{resize:vertical;min-height:104px;line-height:1.5}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:0;border-color:var(--celeste);box-shadow:0 0 0 3px color-mix(in srgb,var(--celeste) 35%,transparent)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:420px){.row2{grid-template-columns:1fr}}
+.cnt{font-size:12px;color:var(--ink-3);text-align:right;font-variant-numeric:tabular-nums}
+.cnt.full{color:var(--carmin)}
+.hint{font-size:12.5px;color:var(--ink-3);margin:0}
+.variants{display:flex;flex-wrap:wrap;gap:8px}
+.variants button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;font-size:13.5px;transition:all .2s}
+.variants button[aria-pressed="true"]{border-color:var(--carmin);color:var(--carmin);background:color-mix(in srgb,var(--carmin) 7%,#fff)}
+.qty{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:999px;background:#fff}
+.qty button{border:0;background:transparent;width:38px;height:40px;font-size:18px;color:var(--carmin)}
+.qty span{min-width:24px;text-align:center;font-variant-numeric:tabular-nums}
+.addrow{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.addbtn{flex:1;min-width:200px;border:0;background:var(--carmin);color:#fff;border-radius:999px;padding:14px 20px;font-weight:500;position:relative;overflow:hidden;transition:background .2s,transform .25s var(--ease)}
+.addbtn:hover{background:var(--carmin-dk);transform:translateY(-2px)}
+.addbtn::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.28) 50%,transparent 70%);transform:translateX(-100%)}
+.addbtn:hover::after{transform:translateX(100%);transition:transform .8s var(--ease)}
+.err{color:var(--carmin);font-size:12.5px;margin:0}
+.extras{display:flex;gap:10px;overflow-x:auto;padding-bottom:4px}
+.extra{flex:none;display:flex;align-items:center;gap:10px;border:1px solid var(--line);background:#fff;border-radius:12px;padding:6px 12px 6px 6px;font-size:12.5px;text-align:left;max-width:240px;transition:all .2s}
+.extra img{width:40px;height:40px;border-radius:8px;object-fit:contain;background:var(--beige-lt);flex:none}
+.extra b{display:block;font-weight:500;color:var(--ink)}
+.extra:hover{border-color:var(--celeste)}
+.extra[aria-pressed="true"]{border-color:var(--celeste);background:color-mix(in srgb,var(--celeste-lt) 45%,#fff)}
+.perks{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:12.5px;color:var(--ink-2)}
+.perks span{display:flex;align-items:center;gap:6px}
+.perks svg{color:var(--azul)}
+
+/* ── Terms page ── */
+.terms{max-width:760px}
+details.t{border-bottom:1px solid var(--line)}
+details.t summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 0;font-weight:500;font-size:15px}
+details.t summary::-webkit-details-marker{display:none}
+details.t summary::after{content:"";width:9px;height:9px;border-right:1.5px solid var(--carmin);border-bottom:1.5px solid var(--carmin);transform:rotate(45deg);transition:transform .25s var(--ease);flex:none;margin-right:4px}
+details.t[open] summary::after{transform:rotate(-135deg)}
+details.t ul{margin:0 0 18px;padding-left:18px;color:var(--ink-2);font-size:14px}
+details.t li{margin:4px 0}
+
+/* ── Footer ── */
+footer{background:var(--carmin-dk);color:var(--beige);margin-top:clamp(48px,7vw,80px);padding-block:48px;padding-bottom:calc(36px + env(safe-area-inset-bottom,0px))}
+.band + footer{margin-top:0}
+.fcol{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px}
+footer .word{height:30px;width:auto}
+footer .tag{margin:-4px 0 6px;font-size:13.5px;opacity:.8}
+footer a{color:var(--beige)}
+.social{display:flex;gap:12px;justify-content:center}
+.social a{width:42px;height:42px;border-radius:999px;display:grid;place-items:center;border:1px solid rgba(245,232,213,.45);color:var(--beige);transition:background .25s,color .25s,transform .25s var(--ease),border-color .25s}
+.social a:hover{background:var(--beige);color:var(--carmin-dk);border-color:var(--beige);transform:translateY(-3px)}
+.contact{display:inline-flex;align-items:center;gap:9px;margin-top:8px;background:var(--beige);color:var(--carmin-dk)!important;text-decoration:none;border-radius:999px;padding:11px 24px;font-weight:500;font-size:14px;transition:transform .25s var(--ease),box-shadow .25s}
+.contact:hover{transform:translateY(-2px);box-shadow:0 12px 24px -14px rgba(0,0,0,.6)}
+.mail{border:0;background:none;color:var(--beige);opacity:.7;font-size:12.5px;padding:2px 6px;border-radius:6px;margin-top:-6px}
+.mail:hover{opacity:1}
+.fline{width:min(320px,70%);height:1px;background:rgba(245,232,213,.22);margin:8px 0 2px}
+.terms-link{font-size:13px;text-underline-offset:3px}
+.copy{font-size:11.5px;opacity:.55;margin-top:-6px}
+
+/* ── Cart ── */
+.scrim{position:fixed;inset:0;background:rgba(59,37,39,.45);z-index:40;opacity:0;pointer-events:none;transition:opacity .3s}
+.scrim.on{opacity:1;pointer-events:auto}
+#cart{position:fixed;z-index:50;top:0;right:0;bottom:0;width:min(440px,100%);background:var(--paper);box-shadow:var(--shadow);display:flex;flex-direction:column;border-radius:var(--r-lg) 0 0 var(--r-lg);transform:translateX(100%);transition:transform .4s var(--ease)}
+#cart.on{transform:none}
+@media (max-width:480px){#cart{border-radius:0}}
+.xbtn{border:0;background:var(--beige-lt);width:38px;height:38px;border-radius:999px;display:grid;place-items:center;color:var(--ink);transition:transform .25s var(--ease)}
+.xbtn:hover{transform:rotate(90deg)}
+#cart .ch{display:flex;justify-content:space-between;align-items:center;padding:calc(18px + env(safe-area-inset-top,0px)) 20px 14px;border-bottom:1px solid var(--line)}
+#cart .ch h3{font-size:26px;color:var(--carmin-dk)}
+#cart .cb{flex:1;overflow:auto;padding:8px 20px 20px}
+#cart .cf{border-top:1px solid var(--line);padding:16px 20px calc(18px + env(safe-area-inset-bottom,0px));display:grid;gap:12px;background:var(--beige-lt)}
+.li{display:grid;grid-template-columns:64px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);animation:enter .35s var(--ease) both}
+.li .thumb{width:64px;height:80px;border-radius:10px;overflow:hidden;background:var(--beige-lt)}
+.li .thumb img{width:100%;height:100%;object-fit:contain}
+.li .t1{display:flex;justify-content:space-between;gap:8px}
+.li .t1 b{font:400 17px/1.2 var(--display)}
+.li .t1 .price{font-weight:500;color:var(--carmin);white-space:nowrap}
+.li .d{font-size:12.5px;color:var(--ink-2);margin-top:4px}
+.li .ded{font-size:12.5px;color:var(--ink-2);margin-top:6px;background:#fff;border-radius:8px;padding:8px 10px;border:1px dashed var(--line);font-style:italic;overflow-wrap:anywhere}
+.li .acts{display:flex;align-items:center;gap:12px;margin-top:8px;font-size:12.5px}
+.li .acts .qty button{width:30px;height:30px;font-size:16px}
+.linkbtn{border:0;background:none;padding:0;color:var(--azul);text-decoration:underline;text-underline-offset:3px;font-size:12.5px}
+.tot{display:flex;justify-content:space-between;align-items:baseline;font-size:15px}
+.tot b{font-size:20px;color:var(--carmin-dk);font-weight:500}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:12.5px;color:var(--ink-2)}
+.check input{margin-top:3px;accent-color:var(--carmin)}
+.wa{display:flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:14px 20px;background:var(--carmin);color:#fff;text-decoration:none;font-weight:500;border:0;width:100%;transition:background .2s,transform .25s var(--ease)}
+.wa:hover{background:var(--carmin-dk);transform:translateY(-2px)}
+.wa[aria-disabled="true"]{background:var(--taupe);pointer-events:none}
+.cempty{text-align:center;padding:48px 10px;color:var(--ink-2)}
+.cempty img{width:54px;margin:0 auto 14px;opacity:.7}
+.toast{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);background:var(--ink);color:#fff;border-radius:999px;padding:11px 18px;font-size:13.5px;z-index:60;opacity:0;pointer-events:none;transition:.3s var(--ease);display:flex;gap:12px;align-items:center;max-width:calc(100% - 32px)}
+.toast.on{opacity:1;transform:translate(-50%,0);pointer-events:auto}
+.toast button{border:0;background:none;color:var(--celeste-lt);text-decoration:underline;padding:0}
+.flydot{position:fixed;z-index:70;width:16px;height:16px;border-radius:99px;background:var(--carmin);pointer-events:none;transition:transform .7s cubic-bezier(.5,-.3,.7,1),opacity .7s}
+
+
+/* ── Loader ── */
+#loader{position:fixed;inset:0;z-index:100;display:grid;place-items:center;background:radial-gradient(80% 70% at 50% 40%,#FBF4EA 0%,var(--beige) 55%,#EFDCC3 100%);transition:opacity .45s var(--ease),visibility .45s}
+#loader.off{opacity:0;visibility:hidden}
+#loader .lg{display:flex;flex-direction:column;align-items:center;gap:16px}
+#loader .iso{width:74px;height:auto;animation:beat 1.1s ease-in-out infinite}
+#loader .word{height:30px;width:auto;opacity:0;animation:rise .8s var(--ease) .15s forwards}
+#loader .ln{width:120px;height:2px;border-radius:2px;background:rgba(193,61,73,.15);overflow:hidden}
+#loader .ln i{display:block;height:100%;width:40%;background:var(--carmin);border-radius:2px;animation:load 1.1s var(--ease) infinite}
+@keyframes beat{0%,100%{transform:scale(1)}15%{transform:scale(1.12)}30%{transform:scale(.97)}45%{transform:scale(1.06)}}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes load{from{transform:translateX(-100%)}to{transform:translateX(260%)}}
+#veil{position:fixed;inset:0;z-index:90;display:grid;place-items:center;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(3px);opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s}
+#veil.on{opacity:1;visibility:visible}
+#veil img{width:46px;animation:beat 1s ease-in-out infinite}
+
+/* ── Chat ── */
+.chatfab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:45;width:60px;height:60px;border-radius:999px;border:0;background:var(--carmin);box-shadow:0 14px 30px -12px rgba(132,32,44,.75);display:grid;place-items:center;transition:transform .3s var(--ease),background .2s}
+.chatfab:hover{transform:translateY(-3px) scale(1.04);background:var(--carmin-dk)}
+.chatfab img{width:30px;height:auto}
+.chatfab .dot{position:absolute;top:6px;right:6px;width:12px;height:12px;border-radius:99px;background:var(--celeste);border:2px solid var(--paper);animation:beat 2.4s ease-in-out infinite}
+.chatfab .tip{position:absolute;right:70px;bottom:12px;background:var(--paper);color:var(--carmin-dk);border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:12.5px;white-space:nowrap;box-shadow:var(--shadow);opacity:0;transform:translateX(8px);transition:.35s var(--ease);pointer-events:none}
+.chatfab.hint .tip{opacity:1;transform:none}
+#chat{position:fixed;right:18px;bottom:calc(90px + env(safe-area-inset-bottom,0px));z-index:46;width:min(380px,calc(100vw - 24px));height:min(580px,calc(100vh - 120px));background:var(--paper);border:1px solid var(--line);border-radius:22px;box-shadow:0 30px 60px -24px rgba(60,20,25,.5);display:flex;flex-direction:column;overflow:hidden;transform-origin:bottom right;transform:scale(.92) translateY(10px);opacity:0;visibility:hidden;transition:transform .35s var(--ease),opacity .25s,visibility .35s}
+#chat.on{transform:none;opacity:1;visibility:visible}
+@media (max-width:520px){#chat{right:12px;left:12px;width:auto;bottom:calc(84px + env(safe-area-inset-bottom,0px));height:calc(100dvh - 110px)}}
+.chd{display:flex;align-items:center;gap:12px;padding:14px 16px;background:var(--carmin-dk);color:var(--beige)}
+.chd .av{width:38px;height:38px;border-radius:999px;background:var(--beige);display:grid;place-items:center;flex:none}
+.chd .av img{width:22px}
+.chd b{display:block;font:400 18px/1.1 var(--display)}
+.chd small{font-size:11.5px;opacity:.8;display:flex;align-items:center;gap:6px}
+.chd small::before{content:"";width:7px;height:7px;border-radius:9px;background:#9fd3a6}
+.chd .xbtn{margin-left:auto;background:rgba(245,232,213,.15);color:var(--beige)}
+.cmsgs{flex:1;overflow-y:auto;padding:16px 14px 8px;display:flex;flex-direction:column;gap:10px;scroll-behavior:smooth}
+.msg{max-width:86%;padding:10px 13px;border-radius:16px;font-size:13.5px;line-height:1.5;animation:enter .3s var(--ease) both;overflow-wrap:anywhere}
+.msg.bot{background:#fff;border:1px solid var(--line);border-bottom-left-radius:6px;align-self:flex-start;color:var(--ink)}
+.msg.me{background:var(--carmin);color:#fff;border-bottom-right-radius:6px;align-self:flex-end}
+.msg a{color:var(--carmin);font-weight:500}
+.msg.me a{color:#fff}
+.typing{display:inline-flex;gap:4px;padding:4px 2px}
+.typing i{width:6px;height:6px;border-radius:9px;background:var(--rosa);animation:tp 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes tp{0%,60%,100%{opacity:.3;transform:none}30%{opacity:1;transform:translateY(-3px)}}
+.chips{display:flex;flex-wrap:wrap;gap:6px;align-self:flex-start;max-width:100%;animation:enter .3s var(--ease) both}
+.chip{border:1px solid var(--carmin);background:transparent;color:var(--carmin);border-radius:999px;padding:6px 12px;font-size:12.5px;transition:all .2s}
+.chip:hover{background:var(--carmin);color:#fff}
+.recs{display:grid;gap:8px;align-self:stretch;animation:enter .3s var(--ease) both}
+.rec{display:grid;grid-template-columns:56px 1fr auto;gap:10px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:7px;text-decoration:none;color:inherit;transition:transform .2s var(--ease),border-color .2s}
+.rec:hover{transform:translateX(3px);border-color:var(--celeste)}
+.rec img{width:56px;height:56px;border-radius:10px;object-fit:contain;background:var(--beige-lt)}
+.rec b{display:block;font:400 15px/1.2 var(--display)}
+.rec span{font-size:12.5px;color:var(--carmin);font-weight:500}
+.rec em{font-style:normal;font-size:11.5px;color:var(--azul);white-space:nowrap;padding-right:4px}
+.cin{display:flex;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);background:var(--beige-lt)}
+.cin input{flex:1;min-width:0;border:1px solid var(--line);border-radius:999px;padding:10px 14px;font-size:14px;background:#fff}
+.cin input:focus{outline:0;border-color:var(--celeste);box-shadow:0 0 0 3px color-mix(in srgb,var(--celeste) 30%,transparent)}
+.cin button{width:42px;height:42px;border-radius:999px;border:0;background:var(--carmin);color:#fff;display:grid;place-items:center;flex:none;transition:transform .2s var(--ease)}
+.cin button:hover{transform:scale(1.06)}
+.cnote{font-size:10.5px;color:var(--ink-3);text-align:center;padding:0 12px 6px;background:var(--beige-lt)}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal.pre{opacity:1;transform:none}
+  .slide .txt>*{opacity:1;transform:none}
+}
+</style>
+
+<header class="top" id="top">
+  <div class="wrap bar">
+    <a class="brand" href="#inicio" aria-label="Casa Amara, inicio">
+      <img class="iso" src="assets/iso_red.png" alt="">
+      <img class="word" src="assets/wordmark_red.png" alt="Casa Amara">
+    </a>
+    <button class="cartbtn" id="openCart" aria-label="Abrir carrito">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      Carrito <span class="n" id="cartN">0</span>
+    </button>
+  </div>
+  <nav class="tabs" aria-label="Categorías">
+    <div class="wrap">
+      <div class="tabrow" id="tabs"></div>
+      <label class="search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="q" type="search" placeholder="Buscar: cumpleaños, rosas, vino…" aria-label="Buscar productos"></label>
+    </div>
+  </nav>
+</header>
+
+<main id="view"></main>
+
+<footer id="foot">
+  <div class="wrap fcol">
+    <img class="word" src="assets/wordmark_cream.png" alt="Casa Amara">
+    <p class="tag">Creamos momentos que merecen ser recordados.</p>
+    <div class="social" aria-label="Redes sociales">
+        <a href="https://www.instagram.com/casaamaraperu/" target="_blank" rel="noopener" aria-label="Instagram de Casa Amara"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.tiktok.com/@casaamara.pe" target="_blank" rel="noopener" aria-label="TikTok de Casa Amara"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 3c.3 2.2 1.6 3.7 3.9 3.9v3.1c-1.4.1-2.7-.3-3.9-1.1v5.9c0 3.4-2.5 6.2-6 6.2S4.5 18.3 4.5 15s2.9-6 6.4-5.8v3.2c-1.6-.3-3.2.9-3.2 2.6 0 1.5 1.2 2.7 2.7 2.7s2.8-1.1 2.8-3V3h3.4Z"/></svg></a>
+        <a href="https://www.facebook.com/casaamaraperu" target="_blank" rel="noopener" aria-label="Facebook de Casa Amara"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21h3.1Z"/></svg></a>
+        <a href="https://wa.me/51988869994" target="_blank" rel="noopener" aria-label="WhatsApp de Casa Amara"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg></a>
+      </div>
+    <a class="contact" href="mailto:casaamara.pe@gmail.com?subject=Consulta%20desde%20la%20web%20de%20Casa%20Amara" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>Contáctanos</a>
+    <button class="mail" id="copyMail" type="button" title="Copiar correo">casaamara.pe@gmail.com <span id="copyTxt">· Copiar</span></button>
+    <div class="fline"></div>
+    <a class="terms-link" href="#terminos">Términos y condiciones</a>
+    <small class="copy">© 2026 Casa Amara</small>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim"></div>
+<aside id="cart" aria-label="Carrito" hidden>
+  <div class="ch"><h3>Tu pedido</h3><button class="xbtn" id="cartClose" aria-label="Cerrar carrito"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <div class="cb" id="cartBody"></div>
+  <div class="cf" id="cartFoot">
+    <div class="tot"><span>Subtotal</span><b class="price" id="cartTot">S/ 0</b></div>
+    <p class="hint" style="margin-top:-6px">El delivery se cotiza según el distrito y te lo confirmamos por WhatsApp.</p>
+    <div class="row2">
+      <div class="fld"><label for="cName">Tu nombre</label><input id="cName" autocomplete="name" placeholder="Nombre y apellido"></div>
+      <div class="fld"><label for="cDist">Distrito de entrega</label><input id="cDist" placeholder="Ej.: Miraflores"></div>
+    </div>
+    <div class="fld"><label for="cTo">¿Quién recibe? (opcional)</label><input id="cTo" placeholder="Nombre de la persona que recibe"></div>
+    <label class="check"><input type="checkbox" id="cTerms"> <span>Leí y acepto los <a href="#terminos" id="termsLink">términos y condiciones</a>.</span></label>
+    <a class="wa" id="waBtn" href="#" target="_blank" rel="noopener" aria-disabled="true">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg>
+      Comprar por WhatsApp
+    </a>
+    <p class="err" id="cartErr" style="text-align:center"></p>
+  </div>
+</aside>
+<div class="toast" id="toast" role="status"><span id="toastTxt"></span><button id="toastBtn">Ver carrito</button></div>
+
+<div id="loader" aria-hidden="true"><div class="lg"><img class="iso" src="assets/iso_red.png" alt=""><img class="word" src="assets/wordmark_red.png" alt=""><div class="ln"><i></i></div></div></div>
+<div id="veil" aria-hidden="true"><img src="assets/iso_red.png" alt=""></div>
+<button class="chatfab" id="chatFab" aria-label="Abrir chat de ayuda" aria-expanded="false"><img src="assets/iso_cream.png" alt=""><span class="dot"></span><span class="tip">¿Te ayudo a elegir? 💛</span></button>
+<section id="chat" role="dialog" aria-label="Chat de ayuda de Casa Amara" aria-hidden="true">
+  <div class="chd"><div class="av"><img src="assets/iso_red.png" alt=""></div><div><b>Asistente Casa Amara</b><small>Te ayudo a elegir tu regalo</small></div>
+    <button class="xbtn" id="chatClose" aria-label="Cerrar chat"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <div class="cmsgs" id="cmsgs" aria-live="polite"></div>
+  <form class="cin" id="cform"><input id="cinput" autocomplete="off" maxlength="400" placeholder="Escribe tu pregunta…" aria-label="Escribe tu mensaje"><button type="submit" aria-label="Enviar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button></form>
+</section>
+
+<script>
+const WA = '51988869994';
+const PRODUCTS = [{"id":"fl-promo3","name":"Promo 3 rosas","sub":"Promociones","price":49,"old":59,"items":["3 rosas en caja","Globo corazón","Ferrero Rocher de 3 bombones","Dedicatoria"],"grp":"flores"},{"id":"fl-6rosas","name":"6 Rosas","sub":"Promociones","price":49,"old":59,"items":["6 rosas en caja","Globo corazón","Dedicatoria"],"grp":"flores"},{"id":"fl-3rpeluche","name":"3R Peluche","sub":"Promociones","price":65,"old":75,"items":["3 rosas con globo de corazón","Peluche de oso"],"grp":"flores"},{"id":"fl-6rjoyero","name":"6R Joyero","sub":"Promociones","price":59,"old":65,"items":["6 rosas","Joyero personalizado con el nombre de la obsequiada"],"grp":"flores"},{"id":"fl-6rferrero","name":"6R Ferrero","sub":"Promociones","price":59,"items":["6 rosas con globo de corazón","3 bombones Ferrero Rocher"],"grp":"flores"},{"id":"fl-6rpeluche","name":"6R Peluche","sub":"Promociones","price":69,"items":["6 rosas con globo de corazón","Peluche de oso"],"grp":"flores"},{"id":"fl-mixtura","name":"Mixtura","sub":"Ramos","price":59,"old":69,"items":["4 rosas","Margaritas, astromelias, follaje y claveles fucsias","Dedicatoria"],"grp":"flores"},{"id":"fl-favorita","name":"Favorita","sub":"Ramos","price":69,"old":80,"items":["6 rosas","Flores estacionales moradas y claveles fucsias","Dedicatoria"],"grp":"flores"},{"id":"fl-lovebox","name":"Love Box","sub":"Tulipanes","price":95,"items":["3 tulipanes con follaje","Una gerbera","Dedicatoria"],"grp":"flores"},{"id":"fl-unica1","name":"Única 1","sub":"Ramos","price":65,"items":["Ramo de 6 rosas y gypsophila en papel coreano","Base con espuma floral (mayor durabilidad)","Dedicatoria"],"grp":"flores"},{"id":"fl-unica2","name":"Única 2","sub":"Ramos","price":65,"items":["Ramo de 6 rosas, follaje y flores moradas en papel coreano","Base con espuma floral (mayor durabilidad)","Dedicatoria"],"grp":"flores"},{"id":"fl-12rosas","name":"12 Rosas","sub":"Ramos","price":75,"old":80,"items":["12 rosas frescas en papel coreano","Dedicatoria"],"grp":"flores","feat":3},{"id":"fl-princesa","name":"Princesa","sub":"Ramos","price":65,"items":["14 rosas, gypsophilas y follaje en papel coreano","Dedicatoria"],"grp":"flores"},{"id":"fl-12pulsera","name":"12 Rosas + Pulsera","sub":"Promociones","price":89,"old":99,"items":["Ramo de rosas, estatis morado y margaritas blancas","Pulsera","Dedicatoria"],"grp":"flores"},{"id":"fl-12joyero","name":"12 Rosas + Joyero","sub":"Promociones","price":95,"old":105,"items":["Ramo de rosas, estatis morado y margaritas blancas","Mini joyero viajero con nombre","Dedicatoria"],"grp":"flores"},{"id":"fl-clasico","name":"Clásico","sub":"Ramos","price":90,"items":["Rosas rojas con decoración de perlas","Dedicatoria"],"variants":[["Con 20 rosas",90],["Con 30 rosas",119]],"tag":"Preferido por nuestros clientes","grp":"flores","feat":2},{"id":"fl-40rosas","name":"40 Rosas","sub":"Ramos","price":145,"items":["Ramo de 40 rosas","Mariposas","Dedicatoria"],"grp":"flores"},{"id":"fl-realeza","name":"Realeza","sub":"Ramos","price":125,"items":["Ramo de 30 rosas rosadas y blancas","Listón con frase personalizable y moño","Corona de metal","Dedicatoria"],"grp":"flores"},{"id":"fl-buchon","name":"Ramo Buchón","sub":"Ramos","price":205,"items":["60 rosas de 3 colores diferentes","Listón con frase","Envuelto en papel coreano","Dedicatoria"],"grp":"flores","cumple":8},{"id":"fl-corazon","name":"Ramo Corazón","sub":"Ramos","price":250,"items":["80 rosas rosadas y blancas","Tela con perlas, tiara de metal y moño con frase","Papel ramo impermeable","Dedicatoria"],"grp":"flores"},{"id":"fl-vintage","name":"Vintage","sub":"Ramos","price":120,"items":["Ramo de 20 rosas, claveles importados y gypsophila","Decoración en tul de perlas y papel coreano","Dedicatoria"],"grp":"flores"},{"id":"fl-claveles","name":"Claveles Importados","sub":"Arte floral","price":89,"items":["Ramo de 12 claveles importados, follaje y gypsophila","Base con espuma floral","Dedicatoria"],"grp":"flores"},{"id":"fl-minirosas","name":"Mini Rosas","sub":"Arte floral","price":150,"items":["Ramo de 12 varas (3 a 4 minirosas por vara)","Follaje, hortensia y gerbera"],"grp":"flores"},{"id":"fl-gerberas","name":"Gerberas","sub":"Arte floral","price":90,"items":["12 gerberas con gypsophila y follaje","Dedicatoria"],"grp":"flores"},{"id":"fl-inglesas","name":"Rosas Inglesas","sub":"Arte floral","price":120,"items":["12 varas (2 a 3 rosas inglesas por vara) y follaje","Dedicatoria"],"grp":"flores"},{"id":"fl-esprosado","name":"Especial Rosado","sub":"Arreglos","price":85,"items":["Arreglo de 5 rosas, claveles, estatis blanco, follaje y flor de dragón","Globo con mensaje personalizado","Dedicatoria"],"tag":"¡Más solicitado!","grp":"flores","feat":1,"cumple":6},{"id":"fl-esprojo","name":"Especial Rojo","sub":"Arreglos","price":85,"items":["Arreglo de 5 rosas, claveles, estatis blanco, follaje y flor de dragón","Globo con mensaje personalizado","Dedicatoria"],"grp":"flores"},{"id":"fl-globofloral","name":"Globo Floral","sub":"Arreglos","price":135,"items":["35 rosas del color que elijas en caja cilíndrica","Globo burbuja de 24\" con tu frase favorita","Tarjeta personalizada"],"grp":"flores","feat":4,"cumple":1},{"id":"fl-globoferrero","name":"Globo Floral Ferrero","sub":"Arreglos","price":160,"items":["22 a 26 rosas premium del color que elijas en caja cilíndrica","Globo burbuja de 24\" con tu frase favorita","Ferrero Rocher de 8 unidades","Tarjeta personalizada"],"grp":"flores","cumple":2},{"id":"fl-arreglolotso","name":"Arreglo Lotso","sub":"Flores y peluches","price":125,"items":["Arreglo de 15 rosas rosadas y follaje en caja cilíndrica","Peluche de oso Lotso dormilón","Globo de corazón y dedicatoria"],"grp":"flores","feat":5,"cumple":7},{"id":"fl-valentino","name":"Valentino","sub":"Flores y peluches","price":105,"items":["Arreglo de 4 rosas rosadas con follaje en caja cilíndrica blanca","Peluche de oso","Caja de Ferrero de 4 bombones","Globo de corazón y dedicatoria"],"grp":"flores"},{"id":"fl-ramolotso","name":"Ramo Lotso","sub":"Flores y peluches","price":120,"items":["12 rosas y gypsophila rosada en papel ramo","Peluche de Lotso","Globo personalizado","Base con espuma floral","Dedicatoria"],"grp":"flores"},{"id":"fl-hellokitty","name":"Ramo Hello Kitty","sub":"Flores y peluches","price":145,"items":["Ramo de 20 rosas y follaje en papel ramo","Peluche de Hello Kitty importado","Ferrero Rocher de 4 unidades","Dedicatoria"],"grp":"flores"},{"id":"fl-corazonesp","name":"Corazón Especial","sub":"Flores y peluches","price":155,"items":["Entre 15 y 20 rosas con mariposas en caja de corazón","21 chocolates Ferrero Rocher","Dedicatoria"],"grp":"flores"},{"id":"fl-globopeluche","name":"Globo, Peluche y Ferrero","sub":"Flores y peluches","price":160,"items":["Arreglo de 12 rosas del color que elijas","Ferrero Rocher de 8 unidades","Peluche de 25 cm a elección","Globo burbuja de 20\" personalizable","Tarjeta con foto"],"grp":"flores","cumple":3},{"id":"fl-5tulipanes","name":"5 Tulipanes","sub":"Tulipanes","price":99,"items":["Ramo de 5 tulipanes y follaje","Dedicatoria"],"grp":"flores"},{"id":"fl-primavera","name":"Primavera","sub":"Tulipanes","price":110,"items":["5 tulipanes en color surtido con astromelias en caja cilíndrica","Dedicatoria"],"grp":"flores","feat":6},{"id":"fl-10tulipanes","name":"10 Tulipanes","sub":"Tulipanes","price":150,"items":["10 tulipanes envueltos en papel coreano","Dedicatoria"],"grp":"flores"},{"id":"fl-catalina","name":"Catalina 1","sub":"Tulipanes","price":140,"items":["5 tulipanes, 6 rosas rojas, astromelias y follaje en caja cilíndrica","Caja de Ferrero de 4 bombones","Dedicatoria"],"grp":"flores"},{"id":"fl-belleza","name":"Belleza Tulipán","sub":"Tulipanes","price":105,"items":["Arreglo de 4 tulipanes en colores surtidos, margaritas y follaje","Dedicatoria"],"grp":"flores"},{"id":"fl-alegria","name":"Alegría","sub":"Tulipanes","price":125,"items":["5 tulipanes en color surtido, dos gerberas, margaritas y follaje","Dedicatoria"],"grp":"flores"},{"id":"fl-atardecer","name":"Atardecer","sub":"Tulipanes","price":150,"items":["6 tulipanes, 4 rosas, 4 girasoles y follaje","Dedicatoria"],"grp":"flores"},{"id":"fl-tulipgarden","name":"Tulipán Garden","sub":"Tulipanes","price":165,"items":["10 tulipanes y follaje","Box cilíndrico con nombre grabado","Dedicatoria"],"grp":"flores"},{"id":"fl-suenopri","name":"Sueño Primaveral","sub":"Tulipanes","price":189,"items":["Arreglo de 5 tulipanes, 6 rosas, astromelias y follaje en caja cilíndrica","Peluche de 25 cm","Caja de Ferrero Rocher de 4 bombones","Dedicatoria y mariposas decorativas"],"grp":"flores"},{"id":"fl-armonia","name":"Armonía","sub":"Girasoles","price":110,"items":["6 girasoles, 10 rosas y follaje en caja de corazón","Dedicatoria"],"grp":"flores"},{"id":"fl-globogira","name":"Globo de Girasoles","sub":"Girasoles","price":99,"items":["Arreglo de 8 girasoles","Globo de 18\" personalizado","Dedicatoria"],"grp":"flores","cumple":4},{"id":"fl-solecito","name":"Solecito","sub":"Girasoles","price":90,"items":["10 girasoles, styver y follaje diverso","Dedicatoria"],"grp":"flores"},{"id":"fl-favgira","name":"Favorita Girasoles","sub":"Girasoles","price":60,"items":["3 girasoles en papel coreano","Dedicatoria"],"grp":"flores"},{"id":"fl-vibranza","name":"Vibranza","sub":"Girasoles","price":110,"items":["11 girasoles con eucalipto chino","Globo de 20\" con frase personalizada","Tarjeta con foto y dedicatoria"],"grp":"flores"},{"id":"fl-vibtul","name":"Vibranza y Tulipanes","sub":"Girasoles","price":165,"items":["Arreglo de girasoles, eucalipto chino y 6 tulipanes","Globo de 20\" con frase personalizada","Tarjeta con foto y dedicatoria"],"grp":"flores","cumple":5},{"id":"fl-stitch","name":"Modelo Stitch","sub":"Girasoles","price":235,"items":["20 girasoles, claveles blancos y 10 rosas azules en caja cilíndrica","Peluche de Stitch de 35 cm","Dedicatoria"],"grp":"flores"},{"id":"gb-joyero","name":"Detalle Joyero","sub":"Detalles","price":45,"items":["Joyero con compartimientos y nombre grabado","Ramo de flores secas","Dedicatoria","Caja de madera con lazo"],"code":"BOX001","grp":"ella"},{"id":"gb-valiosa","name":"Valiosa","sub":"Detalles","price":45,"items":["Jar con contenido a elección","Ramo de flores secas","Dedicatoria","Fotografía (opcional)","Caja de madera con lazo"],"code":"BOX002","grp":"ella"},{"id":"gb-divina","name":"Divina","sub":"Detalles","price":45,"items":["Taza transparente con nombre","Ramo de flores secas con bombón Ferrero Rocher","Dedicatoria","Caja de cartón con lazo"],"code":"BOX003","grp":"ella"},{"id":"gb-divina2","name":"Divina 2","sub":"Detalles","price":49,"items":["Taza transparente con nombre","Ramo de flores secas con bombón Ferrero Rocher","Frutos secos","Dedicatoria","Caja de cartón con lazo"],"code":"BOX073","grp":"ella"},{"id":"gb-ideal","name":"Ideal","sub":"Detalles","price":49,"items":["Vaso cafetero personalizado reutilizable","Jar con contenido a elección","Dedicatoria","Ramito de flores secas y foto (opcional)","Caja de cartón con lazo"],"code":"BOX004","grp":"ella"},{"id":"gb-esencial","name":"Esencial","sub":"Boxes laborales","price":49,"items":["Libreta con nombre","Lapicero de acero en estuche acrílico","Dedicatoria","Ramo de flores secas","Caja de madera con lazo"],"code":"BOX005","grp":"corporativo","feat":3},{"id":"gb-kitoffice","name":"Kit Office","sub":"Boxes laborales","price":65,"items":["Neceser con nombre","Scrunchie de gamuza","Jar con contenido a elección","Ramo de flores secas","Dedicatoria","Caja de madera con lazo"],"code":"BOX076","grp":"corporativo","feat":2},{"id":"gb-ideal2","name":"Ideal 2","sub":"Detalles","price":55,"items":["Vaso cafetero personalizado reutilizable","Jar con contenido a elección","Dedicatoria","Ramito de flores secas y foto (opcional)","Caja de madera con lazo"],"code":"BOX007","grp":"ella"},{"id":"gb-confianza","name":"Confianza","sub":"Detalles","price":75,"items":["Vaso cafetero personalizado reutilizable","Libreta A6","Jar con contenido a elección","Dedicatoria","Fotografía (opcional) y ramito de flores secas","Caja de madera con lazo"],"code":"BOX008","grp":"ella"},{"id":"gb-delicada","name":"Delicada","sub":"Detalles","price":79,"items":["Vaso cafetero personalizado reutilizable","Pulsera de murano con dije de acero","Jar con contenido a elección","Dedicatoria","Fotografía (opcional) y ramito de flores secas","Caja de madera con lazo"],"code":"BOX009","grp":"ella","feat":4},{"id":"gb-consentida","name":"Consentida","sub":"Detalles","price":59,"items":["Joyero con compartimientos y nombre grabado","Pulsera de murano con accesorio dorado","Ramo de flores secas","Dedicatoria","Caja de madera con lazo"],"code":"BOX010","grp":"ella","feat":6},{"id":"gb-especial","name":"Especial","sub":"Detalles","price":65,"items":["Ramo de flores secas con bombón Ferrero Rocher","Pulsera de murano","Joyero con nombre","Dedicatoria","Caja de madera con lazo"],"code":"BOX011","grp":"ella"},{"id":"gb-bienestar","name":"Bienestar","sub":"Boxes","price":69,"items":["Vaso bambú de 350 ml con sorbete de vidrio y nombre","Jar con contenido a elección","Suculenta artificial","Dedicatoria","Fotografía (opcional) y ramo de flores secas","Caja de madera con lazo"],"code":"BOX012","grp":"ella"},{"id":"gb-sonrie","name":"Sonríe","sub":"Boxes","price":75,"items":["Vaso bambú con sorbete de vidrio y nombre","Jar con contenido a elección","Libreta A6 y Ferrero Rocher en mini ramito","Dedicatoria","Caja de madera con lazo"],"code":"BOX013","grp":"ella"},{"id":"gb-amelia","name":"Amelia","sub":"Boxes","price":65,"items":["Vaso bambú de 350 ml con sorbete de vidrio y nombre","Neceser con nombre grabado","Dedicatoria","Ramo de flores secas","Caja de madera con lazo"],"code":"BOX014","grp":"ella"},{"id":"gb-olivia","name":"Olivia","sub":"Boxes","price":75,"items":["Vaso bambú de 350 ml con sorbete de vidrio y nombre","Scrunchie de gamuza y Ferrero Rocher","Joyero con nombre","Dedicatoria","Ramo de flores secas","Caja de madera con lazo"],"code":"BOX015","grp":"ella","feat":5},{"id":"gb-preferida","name":"Preferida","sub":"Boxes","price":75,"items":["Vaso térmico de 500 ml","Jar con contenido a elección","Dedicatoria","Ramito de flores secas","Caja de madera con lazo, nombre y frase temática"],"code":"BOX045","grp":"ella"},{"id":"gb-op19","name":"Opción 19","sub":"Boxes","price":95,"items":["Vaso térmico de 500 ml personalizado","Libreta A5","Joyero viajero personalizado","Dedicatoria","Fotografía (opcional) y ramito de flores secas","Caja de madera con lazo"],"code":"BOX019","grp":"ella"},{"id":"gb-dama","name":"Dama","sub":"Boxes","price":69,"items":["Taza transparente con nombre","Joyero viajero o neceser (a elección)","Jar con contenido a elección","Dedicatoria","Fotografía (opcional) y ramito de flores secas","Caja de madera con lazo"],"code":"BOX016","grp":"ella"},{"id":"gb-gratitud","name":"Gratitud","sub":"Boxes","price":65,"items":["Neceser con nombre","Scrunchie de gamuza","Jar con contenido a elección","Ramo de flores secas","Dedicatoria","Caja de madera con lazo"],"code":"BOX017","grp":"ella"},{"id":"gb-contigo","name":"Contigo","sub":"Boxes","price":95,"items":["Taza de porcelana o transparente con nombre","Neceser con nombre","Jar con contenido a elección","Ferrero de 3 bombones","Dedicatoria","Globo burbuja con frase","Caja de pino estilo canasta"],"code":"BOX074","grp":"ella","feat":3,"cumple":9},{"id":"gb-sweetgirl","name":"Sweet Girl","sub":"Boxes","price":85,"items":["Neceser con nombre","Diadema para skincare, muñequeras y gancho","Vela aromática en cubo","Jar con contenido a elección","Ramito de flores secas y foto (opcional)","Caja de madera con lazo"],"code":"BOX020","grp":"ella","feat":1,"cumple":10},{"id":"gb-generosa","name":"Generosa","sub":"Boxes","price":85,"items":["Vaso térmico de 500 ml con nombre","Joyero viajero con nombre","Jar con contenido a elección","Dedicatoria","Ramo de flores y foto (opcional)","Caja de madera con lazo"],"code":"BOX021","grp":"ella","feat":2,"cumple":11},{"id":"gb-precisa","name":"Precisa","sub":"Boxes","price":99,"items":["Vaso térmico de 500 ml","Neceser con nombre","Lapicero con estuche acrílico y nombre","Libreta A6","Dedicatoria","Ramo de flores secas con bombón Ferrero Rocher","Caja de madera con lazo"],"code":"BOX022","grp":"ella"},{"id":"gb-packlaboral","name":"Pack Laboral","sub":"Boxes laborales","price":99,"items":["Taza de porcelana o transparente con nombre","Lapicero con estuche acrílico y nombre","Jar con contenido a elección","Libreta A5 con nombre grabado","Dedicatoria","Globo burbuja con frase","Caja de pino estilo canasta"],"code":"BOX023","grp":"corporativo","feat":1},{"id":"gb-packlaboral2","name":"Pack Laboral 2","sub":"Boxes laborales","price":115,"items":["Vaso térmico de 500 ml","Lapicero con estuche acrílico y nombre","Jar con contenido a elección","Libreta A5 con nombre grabado","Dedicatoria","Globo burbuja con frase","Caja de pino estilo canasta"],"code":"BOX024","grp":"corporativo"},{"id":"gb-inspira","name":"Inspira","sub":"Boxes","price":115,"items":["Termo de acero","Ferrero Rocher (4 bombones)","Joyero viajero personalizado","Pulsera de acero o murano","Mini ramo de flores secas","Dedicatoria","Caja de madera con mensaje en tapa"],"code":"BOX025","grp":"ella"},{"id":"gb-bondad","name":"Bondad","sub":"Boxes","price":125,"items":["Termo digital personalizado","Ferrero Rocher (4 bombones)","Cuadro de foto o collage de 10×15 cm","Libreta A6","Jar con contenido a elección","Suculenta artificial","Dedicatoria","Caja de madera con mensaje en tapa"],"code":"BOX026","grp":"ella"},{"id":"gb-mejoramiga","name":"Mejor Amiga","sub":"Boxes","price":99,"items":["Vaso cafetero personalizado","Vincha para limpieza facial","Vela aromática","Neceser personalizado","Libreta A6","Dedicatoria","Caja de madera con lazo"],"code":"BOX027","grp":"ella","cumple":12},{"id":"gb-brindis","name":"Brindis","sub":"Para ella","price":85,"items":["Vino Riccadonna 275 ml","Copa de vidrio personalizada","Jar con contenido a elección","Dedicatoria","Foto (opcional) y ramito de flores secas","Caja de madera con lazo"],"code":"BOX028","grp":"brindis","feat":1,"cumple":18},{"id":"gb-lider","name":"Líder","sub":"Para ella","price":69,"items":["Vino Viña Vieja Rosé 355 ml","Copa de vidrio personalizada","1 bombón Ferrero Rocher","Dedicatoria","Caja de madera con lazo"],"code":"BOX029","grp":"brindis"},{"id":"gb-isabel","name":"Isabel","sub":"Para ella","price":79,"items":["Vino tinto español Mayoral 187 ml","Copa de vidrio personalizada","Pulsera de murano","Dedicatoria","Caja de madera con lazo"],"code":"BOX072","grp":"brindis"},{"id":"gb-op30","name":"Opción 30","sub":"Para ella","price":95,"items":["Espumante Freixenet 200 ml","Caja de 4 bombones Ferrero Rocher","Jar con contenido a elección","Dedicatoria","Caja de madera con lazo"],"code":"BOX030","grp":"brindis"},{"id":"gb-elegante","name":"Elegante","sub":"Para ella","price":105,"items":["Vino Intipalka 375 ml","Caja de 4 bombones Ferrero Rocher","Jar con contenido a elección","Copa de vidrio con nombre","Dedicatoria","Caja de madera con lazo"],"code":"BOX031","grp":"brindis","feat":2},{"id":"gb-nuevocomienzo","name":"Nuevo Comienzo","sub":"Para ella","price":125,"items":["Cuadro de 10×15 cm con foto o collage","Copa de vidrio con nombre","Vino blanco Tabernero 375 ml","3 bombones Ferrero Rocher","Jar con contenido a elección","Cajita de alfajores o mini pretzels","Vela aromática en cubo","Dedicatoria"],"code":"BOX032","grp":"brindis"},{"id":"gb-sweetgirl2","name":"Sweet Girl 2","sub":"Para ella","price":129,"items":["Neceser con nombre","Riccadonna 200 ml","Vela aromática en cubo","Jar con contenido a elección","Ferrero Rocher de 4 bombones","Dedicatoria","Caja de madera con lazo, nombre y frase"],"code":"BOX033","grp":"brindis","cumple":17},{"id":"gb-op34","name":"Opción 34","sub":"Para ella","price":155,"items":["Vino Intipalka 750 ml","Dos copas personalizadas","Hielera de acero","Ramito de flores secas","Caja de pino"],"code":"BOX034","lead":1,"tag":"Solicitar con anticipación","grp":"brindis"},{"id":"gb-selecta","name":"Selecta","sub":"Para ella","price":135,"items":["Vino Riccadonna 275 ml","Copa de vidrio personalizada","Jar con contenido a elección","Piqueo de cabanossi, queso y jamón","Dedicatoria","Caja de madera estilo canasta"],"code":"BOX035","tag":"Incluye piqueo","grp":"brindis","feat":3},{"id":"gb-recuerdos","name":"Recuerdos","sub":"Aniversario y amor","price":75,"items":["Cuadro con foto de 10×15 cm","Chocolates diversos (Sublime, Bon o Bon, galletas, Inka Chips)","Ramito de flores secas","Dedicatoria","Contratapa con frase y 4 fotos con ganchito"],"code":"BOX036","grp":"ocasiones","feat":1},{"id":"gb-union","name":"Unión","sub":"Aniversario y amor","price":165,"items":["Riccadonna personalizado 750 ml","Dos fotos estilo polaroid","Caja de Ferrero Rocher de 4 bombones","Jar con contenido a elección","Dos copas de vidrio personalizadas","Dedicatoria"],"code":"BOX037","grp":"ocasiones","feat":2},{"id":"gb-forever","name":"Forever","sub":"Aniversario y amor","price":145,"items":["Dos Riccadonnas","Dos copas de vidrio personalizadas","Caja de Ferrero Rocher de 8 bombones","Dedicatoria","Caja de madera con lazo"],"code":"BOX038","grp":"ocasiones"},{"id":"gb-nosotros","name":"Nosotros","sub":"Aniversario y amor","price":69,"items":["Cuadro de 10×15 cm","Taza transparente personalizada","Jar con contenido a elección","Dedicatoria","Caja de madera con lazo y frase"],"code":"BOX039","grp":"ocasiones"},{"id":"gb-merito","name":"Mérito","sub":"Graduación","price":110,"items":["Osito de peluche de graduación","Dos cervezas de marca a elección","Chocolate Lindt o Ferrero Rocher de 4 bombones","Jar con contenido a elección","Panel acrílico personalizado","Dedicatoria","Caja de madera con lazo"],"grp":"ocasiones","feat":3},{"id":"gb-honor","name":"Honor","sub":"Graduación","price":62,"items":["Vaso cafetero personalizado","Jar con contenido a elección","Scrunchie de gamuza","Ramito de flores secas","Caja con lazo y nombre","Dedicatoria"],"grp":"ocasiones"},{"id":"gb-damahonor","name":"Dama de Honor","sub":"Bodas","price":75,"items":["Joyero personalizado con nombre","Agenda A5","Dos bombones Ferrero Rocher","Mini ramito de flores secas","Dedicatoria"],"code":"BOX040","grp":"ocasiones"},{"id":"gb-condolencias","name":"Condolencias","sub":"Condolencias","price":79,"items":["Jar con contenido a elección","Rosario de acero en frasco de vidrio con paloma","Cuadro de foto con mensaje","Dedicatoria","Caja de madera con mensaje \"El alma trasciende, el amor permanece\""],"code":"BOX041","grp":"ocasiones","feat":6},{"id":"gb-damahonor2","name":"Dama de Honor 2","sub":"Bodas","price":150,"items":["Riccadonna","Copa de vidrio personalizada","Scrunchie","Chocolate Ferrero Rocher","Gafas de sol en forma de corazón","Brazalete con dije de corazón grabado","Manual de dama de honor"],"code":"BOX060","variants":[["Caja material couché",150],["Caja tapa dura",165]],"grp":"ocasiones","feat":5},{"id":"gb-pregunta","name":"Pregunta Especial","sub":"Bodas","price":69,"items":["Vaso térmico de 330 ml con nombre permanente","3 chocolates Ferrero Rocher","Ramito de flores secas y dedicatoria","Caja de madera con mensaje"],"code":"BOX075","tag":"Para padrinos y damas de honor","grp":"ocasiones"},{"id":"gb-op77","name":"Opción 77","sub":"Bodas","price":105,"items":["Vaso térmico de 500 ml con nombre","Riccadonna 185 ml","Cuadro de 10×15 cm con foto","Ramito de flores secas y dedicatoria","Caja de madera"],"code":"BOX077","grp":"ocasiones"},{"id":"gb-globosbienv","name":"Globos de Bienvenida","sub":"Bienvenida bebé","price":130,"items":["10 globos de helio circulares","Globo de oso teddy","Estrella metálica con frase personalizada","Dedicatoria","3 pesas"],"code":"GDH001","grp":"ocasiones","feat":4},{"id":"pe-op42","name":"Opción 42","sub":"Boxes","price":43,"items":["Vaso cafetero reutilizable con nombre","Ramito de flores secas, dos nueces y naranja deshidratada","Dedicatoria","Caja de cartón con lazo"],"code":"BOX042","grp":"el"},{"id":"pe-op43","name":"Opción 43","sub":"Boxes","price":75,"items":["Vaso térmico de 500 ml con grabado láser","Ramito de flores secas, dos nueces y naranja deshidratada","Dedicatoria","Caja de cartón con lazo"],"code":"BOX043","lead":2,"tag":"Pedir con 2 días de anticipación","grp":"el"},{"id":"pe-neceser","name":"Neceser","sub":"Boxes","price":47,"items":["Neceser de biocuero con nombre personalizado","Ramito de flores secas y dedicatoria","Caja de cartón con lazo y etiqueta"],"code":"BOX044","grp":"el"},{"id":"pe-ideal2","name":"Ideal 2 (para él)","sub":"Boxes","price":59,"items":["Vaso cafetero personalizable de 473 ml","Jar con contenido a elección","Ramo de flores secas","Dedicatoria","Caja de madera con lazo"],"code":"BOX007","grp":"el"},{"id":"pe-preferido","name":"Preferido","sub":"Boxes","price":75,"items":["Vaso térmico de 500 ml","Jar con contenido a elección","Dedicatoria","Ramito de flores secas","Caja de madera con lazo, nombre y frase"],"code":"BOX045","grp":"el","feat":4},{"id":"pe-op46","name":"Opción 46","sub":"Boxes","price":45,"items":["Jar de 210 ml con contenido a elección","Llavero de biocuero con nombre","Ramito de flores secas y dedicatoria","Caja de cartón con lazo"],"code":"BOX046","grp":"el"},{"id":"pe-op47","name":"Opción 47","sub":"Boxes","price":50,"items":["Jar de 210 ml con contenido a elección","Libreta A6 con nombre","Ramito de flores secas y dedicatoria","Caja de cartón con lazo y etiqueta"],"code":"BOX047","grp":"el"},{"id":"pe-op48","name":"Opción 48","sub":"Boxes","price":59,"items":["Libreta A6","Monedero de biocuero con inicial grabada","Dos chocolates Ferrero Rocher","Ramito de flores secas y dedicatoria","Caja de cartón con lazo"],"code":"BOX048","grp":"el"},{"id":"pe-op49","name":"Opción 49","sub":"Boxes","price":79,"items":["Vaso cafetero personalizable de 473 ml","Jar con contenido a elección","Caja de Ferrero Rocher de 4 bombones","Foto (opcional), flores secas y dedicatoria","Caja de madera con lazo"],"code":"BOX049","grp":"el","feat":5},{"id":"pe-ideal","name":"Ideal (para él)","sub":"Boxes","price":55,"items":["Vaso cafetero personalizado reutilizable","Jar con contenido a elección","Dedicatoria","Ramito de flores secas y foto (opcional)","Caja de cartón con lazo"],"code":"BOX004","grp":"el"},{"id":"pe-op50","name":"Opción 50","sub":"Boxes","price":55,"items":["Taza transparente personalizada a vinil","Jar con contenido a elección","Mensaje y ramito de flores secas","Caja de cartón con lazo"],"code":"BOX050","grp":"el"},{"id":"pe-op51","name":"Opción 51","sub":"Boxes","price":49,"items":["Taza transparente con nombre","3 chocolates Ferrero Rocher","Ramito de flores secas y dedicatoria","Caja de cartón con lazo"],"code":"BOX051","grp":"el"},{"id":"pe-op52","name":"Opción 52","sub":"Boxes","price":65,"items":["Vaso térmico de 330 ml con nombre","3 chocolates Ferrero Rocher","Ramito de flores secas y dedicatoria","Caja de cartón con lazo"],"code":"BOX052","grp":"el"},{"id":"pe-leal","name":"Leal","sub":"Boxes","price":75,"items":["Taza transparente personalizada","Libreta A6 con diploma al \"Mejor Padre del Mundo\"","Jar con contenido a elección","Cuadro con fotografía","Dedicatoria y ramito de flores secas","Caja de madera con lazo"],"code":"BOX053","grp":"el"},{"id":"pe-confianza","name":"Confianza (para él)","sub":"Boxes","price":75,"items":["Vaso cafetero personalizable reutilizable","Libreta A6","Jar con contenido a elección","Foto (opcional) y ramito de flores secas","Caja de madera con lazo"],"code":"BOX008","grp":"el"},{"id":"pe-caballero","name":"Caballero","sub":"Boxes","price":75,"items":["Taza transparente con nombre","Dos jar con contenido a elección","Dedicatoria","Ramito de flores secas y foto (opcional)","Caja de madera con lazo, nombre y frase"],"code":"BOX054","grp":"el"},{"id":"pe-sonrie","name":"Sonríe (para él)","sub":"Boxes","price":75,"items":["Vaso cafetero personalizable reutilizable","Libreta A6","Jar con contenido a elección","Foto (opcional) y ramito de flores secas","Caja de madera con lazo"],"code":"BOX013","grp":"el"},{"id":"pe-op55","name":"Opción 55","sub":"Boxes","price":69,"items":["Taza térmica de acero inoxidable","Neceser de biocuero con nombre","Ramito de flores secas y dedicatoria","Caja de madera con lazo"],"code":"BOX055","grp":"el"},{"id":"pe-cafetero1","name":"Cafetero 1","sub":"Cafeteros","price":69,"items":["Cafetera francesa","Taza transparente con nombre","Mini pretzels","Ramito de flores secas y dedicatoria","Caja de cartón con lazo"],"code":"BOX056","grp":"el"},{"id":"pe-cafetero2","name":"Cafetero 2","sub":"Cafeteros","price":75,"items":["Taza térmica de acero","Cafetera francesa de 350 ml","Ramito de flores secas y dedicatoria","Caja de madera con lazo"],"code":"BOX057","grp":"el"},{"id":"pe-cafetero3","name":"Cafetero 3","sub":"Cafeteros","price":75,"items":["Cafetera francesa","Jar de 210 ml con contenido a elección","Café molido","Ramito de flores secas y dedicatoria","Caja de madera con lazo"],"code":"BOX058","grp":"el"},{"id":"pe-cafetero4","name":"Cafetero 4","sub":"Cafeteros","price":85,"items":["Cafetera francesa","Vaso térmico con nombre","Chocolate Ferrero Rocher","Ramito de flores secas y dedicatoria","Caja de madera con lazo"],"code":"BOX059","grp":"el","feat":3,"cumple":15},{"id":"pe-packlaboral","name":"Pack Laboral (para él)","sub":"Boxes laborales","price":99,"items":["Taza de porcelana o transparente con nombre","Lapicero con estuche acrílico y nombre","Jar con contenido a elección","Libreta A6 con nombre grabado","Dedicatoria","Globo burbuja con frase","Caja de pino estilo canasta"],"code":"BOX023","grp":"corporativo"},{"id":"pe-ideal3","name":"Ideal 3","sub":"Edición especial","price":89,"items":["Vaso térmico de 500 ml con nombre","Jar con contenido a elección","Cuadro de 10×15 cm con fotografía","Ramito de flores secas y dedicatoria","Caja de madera con lazo"],"code":"BOX061","grp":"el","feat":1,"cumple":13},{"id":"pe-rey","name":"Para el Rey","sub":"Edición especial","price":95,"items":["Vaso térmico de 500 ml","Jar con contenido a elección","Cuadro de 10×15 cm","Taza de vidrio personalizable","Dedicatoria y ramito de flores secas","Caja de madera con lazo"],"code":"BOX062","grp":"el"},{"id":"pe-mejor","name":"Para el Mejor","sub":"Edición especial","price":110,"items":["Vaso térmico de 500 ml con nombre","Jar con contenido a elección","Chocolate Montblanc (7 bombones)","Taza de vidrio personalizable","Dedicatoria y ramito de flores secas","Caja de madera con lazo"],"code":"BOX063","grp":"el","feat":2,"cumple":14},{"id":"pe-alianza","name":"Box Alianza Lima","sub":"Edición especial","price":110,"items":["Vaso térmico de 500 ml con nombre","Jar con contenido a elección","Chocolate Montblanc (7 bombones)","Taza de vidrio personalizable","Dedicatoria y ramito de flores secas","Caja de madera con lazo"],"grp":"el"},{"id":"pe-universitario","name":"Box Universitario","sub":"Edición especial","price":110,"items":["Vaso térmico de 500 ml con nombre","Jar con contenido a elección","Chocolate Montblanc (7 bombones)","Taza de vidrio personalizable","Dedicatoria y ramito de flores secas","Caja de madera con lazo"],"grp":"el"},{"id":"pe-bondad","name":"Bondad (para él)","sub":"Edición especial","price":125,"items":["Termo de acero","Jar con contenido a elección","Ferrero Rocher de 4 unidades","Cuadro de 10×15 cm","Libreta A6 \"Eres capaz de todo\"","Suculenta en maceta de porcelana","Caja de madera con tapa personalizable"],"code":"BOX026","grp":"el"},{"id":"pe-bondad2","name":"Bondad 2","sub":"Edición especial","price":125,"items":["Termo de 500 ml con nombre permanente","Libreta A6","Caja de Ferrero Rocher de 4 bombones","Suculenta artificial","Vino Intipalka 375 ml","Ramito de flores secas y dedicatoria","Caja de madera con lazo"],"code":"BOX064","grp":"el","feat":6},{"id":"pe-preciso","name":"Preciso","sub":"Edición especial","price":99,"items":["Vaso térmico de 500 ml con nombre","Neceser de cuerina con nombre","Libreta A6","Lapicero de metal en estuche acrílico con nombre","Dedicatoria y flores secas con bombón Ferrero","Caja de madera con lazo"],"code":"BOX065","grp":"el"},{"id":"pe-artesanal","name":"Artesanal","sub":"Para él","price":79,"items":["Cerveza artesanal (marca a elección)","Llavero con destapador","Chifles","Ramito de flores secas, mantel de cuadritos y dedicatoria","Hielera de metal con lazo"],"code":"BOX066","grp":"brindis"},{"id":"pe-vikingo","name":"Vikingo","sub":"Para él","price":69,"items":["Cerveza Heineken","Jar con contenido a elección","Dos Hershey de chocolate","Vaso cervecero personalizable","Dedicatoria y ramito de flores secas","Caja de madera con lazo"],"code":"BOX067","grp":"brindis"},{"id":"pe-op68","name":"Opción 68","sub":"Para él","price":95,"items":["Riccadonna","Jar con contenido a elección","Libreta A5 personalizada","Dedicatoria","Flores secas y foto (opcional)","Caja de madera con lazo"],"code":"BOX068","grp":"brindis"},{"id":"pe-op69","name":"Opción 69","sub":"Para él","price":99,"items":["Riccadonna 200 ml","Copa de vidrio con nombre","Caja de cartón con mini pretzels","Jar con contenido a elección","Ramito de flores secas y mensaje","Caja de madera con lazo"],"code":"BOX069","grp":"brindis"},{"id":"pe-pisquero","name":"Pisquero","sub":"Para él","price":85,"items":["Pisco Rotondo de 185 ml","Medidor de onzas","Vaso pisquero con nombre","Ramito de flores secas y dedicatoria","Caja de madera con lazo"],"code":"BOX070","grp":"brindis","feat":4},{"id":"pe-selecto2","name":"Selecto 2","sub":"Para él","price":120,"items":["Vino Intipalka 375 ml","Jar con contenido a elección","Degustación de jamón inglés, cabanossi y queso edam","Copa de vino personalizable","Topper temático, dedicatoria y planta decorativa","Bandeja de pino con lazo"],"code":"BOX071","tag":"Incluye piqueo","grp":"brindis"},{"id":"pe-amigo","name":"Amigo","sub":"Para él","price":130,"items":["Vino Gran Tinto Tabernero 350 ml","Jar con contenido a elección","Degustación de jamón inglés, cabanossi y queso edam","Copa de vino personalizable","Foto estilo polaroid y dedicatoria","Caja con panel y arco de globos"],"code":"BOX072","grp":"brindis","feat":5,"cumple":16},{"id":"pe-amorazul","name":"Amor Azul","sub":"Para él","price":145,"items":["6 rosas azules con follaje","1 Riccadonna de 185 ml","2 chocolates Ferrero Rocher","Globo metálico de corazón personalizado","Caja negra cilíndrica","Dedicatoria"],"grp":"brindis","feat":6},{"id":"pe-merienda","name":"Merienda","sub":"Aniversario y amor","price":99,"items":["Cerveza Heineken","Chocolate Ferrero Rocher","Free tea y tartaleta","Jar con contenido a elección","Caja de pino con panel y arco de globos","Dedicatoria"],"grp":"ocasiones"},{"id":"de-amanecer","name":"Amanecer","sub":"Desayunos","price":85,"items":["Jugo Kero o shake capuccino","Croissant de pollo o jamón y queso","Yogurt griego con cereal o Danlac","Chocolates Princesa y Hershey","Mensaje personalizado en la contratapa","Flores decorativas y dedicatoria"],"grp":"desayunos","feat":1},{"id":"de-despertar","name":"Despertar","sub":"Desayunos","price":90,"items":["Jugo Kero o shake capuccino","Croissant de pollo o jamón y queso","Yogurt griego con cereal o Danlac","Jar con contenido a elección","Mensaje personalizado en la contratapa","Flores decorativas y dedicatoria"],"grp":"desayunos"},{"id":"de-alegre","name":"Desayuno Alegre","sub":"Desayunos","price":120,"items":["Jugo de naranja","Croissant de pollo o jamón y queso","Yogurt griego con cereal","Jar con contenido a elección","Ensalada de frutas con miel y algarrobina aparte","Bandeja de madera con panel de globos y dedicatoria"],"grp":"desayunos","feat":2,"cumple":19},{"id":"de-clasico","name":"Desayuno Clásico","sub":"Desayunos","price":105,"items":["Jugo Kero","Croissant de pollo o jamón y queso","Dos chocolates Ferrero Rocher","Jar con contenido a elección","Ensalada de frutas y miel","Bandeja de madera con panel de globos y dedicatoria"],"grp":"desayunos"},{"id":"de-sonrie","name":"Desayuno Sonríe","sub":"Desayunos","price":110,"items":["Jugo Kero","Croissant de pollo o jamón y queso","Yogurt griego con cereal o Danlac","Jar con contenido a elección","Taza de vidrio o porcelana personalizada","Caja blanca con mensaje en tapa y contratapa"],"grp":"desayunos"},{"id":"de-dulzura","name":"Completa Dulzura","sub":"Desayunos","price":120,"items":["Jugo Kero","2 croissants de pollo o jamón y queso","Yogurt griego con cereal o Danlac","Jar con contenido a elección","Ferrero Rocher de 3 unidades","Caja blanca con mensaje en tapa y contratapa"],"grp":"desayunos","feat":4},{"id":"de-floral","name":"Desayuno Floral","sub":"Desayunos","price":165,"items":["Jugo Kero","Croissant de pollo o jamón y queso","Yogurt griego con cereal o Danlac","Jar con contenido a elección","Caja con mensaje en la contratapa","12 rosas con follaje y papel coreano","Dedicatoria"],"grp":"desayunos","feat":3},{"id":"de-delicada","name":"Desayuno Delicada","sub":"Desayunos","price":145,"items":["Jugo de piña o papaya","Ensalada de frutas, miel y algarrobina en frascos de vidrio","Dos jar con contenido a elección","Pie de fresa o manzana","Flores naturales o secas con base de esponja","Globo burbuja personalizado y 4 miniglobos","Bandeja de pino y dedicatoria"],"grp":"desayunos","feat":5,"cumple":20},{"id":"de-heroe","name":"Héroe","sub":"Desayunos","price":115,"items":["Cerveza Heineken y free tea","Chocolate Ferrero Rocher","Tartaleta","Jar con contenido a elección","Caja de pino con panel y arco de globos","Dedicatoria"],"grp":"desayunos","feat":6},{"id":"ad-ferrero3","name":"Ferrero Rocher × 3","sub":"Chocolates","price":12,"items":["Chocolate Ferrero Rocher de 3 unidades"],"grp":"extras"},{"id":"ad-ferrero4","name":"Ferrero Rocher × 4","sub":"Chocolates","price":20,"items":["Caja de Ferrero Rocher de 4 unidades"],"grp":"extras"},{"id":"ad-kisses","name":"Kisses 102 g","sub":"Chocolates","price":12,"items":["Chocolates Kisses 102 g"],"grp":"extras"},{"id":"ad-ferrero8","name":"Ferrero Rocher × 8","sub":"Chocolates","price":35,"items":["Caja de Ferrero Rocher de 8 unidades"],"grp":"extras","feat":1},{"id":"ad-ferrero12","name":"Ferrero Rocher × 12","sub":"Chocolates","price":50,"items":["Caja de Ferrero Rocher de 12 unidades"],"grp":"extras"},{"id":"ad-hellokitty","name":"Peluche Hello Kitty 22 cm","sub":"Peluches","price":35,"items":["Hello Kitty importado de 22 cm"],"grp":"extras","feat":3},{"id":"ad-cordero","name":"Cordero de corazón 24 cm","sub":"Peluches","price":30,"items":["Peluche de cordero con corazón, 24 cm"],"grp":"extras"},{"id":"ad-lotso","name":"Peluche Lotso 29 cm","sub":"Peluches","price":30,"items":["Peluche Lotso de 29 cm"],"grp":"extras"},{"id":"ad-oso","name":"Oso parchudo 12 cm","sub":"Peluches","price":25,"items":["Oso de peluche de 12 cm"],"grp":"extras","feat":5},{"id":"ad-pulsera","name":"Pulsera de Murano","sub":"Accesorios","price":18,"items":["Pulsera de murano con dije y accesorios de acero","Incluye bolsa de regalo"],"grp":"extras","feat":4},{"id":"ad-spotify","name":"Cuadro Spotify","sub":"Cuadros","price":25,"items":["Cuadro de 10×15 cm con foto y código Spotify/QR que reproduce su canción"],"grp":"extras","feat":2},{"id":"ad-google","name":"Cuadro Google","sub":"Cuadros","price":35,"items":["Cuadro de 13×18 cm estilo búsqueda de Google","Fotos, frase personalizada y fecha especial"],"grp":"extras","feat":6},{"id":"ad-netflix","name":"Cuadro Netflix","sub":"Cuadros","price":35,"items":["Cuadro de 13×18 cm estilo Netflix","Nombres, fecha especial y sinopsis romántica"],"grp":"extras"},{"id":"ad-cuadro","name":"Cuadro con foto o collage","sub":"Cuadros","price":20,"items":["Cuadro con foto o collage"],"variants":[["10×15 cm (hasta 4 fotos)",20],["13×18 cm",25]],"grp":"extras"},{"id":"ad-tematico","name":"Cuadro Temático","sub":"Cuadros","price":35,"items":["Cuadro de 13×18 cm con diseño personalizado","Dedicatoria y bolsa de regalo"],"grp":"extras"},{"id":"ad-firma","name":"Cuadro Firma","sub":"Cuadros","price":99,"items":["Marco de 48×38 cm con foto de 15×21 cm","Plumón indeleble negro"],"grp":"corporativo","feat":6},{"id":"ad-llavero","name":"Llavero de biocuero","sub":"Llaveros","price":10,"items":["Llavero de biocuero con nombre","Tarjeta con frase y logo empresarial, en bolsa"],"grp":"corporativo"},{"id":"ad-llavero2","name":"Llavero destapador","sub":"Llaveros","price":15,"items":["Llavero de biocuero con destapador de metal y nombre","Tarjeta con frase y logo empresarial, en bolsa"],"grp":"corporativo","feat":5},{"id":"ad-setvino","name":"Set para vino","sub":"Accesorios","price":40,"items":["Estuche en forma de botella","Sacacorchos, anillo antigoteo y dosificador","Envuelto en gaza con tag y mini ramito de flores secas"],"variants":[["Por unidad",40],["Por docena (precio c/u)",32]],"grp":"corporativo","feat":4}];
+const GROUPS = [
+  {k:'cumple', l:'Cumpleaños', d:'Regalos para celebrar su día: flores con globo, boxes con su nombre, brindis y desayunos.', cover:'fl-globofloral', special:true},
+  {k:'flores', l:'Flores', d:'Ramos, arreglos, tulipanes y girasoles hechos el mismo día.', cover:'fl-buchon'},
+  {k:'ella', l:'Para ella', d:'Boxes y detalles personalizados con su nombre.', cover:'gb-sweetgirl'},
+  {k:'el', l:'Para él', d:'Vasos térmicos, cafeteros y boxes con su estilo.', cover:'pe-mejor'},
+  {k:'brindis', l:'Para brindar', d:'Boxes con vino, espumante, cerveza o pisco.', cover:'gb-brindis'},
+  {k:'ocasiones', l:'Ocasiones', d:'Aniversarios, graduaciones, bodas, bienvenidas y condolencias.', cover:'gb-globosbienv'},
+  {k:'desayunos', l:'Desayunos', d:'Desayunos sorpresa con dedicatoria para empezar el día.', cover:'de-alegre'},
+  {k:'corporativo', l:'Corporativos', d:'Regalos para equipos y clientes. Precios por mayor desde 6 unidades.', cover:'gb-packlaboral'},
+  {k:'extras', l:'Adicionales', d:'Chocolates, peluches y cuadros para completar tu detalle.', cover:'ad-spotify'},
+];
+const BEST = ['fl-esprosado','fl-clasico','gb-sweetgirl','de-alegre','fl-globoferrero','pe-ideal3','gb-generosa','fl-12rosas','gb-brindis','fl-arreglolotso'];
+const SLIDES = [
+  {cls:'s-bday', kick:'Cumpleaños', h:'Celebra su día<br><em>con un detalle</em>', p:'Flores con globo, boxes con su nombre y desayunos sorpresa para su cumpleaños.', cta:['Ver regalos de cumpleaños','#c-cumple'], alt:['Desayunos','#c-desayunos'], imgs:['fl-globofloral','gb-contigo','de-alegre'], btn:'red', bday:true},
+  {cls:'s-carmin', kick:'Flores frescas · entrega el mismo día', h:'Flores que dicen<br><em>lo que sientes</em>', p:'Ramos y arreglos hechos a mano con tu dedicatoria, listos para hoy mismo en Lima.', cta:['Ver flores','#c-flores'], alt:['Promociones','#c-flores'], imgs:['fl-buchon','fl-esprosado','fl-12rosas'], btn:'light'},
+  {cls:'s-celeste', kick:'Boxes personalizados', h:'Un regalo con<br><em>su nombre</em>', p:'Vasos, joyeros y neceseres grabados, con flores secas y dedicatoria.', cta:['Para ella','#c-ella'], alt:['Para él','#c-el'], imgs:['gb-generosa','gb-sweetgirl','pe-ideal3'], btn:'red'},
+  {cls:'s-beige', kick:'Desayunos sorpresa', h:'Empieza su día<br><em>con un detalle</em>', p:'Desayunos con globos, flores y mensaje personalizado desde S/ 85.', cta:['Ver desayunos','#c-desayunos'], alt:['Corporativos','#c-corporativo'], imgs:['de-alegre','de-amanecer','de-floral'], btn:'red'},
+];
+const EXTRA_IDS = ['ad-ferrero3','ad-ferrero4','ad-ferrero8','ad-kisses','ad-oso','ad-cordero','ad-pulsera','ad-spotify'];
+const byId = Object.fromEntries(PRODUCTS.map(p=>[p.id,p]));
+const $ = s=>document.querySelector(s);
+const money = n => 'S/ ' + (Number.isInteger(n) ? n : n.toFixed(2));
+const imgSrc = id => 'img/' + id + '.jpg';
+const esc = s => String(s).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function imgTag(id, alt, eager){ return `<img src="${imgSrc(id)}" alt="${esc(alt)}" ${eager?'':'loading="lazy"'} onerror="this.replaceWith(fallback())">`; }
+window.fallback = function(){ const d=document.createElement('div'); d.className='ph-fallback'; d.innerHTML='<img src="assets/iso_red.png" alt="">'; return d; };
+const ARROW = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+
+/* ---------- state ---------- */
+let cart = [];
+try{ cart = JSON.parse(localStorage.getItem('ca_cart')||'[]').filter(l=>byId[l.id]); }catch(e){ cart=[]; }
+const save = ()=>{ try{ localStorage.setItem('ca_cart', JSON.stringify(cart)); }catch(e){} };
+let form = {};
+try{ form = JSON.parse(localStorage.getItem('ca_form')||'{}'); }catch(e){ form={}; }
+const saveForm = ()=>{ try{ localStorage.setItem('ca_form',JSON.stringify(form)); }catch(e){} };
+
+/* ---------- dates (Lima) ---------- */
+const limaToday = ()=> new Intl.DateTimeFormat('en-CA',{timeZone:'America/Lima',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+function addDays(iso, n){ const d=new Date(iso+'T12:00:00'); d.setDate(d.getDate()+n); return d.toISOString().slice(0,10); }
+const niceDate = iso => new Date(iso+'T12:00:00').toLocaleDateString('es-PE',{weekday:'long',day:'numeric',month:'long'});
+
+/* ---------- pieces ---------- */
+function card(p){
+  const badge = p.old ? `<span class="badge">−${Math.round((1-p.price/p.old)*100)}%</span>` : (p.tag && p.tag.length<22 ? `<span class="badge soft">${esc(p.tag)}</span>`:'');
+  return `<a class="card" href="#p-${p.id}">
+    <div class="ph">${imgTag(p.id,p.name)}${badge}<span class="ver">Ver detalle</span></div>
+    <div class="meta"><div class="nm">${esc(p.name)}</div>
+    <div class="pr price">${p.variants?'<span class="from">desde</span>':''}${money(p.price)}${p.old?`<s>${money(p.old)}</s>`:''}</div></div>
+  </a>`;
+}
+const GL = {flores:'Flores',ella:'Para ella',el:'Para él',brindis:'Para brindar',ocasiones:'Ocasiones',desayunos:'Desayunos',corporativo:'Corporativos',extras:'Adicionales'};
+const inGroup = k => k==='cumple' ? PRODUCTS.filter(p=>p.cumple).sort((a,b)=>a.cumple-b.cumple) : PRODUCTS.filter(p=>p.grp===k).sort((a,b)=>(a.feat||99)-(b.feat||99));
+const subOf = (p,k) => k==='cumple' ? GL[p.grp] : p.sub;
+function renderTabs(active){
+  $('#tabs').innerHTML = `<a class="tab${active==='inicio'?' on':''}" href="#inicio">Inicio</a>` + GROUPS.map(g=>`<a class="tab${active===g.k?' on':''}" href="#c-${g.k}">${g.l}</a>`).join('');
+  const on=$('#tabs .on'); if(on) on.scrollIntoView({block:'nearest',inline:'nearest'});
+}
+
+/* ---------- views ---------- */
+let slideTimer=null;
+function viewHome(){
+  const best = BEST.map(id=>byId[id]);
+  const promos = PRODUCTS.filter(p=>p.old);
+  return `<section class="hero"><div class="wrap">
+    <div class="carousel" id="car" aria-roledescription="carrusel">
+      ${SLIDES.map((s,i)=>`<div class="slide ${s.cls}${i===0?' on':''}" aria-hidden="${i!==0}">${s.bday?`<div class="confetti" aria-hidden="true">${CONFETTI}</div>`:''}
+        <div class="txt"><div class="kick">${s.kick}</div><h2>${s.h}</h2><p>${s.p}</p>
+          <div class="btns"><a class="btn ${s.btn}" href="${s.cta[1]}">${s.cta[0]} ${ARROW}</a><a class="btn line" href="${s.alt[1]}">${s.alt[0]}</a></div></div>
+        <div class="collage"><div class="f f2">${imgTag(s.imgs[1],'',true)}</div><div class="f f3">${imgTag(s.imgs[2],'',true)}</div><div class="f f1">${imgTag(s.imgs[0],'',true)}</div></div>
+      </div>`).join('')}
+      <div class="dots">${SLIDES.map((s,i)=>`<button data-i="${i}" class="${i===0?'on':''}" aria-label="Banner ${i+1}"><span></span></button>`).join('')}</div>
+      <div class="arrows"><button data-d="-1" aria-label="Anterior"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg></button><button data-d="1" aria-label="Siguiente"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button></div>
+    </div></div></section>
+
+  <section class="block"><div class="wrap">
+    <div class="bhead"><div><h2>Compra por categoría</h2><p>Encuentra el detalle ideal según a quién y para qué.</p></div></div>
+    <div class="cats">${GROUPS.map(g=>`<a class="ctile reveal${g.special?' special':''}" href="#c-${g.k}"><div class="ci">${imgTag(g.cover,g.l)}</div><b>${g.l}</b><small>${inGroup(g.k).length} productos</small></a>`).join('')}</div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <div class="bhead"><div><h2>Los más pedidos</h2><p>Los favoritos de nuestros clientes.</p></div></div>
+    <div class="grid best">${best.map(card).join('')}</div>
+  </div></section>
+
+  <section class="block"><div class="wrap">
+    <div class="bhead"><div><h2>Promociones</h2><p>Precios especiales en flores por tiempo limitado.</p></div><a class="link" href="#c-flores">Ver todas las flores ${ARROW}</a></div>
+    <div class="promos">${promos.map(card).join('')}</div>
+  </div></section>
+
+  <section class="band"><div class="wrap howto">
+    <div><i>1</i><span><b>Elige tu detalle</b>con fecha, turno y dedicatoria.</span></div>
+    <div><i>2</i><span><b>Compra por WhatsApp</b>tu pedido llega ya escrito.</span></div>
+    <div><i>3</i><span><b>Te confirmamos</b>disponibilidad y delivery.</span></div>
+    <div><i>4</i><span><b>Paga y listo</b>agendamos tu entrega.</span></div>
+  </div></section>`;
+}
+function startCarousel(){
+  const car=$('#car'); if(!car) return;
+  const slides=[...car.querySelectorAll('.slide')], dots=[...car.querySelectorAll('.dots button')];
+  let i=0;
+  const go=n=>{ i=(n+slides.length)%slides.length; slides.forEach((s,k)=>{s.classList.toggle('on',k===i); s.setAttribute('aria-hidden',k!==i);}); dots.forEach((d,k)=>{d.classList.remove('on'); if(k===i){ void d.offsetWidth; d.classList.add('on'); }}); restart(); };
+  const restart=()=>{ clearInterval(slideTimer); if(!car.classList.contains('paused')) slideTimer=setInterval(()=>go(i+1),6000); };
+  car.querySelector('.dots').onclick=e=>{const b=e.target.closest('button'); if(b) go(+b.dataset.i);};
+  car.querySelector('.arrows').onclick=e=>{const b=e.target.closest('button'); if(b) go(i+ +b.dataset.d);};
+  car.addEventListener('mouseenter',()=>{car.classList.add('paused'); clearInterval(slideTimer);});
+  car.addEventListener('mouseleave',()=>{car.classList.remove('paused'); restart();});
+  let x0=null; car.addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});
+  car.addEventListener('touchend',e=>{ if(x0===null) return; const dx=e.changedTouches[0].clientX-x0; if(Math.abs(dx)>40) go(i+(dx<0?1:-1)); x0=null; });
+  restart();
+}
+
+const CONFETTI = (()=>{ const c=['#C13D49','#94B6CF','#F5E8D5','#CB6677','#567F99','#FCF7F0']; let s=''; for(let i=0;i<34;i++){ const x=(i*37)%100, y=(i*53)%100, r=(i*47)%180, col=c[i%c.length], w=i%3?8:5, h=i%3?3:5; s+=`<i style="left:${x}%;top:${y}%;width:${w}px;height:${h}px;background:${col};transform:rotate(${r}deg);animation-delay:${(i%7)*.4}s"></i>`; } return s; })();
+const BALLOONS = `<svg class="balloons" viewBox="0 0 220 260" aria-hidden="true"><g class="b1"><path d="M70 150 q-6 40 10 90" fill="none" stroke="#84202C" stroke-width="1.2"/><ellipse cx="70" cy="95" rx="42" ry="52" fill="#C13D49"/><ellipse cx="56" cy="76" rx="9" ry="15" fill="#fff" opacity=".28"/><path d="M64 146 l6 8 6-8z" fill="#84202C"/></g><g class="b2"><path d="M150 130 q10 50 -12 110" fill="none" stroke="#567F99" stroke-width="1.2"/><ellipse cx="150" cy="80" rx="36" ry="46" fill="#94B6CF"/><ellipse cx="138" cy="63" rx="8" ry="13" fill="#fff" opacity=".35"/><path d="M144 125 l6 7 6-7z" fill="#567F99"/></g><g class="b3"><path d="M110 170 q-4 40 4 80" fill="none" stroke="#CB6677" stroke-width="1.2"/><ellipse cx="110" cy="130" rx="30" ry="38" fill="#F5E8D5" stroke="#E6D6BF"/><ellipse cx="101" cy="116" rx="6" ry="10" fill="#fff" opacity=".6"/><path d="M105 167 l5 6 5-6z" fill="#CB6677"/></g></svg>`;
+function cumpleBanner(){
+  return `<div class="bday"><div class="confetti" aria-hidden="true">${CONFETTI}</div>
+    <div class="bday-txt"><div class="kick">Cumpleaños</div><h1>Celebra su día <em>con un detalle</em></h1><p>20 regalos elegidos para cumpleaños: flores con globo, boxes con su nombre, brindis y desayunos sorpresa.</p></div>
+    ${BALLOONS}</div>`;
+}
+let catState={};
+function viewCategory(k){
+  const g=GROUPS.find(x=>x.k===k); if(!g) return viewHome();
+  const all=inGroup(k), st=catState[k]||(catState[k]={sub:null,sort:'rel'});
+  const subs=[...new Set(all.map(p=>subOf(p,k)))];
+  return `<div class="wrap">
+    <div class="crumb"><a href="#inicio">Inicio</a><span>/</span><span>${g.l}</span></div>
+    ${k==='cumple'?cumpleBanner():`<div class="phead"><div><h1>${g.l}</h1><p>${g.d}</p></div></div>`}
+    <div class="filters">
+      <div class="subs" id="subs">${subs.length>1?[`<button class="sub" data-s="" aria-pressed="${!st.sub}">Todos</button>`,...subs.map(s=>`<button class="sub" data-s="${esc(s)}" aria-pressed="${st.sub===s}">${esc(s)}</button>`)].join(''):''}</div>
+      <div style="display:flex;gap:12px;align-items:center"><span class="count" id="count"></span>
+      <select class="select" id="sort" aria-label="Ordenar"><option value="rel">Destacados</option><option value="asc">Precio: menor a mayor</option><option value="desc">Precio: mayor a menor</option></select></div>
+    </div>
+    <div class="grid" id="cgrid"></div>
+  </div>`;
+}
+function fillCategory(k){
+  const st=catState[k]; let list=inGroup(k);
+  if(st.sub) list=list.filter(p=>subOf(p,k)===st.sub);
+  if(st.sort==='asc') list=[...list].sort((a,b)=>a.price-b.price);
+  if(st.sort==='desc') list=[...list].sort((a,b)=>b.price-a.price);
+  $('#count').textContent = list.length+(list.length===1?' producto':' productos');
+  const gEl=$('#cgrid'); gEl.innerHTML=list.map(card).join(''); stagger(gEl);
+  $('#sort').value=st.sort;
+  $('#subs').onclick=e=>{const b=e.target.closest('.sub'); if(!b) return; st.sub=b.dataset.s||null; [...$('#subs').children].forEach(x=>x.setAttribute('aria-pressed',(x.dataset.s||null)===st.sub)); fillCategory(k);};
+  $('#sort').onchange=e=>{st.sort=e.target.value; fillCategory(k);};
+}
+
+let cur=null, curVar=0, curQty=1, curExtras=new Set();
+function viewProduct(id){
+  const p=byId[id]; if(!p) return viewHome();
+  cur=p; curVar=0; curQty=1; curExtras=new Set();
+  const g=GROUPS.find(x=>x.k===p.grp);
+  const min=addDays(limaToday(), p.lead||0);
+  const date = form.lastDate && form.lastDate>=min ? form.lastDate : min;
+  const related = inGroup(p.grp).filter(x=>x.id!==p.id).slice(0,5);
+  return `<div class="wrap">
+    <div class="crumb"><a href="#inicio">Inicio</a><span>/</span><a href="#c-${g.k}">${g.l}</a><span>/</span><span>${esc(p.name)}</span></div>
+    <div class="pd">
+      <div class="pd-media"><button class="pd-img" id="pdImg" aria-label="Ampliar imagen de ${esc(p.name)}">${imgTag(p.id,p.name,true)}</button><span class="zoomhint"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M11 8v6M8 11h6"/></svg>Toca la imagen para ampliarla</span></div>
+      <div class="pd-info">
+        <div>${p.tag?`<span class="pd-tag">${esc(p.tag)}</span>`:''}<h1 style="margin-top:${p.tag?10:0}px">${esc(p.name)}</h1></div>
+        <div class="pd-code">${[p.code,p.sub].filter(Boolean).join(' · ')}</div>
+        <div class="pd-price price" id="pdPrice"></div>
+        <ul class="items">${p.items.map(i=>`<li>${esc(i)}</li>`).join('')}</ul>
+        <div class="box">
+          ${p.variants?`<div class="fld"><span class="lbl">Elige una opción</span><div class="variants" id="pdVars">${p.variants.map((v,i)=>`<button type="button" data-i="${i}" aria-pressed="${i===0}">${esc(v[0])} · ${money(v[1])}</button>`).join('')}</div></div>`:''}
+          <div class="row2">
+            <div class="fld"><label for="pdDate">Fecha de entrega</label><input type="date" id="pdDate" min="${min}" value="${date}" required></div>
+            <div class="fld"><label for="pdTurn">Turno</label>
+              <select id="pdTurn"><option>Primer turno (9 a. m. – 1 p. m.)</option><option>Segundo turno (12 m. – 6 p. m.)</option><option>Hora especial (a coordinar)</option></select></div>
+          </div>
+          <p class="hint">${p.lead?`Este producto se pide con ${p.lead===1?'1 día':p.lead+' días'} de anticipación.`:'Puedes pedirlo para hoy mismo, según disponibilidad.'}</p>
+          <div class="fld"><label for="pdDed">Dedicatoria</label>
+            <textarea id="pdDed" maxlength="400" placeholder="Escribe el mensaje que irá en la tarjeta. Ej.: «Feliz cumpleaños, mamá. Gracias por tanto amor. Te quiero, Ana»"></textarea>
+            <div class="cnt" id="pdCnt">0 / 400</div></div>
+          ${p.grp!=='extras'?`<div class="fld"><span class="lbl">Agrégale un detalle (opcional)</span><div class="extras" id="pdExtras">${EXTRA_IDS.map(x=>{const e=byId[x]; return `<button type="button" class="extra" data-x="${x}" aria-pressed="false"><img src="${imgSrc(x)}" alt="" onerror="this.style.visibility='hidden'"><span><b>${esc(e.name)}</b>+ ${money(e.price)}</span></button>`;}).join('')}</div></div>`:''}
+          <p class="err" id="pdErr" role="alert"></p>
+          <div class="addrow">
+            <div class="qty" aria-label="Cantidad"><button type="button" id="qMinus" aria-label="Menos">−</button><span id="qVal">1</span><button type="button" id="qPlus" aria-label="Más">+</button></div>
+            <button class="addbtn" id="pdAdd">Agregar al carrito</button>
+          </div>
+        </div>
+        <div class="perks">
+          <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.6"/><circle cx="17" cy="17.5" r="1.6"/></svg>Delivery en Lima según distrito</span>
+          <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg>Personalizado a mano</span>
+          <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 3h10v18l-5-3-5 3z"/></svg>Boleta y factura</span>
+        </div>
+      </div>
+    </div>
+    <section class="block"><div class="bhead"><div><h2>También te puede gustar</h2></div><a class="link" href="#c-${g.k}">Ver ${g.l.toLowerCase()} ${ARROW}</a></div>
+    <div class="grid">${related.map(card).join('')}</div></section>
+  </div>`;
+}
+function unitPrice(p,v){ return p.variants ? p.variants[v][1] : p.price; }
+function wireProduct(){
+  const p=cur;
+  const upd=()=>{ let t=unitPrice(p,curVar)*curQty; curExtras.forEach(x=>t+=byId[x].price);
+    $('#pdPrice').innerHTML = money(unitPrice(p,curVar)) + (p.old?`<s>${money(p.old)}</s>`:'');
+    $('#pdAdd').textContent = 'Agregar al carrito · ' + money(t); };
+  upd();
+  const ded=$('#pdDed'); ded.oninput=()=>{const n=ded.value.length; $('#pdCnt').textContent=n+' / 400'; $('#pdCnt').classList.toggle('full',n>=400);};
+  if($('#pdVars')) $('#pdVars').onclick=e=>{const b=e.target.closest('button'); if(!b) return; curVar=+b.dataset.i; [...$('#pdVars').children].forEach((x,i)=>x.setAttribute('aria-pressed',i===curVar)); upd();};
+  if($('#pdExtras')) $('#pdExtras').onclick=e=>{const b=e.target.closest('.extra'); if(!b) return; const x=b.dataset.x; curExtras.has(x)?curExtras.delete(x):curExtras.add(x); b.setAttribute('aria-pressed',curExtras.has(x)); upd();};
+  $('#qMinus').onclick=()=>{curQty=Math.max(1,curQty-1); $('#qVal').textContent=curQty; upd();};
+  $('#qPlus').onclick=()=>{curQty=Math.min(20,curQty+1); $('#qVal').textContent=curQty; upd();};
+  $('#pdImg').onclick=()=>lightbox(p);
+  $('#pdAdd').onclick=e=>{
+    const d=$('#pdDate'), date=d.value, min=d.min;
+    if(!date){ $('#pdErr').textContent='Elige la fecha de entrega.'; d.focus(); return; }
+    if(date<min){ $('#pdErr').textContent='Elige una fecha desde el '+niceDate(min)+'.'; d.focus(); return; }
+    $('#pdErr').textContent='';
+    const line={id:p.id, v:curVar, qty:curQty, date, turn:$('#pdTurn').value, ded:ded.value.trim().slice(0,400)};
+    form.lastDate=date; saveForm();
+    cart.push(line);
+    curExtras.forEach(x=>cart.push({id:x,v:0,qty:1,date,turn:line.turn,ded:'',with:p.name}));
+    save(); renderCart(); fly(e.currentTarget);
+    toast(`${p.name} se agregó a tu pedido`);
+    ded.value=''; ded.oninput(); curExtras.clear(); document.querySelectorAll('#pdExtras .extra').forEach(b=>b.setAttribute('aria-pressed','false')); upd();
+  };
+}
+function viewTerms(){
+  return `<div class="wrap terms">
+    <div class="crumb"><a href="#inicio">Inicio</a><span>/</span><span>Términos y condiciones</span></div>
+    <div class="phead"><div><h1>Términos y condiciones</h1><p>Todo lo que debes saber antes de hacer tu pedido.</p></div></div>
+    <details class="t" open><summary>Horarios de entrega</summary><ul>
+      <li>Primer turno: 9:00 a. m. – 1:00 p. m.</li><li>Segundo turno: 12:00 m. – 6:00 p. m. (gift boxes: 2:00 – 5:00 p. m.).</li><li>Horas especiales: consultar disponibilidad. Aceptamos pedidos para el mismo día.</li></ul></details>
+    <details class="t" open><summary>Entrega</summary><ul>
+      <li>Cuando el servicio de entrega llega a la dirección, el tiempo de espera máximo es de 10 minutos.</li>
+      <li>Verifica que el destinatario o la persona encargada esté presente en el horario de entrega. Si no está, se entregará en recepción o a un amigo o familiar disponible.</li>
+      <li>Si no hay recepción ni familiares o amigos disponibles, el pedido vuelve a la tienda con un recargo por el servicio de regreso.</li>
+      <li>Si la dirección está en una manzana (Mz./Lt.), envíanos la ubicación de Google Maps.</li></ul></details>
+    <details class="t"><summary>Envíos y precios</summary><ul>
+      <li>Envíos el mismo día en Lima y a provincias mediante Shalom (1 a 2 días hábiles).</li>
+      <li>El costo de envío se cotiza según la distancia de la entrega.</li>
+      <li>Los precios incluyen IGV. Emitimos boleta y factura. Precios al por mayor a partir de 6 unidades.</li></ul></details>
+    <details class="t"><summary>Productos</summary><ul>
+      <li>Todos los regalos son personalizados.</li>
+      <li>Si se agota algún artículo de un box, lo reemplazamos por uno de igual o mejor calidad.</li>
+      <li>Algunos productos se piden con anticipación; lo verás indicado en cada uno.</li></ul></details>
+    <details class="t"><summary>Pagos</summary><ul>
+      <li>Transferencia o depósito: BCP, Scotiabank o Yape.</li>
+      <li>Pagos en línea con link de IziPay o código de PagoEfectivo (+5%). Aceptamos todas las tarjetas.</li>
+      <li>Tu pedido se agenda cuando se confirma el pago.</li></ul></details>
+    <details class="t"><summary>Cambios y devoluciones</summary><ul><li>No se aceptan cambios ni devoluciones.</li></ul></details>
+  </div>`;
+}
+const norm = s => s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
+const BDAY=/^(cumple|cumpl|cumpleano|cumpleanos|birthday|happy birthday|feliz cumple|feliz cumpleanos|bday)/;
+function viewSearch(q){
+  const n=norm(q);
+  const bd=BDAY.test(n)||n.includes('cumple')||n.includes('birthday');
+  let list=PRODUCTS.filter(p=>norm(p.name+' '+(p.code||'')+' '+p.sub+' '+(GL[p.grp]||'')+' '+p.items.join(' ')+(p.cumple?' cumpleanos cumple birthday':'')).includes(n));
+  if(bd) list=inGroup('cumple').concat(list.filter(p=>!p.cumple));
+  return `<div class="wrap">
+    <div class="crumb"><a href="#inicio">Inicio</a><span>/</span><span>Búsqueda</span></div>
+    <div class="phead"><div><h1>«${esc(q)}»</h1>${bd?'<p><a class="link" href="#c-cumple">Ver la sección Cumpleaños '+ARROW+'</a></p>':''}<p>${list.length? list.length+(list.length===1?' producto encontrado':' productos encontrados') : 'No encontramos productos con esa palabra. Prueba con «rosas», «vino» o «taza».'}</p></div></div>
+    <div class="grid" id="sgrid">${list.map(card).join('')}</div></div>`;
+}
+
+/* ---------- router ---------- */
+function route(){
+  clearInterval(slideTimer);
+  document.querySelectorAll('.lb').forEach(x=>x.remove()); document.body.style.overflow='';
+  const h=location.hash.slice(1)||'inicio';
+  let html, tab='inicio', after=null;
+  if(h.startsWith('c-')){ const k=h.slice(2); tab=k; html=viewCategory(k); after=()=>fillCategory(k); }
+  else if(h.startsWith('p-')){ const p=byId[h.slice(2)]; tab=p?p.grp:'inicio'; html=viewProduct(h.slice(2)); after=p?wireProduct:null; }
+  else if(h==='terminos'){ tab=''; html=viewTerms(); }
+  else { html=viewHome(); after=startCarousel; }
+  if(!h.startsWith('p-') && !h.startsWith('c-') && h!=='terminos' && h!=='inicio'){ /* unknown */ }
+  const v=$('#view'); v.classList.remove('enter'); v.innerHTML=html; void v.offsetWidth; v.classList.add('enter');
+  renderTabs(tab);
+  if(after) after();
+  if($('#q').value && !h.startsWith('buscar')) $('#q').value='';
+  window.scrollTo({top:0,behavior:'instant'});
+  setupReveal();
+}
+addEventListener('hashchange',()=>withVeil(route));
+let qT; $('#q').addEventListener('input',e=>{ clearTimeout(qT); const q=e.target.value.trim(); qT=setTimeout(()=>{
+  if(!q){ route(); return; }
+  clearInterval(slideTimer);
+  const v=$('#view'); v.innerHTML=viewSearch(q); renderTabs(''); setupReveal();
+},180); });
+
+/* ---------- motion ---------- */
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let io=null;
+function setupReveal(){
+  if(reduce || !('IntersectionObserver' in window)) return;
+  io && io.disconnect();
+  io=new IntersectionObserver(es=>es.forEach(en=>{ if(en.isIntersecting){ en.target.classList.remove('pre'); io.unobserve(en.target);} }),{rootMargin:'0px 0px -8% 0px'});
+  const vh=innerHeight;
+  document.querySelectorAll('#view .block, #view .band, #view .ctile, #view .grid .card, #view .promos .card').forEach((el,i)=>{
+    if(el.getBoundingClientRect().top > vh*0.92){ el.classList.add('reveal','pre'); el.style.transitionDelay = (el.classList.contains('card')||el.classList.contains('ctile')) ? ((i%5)*60)+'ms' : '0ms'; io.observe(el); }
+  });
+}
+function stagger(el){ if(reduce) return; [...el.children].forEach((c,i)=>{ c.style.animation=`enter .45s var(--ease) ${Math.min(i,14)*35}ms both`; }); }
+function fly(from){
+  if(reduce) return;
+  const a=from.getBoundingClientRect(), b=$('#openCart').getBoundingClientRect();
+  const d=document.createElement('div'); d.className='flydot'; d.style.left=(a.left+a.width/2)+'px'; d.style.top=(a.top+a.height/2)+'px'; document.body.appendChild(d);
+  requestAnimationFrame(()=>{ d.style.transform=`translate(${b.left+b.width/2-(a.left+a.width/2)}px,${b.top+b.height/2-(a.top+a.height/2)}px) scale(.5)`; d.style.opacity='.3'; });
+  setTimeout(()=>{ d.remove(); const c=$('#openCart'); c.classList.remove('bump'); void c.offsetWidth; c.classList.add('bump'); },720);
+}
+
+function lightbox(p){
+  const d=document.createElement('div'); d.className='lb'; d.setAttribute('role','dialog'); d.setAttribute('aria-label',p.name);
+  d.innerHTML=`<img src="${imgSrc(p.id)}" alt="${esc(p.name)}"><button class="xbtn lbx" aria-label="Cerrar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg></button><span class="lbcap">${esc(p.name)} · toca la foto para acercar</span>`;
+  const close=()=>{ d.classList.remove('on'); document.body.style.overflow=''; removeEventListener('keydown',key); setTimeout(()=>d.remove(),300); };
+  const key=e=>{ if(e.key==='Escape') close(); };
+  d.addEventListener('click',e=>{ if(e.target.tagName==='IMG'){ d.classList.toggle('big'); e.stopPropagation(); } else close(); });
+  addEventListener('keydown',key); document.body.appendChild(d); document.body.style.overflow='hidden';
+  requestAnimationFrame(()=>d.classList.add('on')); d.querySelector('.lbx').focus();
+}
+
+/* ---------- cart ---------- */
+const scrim=$('#scrim');
+function lineName(l){ const p=byId[l.id]; return p.name + (p.variants?` (${p.variants[l.v][0]})`:''); }
+const lineTotal = l => unitPrice(byId[l.id],l.v)*l.qty;
+function renderCart(){
+  const n=cart.reduce((a,l)=>a+l.qty,0);
+  $('#cartN').textContent=n;
+  $('#cartTot').textContent=money(cart.reduce((a,l)=>a+lineTotal(l),0));
+  $('#cartFoot').hidden = !cart.length;
+  $('#cartBody').innerHTML = cart.length ? cart.map((l,i)=>{const p=byId[l.id]; return `<div class="li">
+    <a class="thumb" href="#p-${p.id}">${imgTag(p.id,'')}</a>
+    <div><div class="t1"><b>${esc(lineName(l))}</b><span class="price">${money(lineTotal(l))}</span></div>
+    <div class="d">${p.code?p.code+' · ':''}${esc(niceDate(l.date))} · ${esc(l.turn.split(' (')[0])}${l.with?` · para acompañar ${esc(l.with)}`:''}</div>
+    <label class="fld" style="margin-top:8px"><span class="lbl" style="font-size:10.5px">Dedicatoria</span><textarea data-ded="${i}" maxlength="400" rows="2" style="min-height:56px;font-size:13px;padding:8px 10px" placeholder="Opcional">${esc(l.ded)}</textarea></label>
+    <div class="acts"><div class="qty"><button data-a="m" data-i="${i}" aria-label="Menos">−</button><span>${l.qty}</span><button data-a="p" data-i="${i}" aria-label="Más">+</button></div>
+    <button class="linkbtn" data-a="r" data-i="${i}">Quitar</button></div></div></div>`;}).join('')
+    : `<div class="cempty"><img src="assets/iso_red.png" alt=""><p>Tu pedido está vacío.<br>Elige un detalle para empezar.</p><a class="btn red" href="#inicio" id="goShop" style="margin-top:8px">Ir a la tienda</a></div>`;
+  updWA();
+}
+$('#cartBody').addEventListener('click',e=>{
+  if(e.target.closest('#goShop')||e.target.closest('.thumb')){ closeCart(); return; }
+  const b=e.target.closest('[data-a]'); if(!b) return; const i=+b.dataset.i, a=b.dataset.a;
+  if(a==='m') cart[i].qty=Math.max(1,cart[i].qty-1);
+  if(a==='p') cart[i].qty=Math.min(20,cart[i].qty+1);
+  if(a==='r') cart.splice(i,1);
+  save(); renderCart();
+});
+$('#cartBody').addEventListener('input',e=>{ const t=e.target.closest('[data-ded]'); if(!t) return; cart[+t.dataset.ded].ded=t.value.slice(0,400); save(); updWA(); });
+function openCart(){ const c=$('#cart'); c.hidden=false; requestAnimationFrame(()=>c.classList.add('on')); scrim.classList.add('on'); document.body.style.overflow='hidden'; }
+function closeCart(){ const c=$('#cart'); if(c.hidden) return; c.classList.remove('on'); scrim.classList.remove('on'); document.body.style.overflow=''; setTimeout(()=>{ if(!c.classList.contains('on')) c.hidden=true; },400); }
+$('#openCart').onclick=openCart; $('#cartClose').onclick=closeCart; scrim.onclick=closeCart; $('#termsLink').onclick=closeCart;
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeCart(); });
+['cName','cDist','cTo'].forEach(id=>{ const el=$('#'+id); el.value=form[id]||''; el.addEventListener('input',()=>{form[id]=el.value; saveForm(); updWA();}); });
+$('#cTerms').addEventListener('change',updWA);
+function buildMsg(){
+  const lines=['Hola Casa Amara, quiero hacer este pedido desde la tienda web:',''];
+  cart.forEach((l,i)=>{const p=byId[l.id];
+    lines.push(`${i+1}. ${lineName(l)}${p.code?' ['+p.code+']':''} × ${l.qty} — ${money(lineTotal(l))}`);
+    lines.push(`   Entrega: ${niceDate(l.date)} (${l.date.split('-').reverse().join('/')}), ${l.turn}`);
+    if(l.with) lines.push(`   Para acompañar: ${l.with}`);
+    if(l.ded) lines.push(`   Dedicatoria: "${l.ded}"`);
+    lines.push('');
+  });
+  lines.push(`Subtotal: ${money(cart.reduce((a,l)=>a+lineTotal(l),0))} (más delivery según distrito)`);
+  lines.push(`Mi nombre: ${form.cName||''}`);
+  if(form.cTo) lines.push(`Recibe: ${form.cTo}`);
+  lines.push(`Distrito de entrega: ${form.cDist||''}`);
+  lines.push('','Quedo atento(a) a la confirmación y al costo de delivery. Gracias.');
+  return lines.join('\n');
+}
+function updWA(){
+  const btn=$('#waBtn'), name=(form.cName||'').trim(), dist=(form.cDist||'').trim(), ok=$('#cTerms').checked;
+  let err='';
+  if(cart.length){ if(!name) err='Escribe tu nombre.'; else if(!dist) err='Escribe el distrito de entrega.'; else if(!ok) err='Acepta los términos y condiciones para continuar.'; }
+  const ready=cart.length && !err;
+  btn.setAttribute('aria-disabled', ready?'false':'true');
+  btn.href = ready ? `https://wa.me/${WA}?text=${encodeURIComponent(buildMsg())}` : '#';
+  $('#cartErr').textContent = cart.length ? err : '';
+}
+$('#waBtn').addEventListener('click',e=>{ if(e.currentTarget.getAttribute('aria-disabled')==='true') e.preventDefault(); });
+let tt; function toast(t){ $('#toastTxt').textContent=t; const el=$('#toast'); el.classList.add('on'); clearTimeout(tt); tt=setTimeout(()=>el.classList.remove('on'),3200); }
+$('#toastBtn').onclick=()=>{ $('#toast').classList.remove('on'); openCart(); };
+
+$('#copyMail').onclick=async()=>{ const m='casaamara.pe@gmail.com'; try{ await navigator.clipboard.writeText(m); $('#copyTxt').textContent='· Copiado'; }catch(e){ const r=document.createRange(); r.selectNodeContents($('#copyMail')); const s=getSelection(); s.removeAllRanges(); s.addRange(r); $('#copyTxt').textContent='· Selecciónalo y copia'; } setTimeout(()=>$('#copyTxt').textContent='· Copiar',2500); };
+
+/* ---------- loader & page veil ---------- */
+const T0=performance.now();
+function hideLoader(){ const l=$('#loader'); if(!l||l.classList.contains('off')) return; const wait=Math.max(0,(reduce?300:1300)-(performance.now()-T0)); setTimeout(()=>{ l.classList.add('off'); setTimeout(()=>l.remove(),600); },wait); }
+addEventListener('load',hideLoader); setTimeout(hideLoader,2200);
+let firstRoute=true;
+function withVeil(fn){
+  if(firstRoute||reduce){ firstRoute=false; fn(); return; }
+  const v=$('#veil'); v.classList.add('on');
+  setTimeout(()=>{ fn(); setTimeout(()=>v.classList.remove('on'),260); },200);
+}
+
+/* ---------- chat assistant ---------- */
+// Si la página está publicada en tu propio hosting (Netlify), el chat usa Google Gemini a través de esta función.
+// La clave de la API vive SOLO en el servidor (variable GEMINI_API_KEY), nunca en esta página.
+const CHAT_ENDPOINT = (/^https?:$/.test(location.protocol) && !/claude|anthropic|localhost/.test(location.hostname)) ? '/.netlify/functions/chat' : '';
+const WELCOME='¡Hola! Soy la asistente de Casa Amara 💛 ¿Te ayudo a encontrar el regalo perfecto?';
+const chatHist=[]; let chatStarted=false, guide={}, useAI=!!CHAT_ENDPOINT;
+const cm=()=>$('#cmsgs');
+function scrollChat(){ const c=cm(); c.scrollTop=c.scrollHeight; }
+function fmt(s){ // escape, then allow **bold**, product links [txt](#p-id) and line breaks
+  let h=esc(s);
+  h=h.replace(/\[([^\]]{1,80})\]\(#p-([a-z0-9-]{3,40})\)/g,(m,txt,id)=>byId[id]?`<a href="#p-${id}">${txt}</a>`:txt);
+  h=h.replace(/\*\*([^*]{1,120})\*\*/g,'<b>$1</b>').replace(/\n/g,'<br>');
+  return h;
+}
+function say(text,who='bot'){ const d=document.createElement('div'); d.className='msg '+who; d.innerHTML= who==='bot'?fmt(text):esc(text); cm().appendChild(d); scrollChat(); return d; }
+function chips(list){ const w=document.createElement('div'); w.className='chips'; list.forEach(([label,fn])=>{ const b=document.createElement('button'); b.className='chip'; b.type='button'; b.textContent=label; b.onclick=()=>{ w.remove(); say(label,'me'); fn(); }; w.appendChild(b); }); cm().appendChild(w); scrollChat(); }
+function recs(list){ const w=document.createElement('div'); w.className='recs'; w.innerHTML=list.map(p=>`<a class="rec" href="#p-${p.id}"><img src="${imgSrc(p.id)}" alt=""><div><b>${esc(p.name)}</b><span>${p.variants?'desde ':''}${money(p.price)}</span></div><em>Ver →</em></a>`).join(''); cm().appendChild(w); scrollChat(); }
+function typing(){ const d=say(''); d.innerHTML='<span class="typing"><i></i><i></i><i></i></span>'; return d; }
+function later(fn,ms=650){ const d=typing(); setTimeout(()=>{ d.remove(); fn(); },reduce?50:ms); }
+function mainMenu(){ chips([['Ayúdame a elegir un regalo',askWho],['¿Cómo compro?',()=>later(()=>{answer('comprar');more();})],['Envíos y horarios',()=>later(()=>{answer('envio');more();})],['Contacto',()=>later(()=>{answer('contacto');more();})]]); }
+function more(){ chips([['Elegir un regalo',askWho],['Tengo otra pregunta',()=>later(()=>say('Claro, escríbeme tu pregunta aquí abajo 👇'))]]); }
+const FAQ={
+  comprar:'Es muy fácil:\n1. Elige tu detalle y abre su página.\n2. Escoge la **fecha de entrega**, el turno y escribe tu **dedicatoria** (hasta 400 caracteres).\n3. Agrégalo al carrito y toca **Comprar por WhatsApp**: tu pedido nos llega ya escrito.\n4. Te confirmamos disponibilidad y delivery, y con tu pago agendamos la entrega.',
+  envio:'Hacemos entregas **el mismo día en Lima** y a provincias por Shalom (1 a 2 días hábiles). El costo de delivery se cotiza según el distrito.\nTurnos: **9 a. m. – 1 p. m.** y **12 m. – 6 p. m.** (gift boxes de 2 a 5 p. m.). Horas especiales, según disponibilidad.',
+  pago:'Puedes pagar por transferencia o depósito (BCP, Scotiabank o Yape) o en línea con IziPay o PagoEfectivo (+5%). Aceptamos todas las tarjetas. Tu pedido se agenda al confirmar el pago.',
+  contacto:'Puedes escribirnos por WhatsApp al **988 869 994** o al correo **casaamara.pe@gmail.com**. ¡Te respondemos con gusto!',
+  cambios:'Como todos nuestros regalos son personalizados, no se aceptan cambios ni devoluciones. Si tienes una duda antes de comprar, escríbenos al WhatsApp 988 869 994.',
+  factura:'Sí, emitimos boleta y factura. Los precios ya incluyen IGV. Para pedidos de 6 unidades o más tenemos precios por mayor.',
+};
+function answer(k){ say(FAQ[k]); }
+function askWho(){ guide={}; later(()=>{ say('¡Me encanta! Cuéntame, ¿para quién es el regalo?'); chips([['Para ella',()=>{guide.who='ella';askOcc();}],['Para él',()=>{guide.who='el';askOcc();}],['Para mi pareja',()=>{guide.who='pareja';askOcc();}],['Para mi mamá o papá',()=>{guide.who='padres';askOcc();}],['Para mi equipo o clientes',()=>{guide.who='empresa';guide.occ='corporativo';askBudget();}]]); }); }
+function askOcc(){ later(()=>{ say('¿Y qué ocasión celebran?'); chips([['Cumpleaños',()=>{guide.occ='cumple';askBudget();}],['Aniversario o amor',()=>{guide.occ='amor';askBudget();}],['Agradecimiento o detalle',()=>{guide.occ='detalle';askBudget();}],['Graduación',()=>{guide.occ='graduacion';askBudget();}],['Condolencias',()=>{guide.occ='condolencias';askBudget();}],['Sin motivo, solo porque sí',()=>{guide.occ='detalle';askBudget();}]]); }); }
+function askBudget(){ later(()=>{ say('Perfecto. ¿Cuál es tu presupuesto aproximado?'); chips([['Hasta S/ 60',()=>{guide.b=[0,60];recommend();}],['S/ 60 a S/ 100',()=>{guide.b=[60,100];recommend();}],['S/ 100 a S/ 150',()=>{guide.b=[100,150];recommend();}],['Más de S/ 150',()=>{guide.b=[150,9999];recommend();}]]); }); }
+function pool(){
+  const {who,occ}=guide; let s=PRODUCTS.filter(p=>p.grp!=='extras');
+  const W={ella:['flores','ella','desayunos','brindis','ocasiones'],el:['el','brindis','desayunos'],pareja:['flores','ocasiones','brindis','ella','el'],padres:['flores','desayunos','ella','el','brindis'],empresa:['corporativo','el','ella']}[who]||[];
+  const score=p=>{ let v=0;
+    if(W.includes(p.grp)) v+=3-W.indexOf(p.grp)*0.3;
+    if(who==='el' && p.grp==='brindis' && p.sub==='Para él') v+=2;
+    if(who==='ella' && p.grp==='brindis' && p.sub==='Para ella') v+=1;
+    if(occ==='cumple' && p.cumple) v+=5;
+    if(occ==='amor' && (p.sub==='Aniversario y amor' || (p.grp==='flores' && /ros/i.test(p.name+p.items.join(' '))))) v+=4;
+    if(occ==='graduacion' && p.sub==='Graduación') v+=6;
+    if(occ==='condolencias' && p.sub==='Condolencias') v+=9;
+    if(occ==='corporativo' && p.grp==='corporativo') v+=6;
+    if(occ==='detalle' && ['ella','el','flores','desayunos'].includes(p.grp)) v+=1.5;
+    if(p.feat) v+=1.2-(p.feat*0.1); if(BEST.includes(p.id)) v+=1; return v; };
+  return s.map(p=>[score(p),p]).filter(x=>x[0]>2).sort((a,b)=>b[0]-a[0]).map(x=>x[1]);
+}
+function recommend(){
+  later(()=>{
+    const all=pool(), [lo,hi]=guide.b; let r=all.filter(p=>p.price>=lo&&p.price<=hi).slice(0,4); let note='';
+    if(r.length<2){ r=all.slice().sort((a,b)=>Math.abs(a.price-(lo+hi)/2)-Math.abs(b.price-(lo+hi)/2)).slice(0,4); note=' No encontré muchas opciones exactas en ese rango, así que te muestro las más cercanas.'; }
+    say('¡Tengo algunas ideas para ti!'+note+' Toca cualquiera para ver sus detalles:');
+    recs(r);
+    setTimeout(()=>{ say('En cada producto puedes elegir la fecha y escribir tu dedicatoria. ¿Te ayudo con algo más?'); chips([['Ver otras opciones',askWho],['¿Cómo compro?',()=>later(()=>{answer('comprar');more();})],['Hablar por WhatsApp',()=>later(()=>{say('Escríbenos aquí: [WhatsApp 988 869 994](https://wa.me/51988869994) 💛'); linkify();})]]); },reduce?0:500);
+  },900);
+}
+function linkify(){ const last=cm().lastElementChild; if(last) last.innerHTML=last.innerHTML.replace(/\[([^\]]+)\]\((https:\/\/wa\.me\/[0-9]+)\)/g,'<a href="$2" target="_blank" rel="noopener">$1</a>'); }
+function localReply(q){
+  const n=norm(q);
+  const has=(...w)=>w.some(x=>n.includes(x));
+  if(has('hola','buenas','buenos')&&n.length<25){ say('¡Hola! 💛 Cuéntame qué buscas o déjame ayudarte a elegir.'); mainMenu(); return; }
+  if(has('como compr','como pido','pedido','comprar','hacer un pedido')){ answer('comprar'); more(); return; }
+  if(has('envio','delivery','entrega','provincia','distrito','shalom','llega','horario','turno','hora')){ answer('envio'); more(); return; }
+  if(has('pago','pagar','yape','plin','tarjeta','transfer','izipay','deposito')){ answer('pago'); more(); return; }
+  if(has('devol','cambio','reembolso')){ answer('cambios'); more(); return; }
+  if(has('factura','boleta','igv','por mayor','mayoreo')){ answer('factura'); more(); return; }
+  if(has('contact','whatsapp','wsp','correo','telefono','numero','llamar')){ answer('contacto'); more(); return; }
+  if(has('recomiend','ayuda','regalo','elegir','sugier','que le regalo','ideas')){ askWho(); return; }
+  // product search with optional budget
+  const m=n.match(/(\d{2,4})/); const max=m?+m[1]:null;
+  const bday=has('cumple','birthday');
+  const words=n.split(/[^a-z0-9ñ]+/).filter(w=>w.length>3 && !['para','quiero','busco','algo','menos','soles','hasta','precio','tienen','tienes','cuanto','cuesta','regalo'].includes(w));
+  let found=PRODUCTS.filter(p=>{ const hay=norm(p.name+' '+p.sub+' '+(GL[p.grp]||'')+' '+p.items.join(' '))+(p.cumple?' cumpleanos cumple':''); return (bday&&p.cumple) || (words.length && words.some(w=>hay.includes(w.replace(/s$/,'')))); });
+  if(max) found=found.filter(p=>p.price<=max);
+  if(found.length){ say(`Encontré ${found.length>4?'estas opciones':'esto'} en nuestro catálogo${max?` hasta S/ ${max}`:''}:`); recs(found.slice(0,4)); if(found.length>4) say('Hay más opciones en la tienda. ¿Quieres que te ayude a afinar la búsqueda?'); more(); return; }
+  say('Mmm, esa no la sé con seguridad 🙈 Para ayudarte mejor, escríbenos al correo **casaamara.pe@gmail.com** o por [WhatsApp 988 869 994](https://wa.me/51988869994) y te respondemos pronto.'); linkify(); more();
+}
+async function aiReply(q){
+  const d=typing();
+  try{
+    const r=await fetch(CHAT_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:chatHist.slice(-12)})});
+    if(!r.ok) throw new Error('http '+r.status);
+    const j=await r.json(); d.remove();
+    const txt=(j.reply||'').trim(); if(!txt) throw new Error('empty');
+    chatHist.push({role:'model',text:txt});
+    const b=say(txt); b.innerHTML=b.innerHTML.replace(/\[([^\]]+)\]\((https:\/\/wa\.me\/[0-9]+)\)/g,'<a href="$2" target="_blank" rel="noopener">$1</a>');
+    const ids=[...new Set([...txt.matchAll(/#p-([a-z0-9-]+)/g)].map(m=>m[1]).filter(id=>byId[id]))].slice(0,4);
+    if(ids.length) recs(ids.map(id=>byId[id]));
+  }catch(e){ d.remove(); useAI=false; localReply(q); }
+}
+function openChat(){ const c=$('#chat'); c.classList.add('on'); c.setAttribute('aria-hidden','false'); $('#chatFab').setAttribute('aria-expanded','true'); $('#chatFab').classList.remove('hint');
+  if(!chatStarted){ chatStarted=true; later(()=>{ say(WELCOME); mainMenu(); },500); }
+  setTimeout(()=>$('#cinput').focus({preventScroll:true}),350); }
+function closeChat(){ const c=$('#chat'); c.classList.remove('on'); c.setAttribute('aria-hidden','true'); $('#chatFab').setAttribute('aria-expanded','false'); }
+$('#chatFab').onclick=()=>$('#chat').classList.contains('on')?closeChat():openChat();
+$('#chatClose').onclick=closeChat;
+$('#cmsgs').addEventListener('click',e=>{ const a=e.target.closest('a[href^="#p-"]'); if(a && innerWidth<520) closeChat(); });
+$('#cform').onsubmit=e=>{ e.preventDefault(); const i=$('#cinput'), q=i.value.trim(); if(!q) return; i.value='';
+  document.querySelectorAll('#cmsgs .chips').forEach(x=>x.remove());
+  say(q,'me'); chatHist.push({role:'user',text:q.slice(0,400)});
+  if(useAI) aiReply(q); else later(()=>localReply(q),600); };
+setTimeout(()=>{ if(!chatStarted) $('#chatFab').classList.add('hint'); setTimeout(()=>$('#chatFab').classList.remove('hint'),5000); },4000);
+
+renderCart(); firstRoute=false; route();
+</script>
