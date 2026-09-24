@@ -3,11 +3,11 @@
 const CATALOG = require('./catalog.json');
 
 const catalogText = CATALOG.map(p =>
-  `${p.id} | ${p.nombre} | S/ ${p.precio}${p.opciones ? ' (' + p.opciones.join('; ') + ')' : ''} | ${p.categoria} > ${p.sub}` +
-  `${p.cumpleanos ? ' | apto cumpleaños' : ''}${p.anticipacion_dias ? ` | pedir con ${p.anticipacion_dias} día(s) de anticipación` : ''} | ${p.contenido.join(', ')}`
+  `${p.id} | ${p.nombre} | S/ ${p.precio}${p.opciones ? ' (' + p.opciones.join('; ') + ')' : ''} | ${p.categorias.join(' / ')}` +
+  `${p.cumpleanos ? ' | apto cumpleaños' : ''}${p.anticipacion_dias ? ` | pedir con ${p.anticipacion_dias} día(s) de anticipación` : ''}${p.solo_turno_tarde ? ' | SOLO turno tarde (12 m. – 6 p. m.)' : ''} | ${p.contenido.join(', ')}`
 ).join('\n');
 
-const SYSTEM = `Eres la asistente virtual de Casa Amara, una tienda de regalos personalizados, flores, gift boxes y desayunos sorpresa en Lima, Perú.
+const SYSTEM = `Eres la asistente virtual de Casa Amara, una tienda de regalos personalizados, flores, gift boxes y arreglos personalizados en Lima, Perú.
 Tu objetivo: ayudar a cada cliente a encontrar el regalo ideal y resolver dudas básicas.
 
 ESTILO
@@ -18,6 +18,7 @@ RECOMENDACIONES
 - Recomienda SOLO productos del CATÁLOGO de abajo. Nunca inventes productos, precios ni contenidos.
 - Sugiere de 2 a 4 productos, cada uno con su nombre, precio y link en este formato exacto: [Nombre — S/ precio](#p-ID)
   Ejemplo: [Globo Floral — S/ 135](#p-fl-globofloral)
+- Casa Amara ya no vende desayunos ni cajas alargadas de rosas; si los piden, ofrece alternativas del catálogo.
 - Respeta el presupuesto. Si no hay opciones en ese rango, dilo y ofrece las más cercanas.
 
 INFORMACIÓN DE LA TIENDA
