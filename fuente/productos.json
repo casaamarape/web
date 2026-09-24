@@ -1,0 +1,2361 @@
+[
+ {
+  "id": "fl-mixtura",
+  "name": "Mixtura",
+  "sub": "Ramos",
+  "price": 59,
+  "old": 69,
+  "items": [
+   "4 rosas",
+   "Margaritas, astromelias, follaje y claveles fucsias",
+   "Dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores"
+ },
+ {
+  "id": "fl-favorita",
+  "name": "Favorita",
+  "sub": "Ramos",
+  "price": 69,
+  "old": 80,
+  "items": [
+   "6 rosas",
+   "Flores estacionales moradas y claveles fucsias",
+   "Dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores"
+ },
+ {
+  "id": "fl-lovebox",
+  "name": "Love Box",
+  "sub": "Tulipanes",
+  "price": 95,
+  "items": [
+   "3 tulipanes con follaje",
+   "Una gerbera",
+   "Dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores"
+ },
+ {
+  "id": "fl-unica1",
+  "name": "Única 1",
+  "sub": "Ramos",
+  "price": 65,
+  "items": [
+   "Ramo de 6 rosas y gypsophila en papel coreano",
+   "Base con espuma floral (mayor durabilidad)",
+   "Dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores"
+ },
+ {
+  "id": "fl-unica2",
+  "name": "Única 2",
+  "sub": "Ramos",
+  "price": 65,
+  "items": [
+   "Ramo de 6 rosas, follaje y flores moradas en papel coreano",
+   "Base con espuma floral (mayor durabilidad)",
+   "Dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores"
+ },
+ {
+  "id": "fl-12rosas",
+  "name": "12 Rosas",
+  "sub": "Ramos",
+  "price": 75,
+  "old": 80,
+  "items": [
+   "12 rosas frescas en papel coreano",
+   "Dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores"
+ },
+ {
+  "id": "fl-princesa",
+  "name": "Princesa",
+  "sub": "Ramos",
+  "price": 65,
+  "items": [
+   "14 rosas, gypsophilas y follaje en papel coreano",
+   "Dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores"
+ },
+ {
+  "id": "fl-12pulsera",
+  "name": "12 Rosas + Pulsera",
+  "sub": "Promociones",
+  "price": 89,
+  "old": 99,
+  "items": [
+   "Ramo de rosas, estatis morado y margaritas blancas",
+   "Pulsera",
+   "Dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores"
+ },
+ {
+  "id": "fl-12joyero",
+  "name": "12 Rosas + Joyero",
+  "sub": "Promociones",
+  "price": 95,
+  "old": 105,
+  "items": [
+   "Ramo de rosas, estatis morado y margaritas blancas",
+   "Mini joyero viajero con nombre",
+   "Dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores"
+ },
+ {
+  "id": "fl-clasico",
+  "name": "Clásico",
+  "sub": "Ramos",
+  "price": 90,
+  "items": [
+   "Rosas rojas con decoración de perlas",
+   "Dedicatoria"
+  ],
+  "variants": [
+   [
+    "Con 20 rosas",
+    90
+   ],
+   [
+    "Con 30 rosas",
+    119
+   ]
+  ],
+  "tag": "Preferido por nuestros clientes",
+  "grp": "flores",
+  "home": "flores"
+ },
+ {
+  "id": "fl-40rosas",
+  "name": "40 Rosas",
+  "sub": "Ramos",
+  "price": 145,
+  "items": [
+   "Ramo de 40 rosas",
+   "Mariposas",
+   "Dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores"
+ },
+ {
+  "id": "fl-realeza",
+  "name": "Realeza",
+  "sub": "Ramos",
+  "price": 125,
+  "items": [
+   "Ramo de 30 rosas rosadas y blancas",
+   "Listón con frase personalizable y moño",
+   "Corona de metal",
+   "Dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores"
+ },
+ {
+  "id": "fl-buchon",
+  "name": "Ramo Buchón",
+  "sub": "Ramos",
+  "price": 205,
+  "items": [
+   "60 rosas de 3 colores diferentes",
+   "Listón con frase",
+   "Envuelto en papel coreano",
+   "Dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores",
+  "cumple": 24
+ },
+ {
+  "id": "fl-corazon",
+  "name": "Ramo Corazón",
+  "sub": "Ramos",
+  "price": 250,
+  "items": [
+   "80 rosas rosadas y blancas",
+   "Tela con perlas, tiara de metal y moño con frase",
+   "Papel ramo impermeable",
+   "Dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores"
+ },
+ {
+  "id": "fl-vintage",
+  "name": "Vintage",
+  "sub": "Ramos",
+  "price": 120,
+  "items": [
+   "Ramo de 20 rosas, claveles importados y gypsophila",
+   "Decoración en tul de perlas y papel coreano",
+   "Dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores"
+ },
+ {
+  "id": "fl-claveles",
+  "name": "Claveles Importados",
+  "sub": "Arte floral",
+  "price": 89,
+  "items": [
+   "Ramo de 12 claveles importados, follaje y gypsophila",
+   "Base con espuma floral",
+   "Dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores"
+ },
+ {
+  "id": "fl-minirosas",
+  "name": "Mini Rosas",
+  "sub": "Arte floral",
+  "price": 150,
+  "items": [
+   "Ramo de 12 varas (3 a 4 minirosas por vara)",
+   "Follaje, hortensia y gerbera"
+  ],
+  "grp": "flores",
+  "home": "flores"
+ },
+ {
+  "id": "fl-gerberas",
+  "name": "Gerberas",
+  "sub": "Arte floral",
+  "price": 90,
+  "items": [
+   "12 gerberas con gypsophila y follaje",
+   "Dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores"
+ },
+ {
+  "id": "fl-inglesas",
+  "name": "Rosas Inglesas",
+  "sub": "Arte floral",
+  "price": 120,
+  "items": [
+   "12 varas (2 a 3 rosas inglesas por vara) y follaje",
+   "Dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores"
+ },
+ {
+  "id": "fl-esprosado",
+  "name": "Especial Rosado",
+  "sub": "Arreglos",
+  "price": 85,
+  "items": [
+   "Arreglo de 5 rosas, claveles, estatis blanco, follaje y flor de dragón",
+   "Globo con mensaje personalizado",
+   "Dedicatoria"
+  ],
+  "tag": "¡Más solicitado!",
+  "grp": "flores",
+  "home": "flores",
+  "cumple": 19
+ },
+ {
+  "id": "fl-esprojo",
+  "name": "Especial Rojo",
+  "sub": "Arreglos",
+  "price": 85,
+  "items": [
+   "Arreglo de 5 rosas, claveles, estatis blanco, follaje y flor de dragón",
+   "Globo con mensaje personalizado",
+   "Dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores",
+  "cumple": 20
+ },
+ {
+  "id": "fl-globofloral",
+  "name": "Globo Floral",
+  "sub": "Arreglos",
+  "price": 135,
+  "items": [
+   "35 rosas del color que elijas en caja cilíndrica",
+   "Globo burbuja de 24\" con tu frase favorita",
+   "Tarjeta personalizada"
+  ],
+  "grp": "flores",
+  "home": "flores",
+  "cumple": 13
+ },
+ {
+  "id": "fl-globoferrero",
+  "name": "Globo Floral Ferrero",
+  "sub": "Arreglos",
+  "price": 160,
+  "items": [
+   "22 a 26 rosas premium del color que elijas en caja cilíndrica",
+   "Globo burbuja de 24\" con tu frase favorita",
+   "Ferrero Rocher de 8 unidades",
+   "Tarjeta personalizada"
+  ],
+  "grp": "flores",
+  "home": "flores",
+  "cumple": 14
+ },
+ {
+  "id": "fl-arreglolotso",
+  "name": "Arreglo Lotso",
+  "sub": "Flores y peluches",
+  "price": 125,
+  "items": [
+   "Arreglo de 15 rosas rosadas y follaje en caja cilíndrica",
+   "Peluche de oso Lotso dormilón",
+   "Globo de corazón y dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores",
+  "cumple": 21
+ },
+ {
+  "id": "fl-valentino",
+  "name": "Valentino",
+  "sub": "Flores y peluches",
+  "price": 105,
+  "items": [
+   "Arreglo de 4 rosas rosadas con follaje en caja cilíndrica blanca",
+   "Peluche de oso",
+   "Caja de Ferrero de 4 bombones",
+   "Globo de corazón y dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores"
+ },
+ {
+  "id": "fl-ramolotso",
+  "name": "Ramo Lotso",
+  "sub": "Flores y peluches",
+  "price": 120,
+  "items": [
+   "12 rosas y gypsophila rosada en papel ramo",
+   "Peluche de Lotso",
+   "Globo personalizado",
+   "Base con espuma floral",
+   "Dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores",
+  "cumple": 22
+ },
+ {
+  "id": "fl-hellokitty",
+  "name": "Ramo Hello Kitty",
+  "sub": "Flores y peluches",
+  "price": 145,
+  "items": [
+   "Ramo de 20 rosas y follaje en papel ramo",
+   "Peluche de Hello Kitty importado",
+   "Ferrero Rocher de 4 unidades",
+   "Dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores",
+  "cumple": 23
+ },
+ {
+  "id": "fl-corazonesp",
+  "name": "Corazón Especial",
+  "sub": "Flores y peluches",
+  "price": 155,
+  "items": [
+   "Entre 15 y 20 rosas con mariposas en caja de corazón",
+   "21 chocolates Ferrero Rocher",
+   "Dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores"
+ },
+ {
+  "id": "fl-globopeluche",
+  "name": "Globo, Peluche y Ferrero",
+  "sub": "Flores y peluches",
+  "price": 160,
+  "items": [
+   "Arreglo de 12 rosas del color que elijas",
+   "Ferrero Rocher de 8 unidades",
+   "Peluche de 25 cm a elección",
+   "Globo burbuja de 20\" personalizable",
+   "Tarjeta con foto"
+  ],
+  "grp": "flores",
+  "home": "flores",
+  "cumple": 15
+ },
+ {
+  "id": "fl-5tulipanes",
+  "name": "5 Tulipanes",
+  "sub": "Tulipanes",
+  "price": 99,
+  "items": [
+   "Ramo de 5 tulipanes y follaje",
+   "Dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores"
+ },
+ {
+  "id": "fl-primavera",
+  "name": "Primavera",
+  "sub": "Tulipanes",
+  "price": 110,
+  "items": [
+   "5 tulipanes en color surtido con astromelias en caja cilíndrica",
+   "Dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores"
+ },
+ {
+  "id": "fl-10tulipanes",
+  "name": "10 Tulipanes",
+  "sub": "Tulipanes",
+  "price": 150,
+  "items": [
+   "10 tulipanes envueltos en papel coreano",
+   "Dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores"
+ },
+ {
+  "id": "fl-catalina",
+  "name": "Catalina 1",
+  "sub": "Tulipanes",
+  "price": 140,
+  "items": [
+   "5 tulipanes, 6 rosas rojas, astromelias y follaje en caja cilíndrica",
+   "Caja de Ferrero de 4 bombones",
+   "Dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores"
+ },
+ {
+  "id": "fl-belleza",
+  "name": "Belleza Tulipán",
+  "sub": "Tulipanes",
+  "price": 105,
+  "items": [
+   "Arreglo de 4 tulipanes en colores surtidos, margaritas y follaje",
+   "Dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores"
+ },
+ {
+  "id": "fl-alegria",
+  "name": "Alegría",
+  "sub": "Tulipanes",
+  "price": 125,
+  "items": [
+   "5 tulipanes en color surtido, dos gerberas, margaritas y follaje",
+   "Dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores"
+ },
+ {
+  "id": "fl-atardecer",
+  "name": "Atardecer",
+  "sub": "Tulipanes",
+  "price": 150,
+  "items": [
+   "6 tulipanes, 4 rosas, 4 girasoles y follaje",
+   "Dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores"
+ },
+ {
+  "id": "fl-tulipgarden",
+  "name": "Tulipán Garden",
+  "sub": "Tulipanes",
+  "price": 165,
+  "items": [
+   "10 tulipanes y follaje",
+   "Box cilíndrico con nombre grabado",
+   "Dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores"
+ },
+ {
+  "id": "fl-suenopri",
+  "name": "Sueño Primaveral",
+  "sub": "Tulipanes",
+  "price": 189,
+  "items": [
+   "Arreglo de 5 tulipanes, 6 rosas, astromelias y follaje en caja cilíndrica",
+   "Peluche de 25 cm",
+   "Caja de Ferrero Rocher de 4 bombones",
+   "Dedicatoria y mariposas decorativas"
+  ],
+  "grp": "flores",
+  "home": "flores"
+ },
+ {
+  "id": "fl-armonia",
+  "name": "Armonía",
+  "sub": "Girasoles",
+  "price": 110,
+  "items": [
+   "6 girasoles, 10 rosas y follaje en caja de corazón",
+   "Dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores"
+ },
+ {
+  "id": "fl-globogira",
+  "name": "Globo de Girasoles",
+  "sub": "Girasoles",
+  "price": 99,
+  "items": [
+   "Arreglo de 8 girasoles",
+   "Globo de 18\" personalizado",
+   "Dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores",
+  "cumple": 16
+ },
+ {
+  "id": "fl-solecito",
+  "name": "Solecito",
+  "sub": "Girasoles",
+  "price": 90,
+  "items": [
+   "10 girasoles, styver y follaje diverso",
+   "Dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores"
+ },
+ {
+  "id": "fl-favgira",
+  "name": "Favorita Girasoles",
+  "sub": "Girasoles",
+  "price": 60,
+  "items": [
+   "3 girasoles en papel coreano",
+   "Dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores"
+ },
+ {
+  "id": "fl-vibranza",
+  "name": "Vibranza",
+  "sub": "Girasoles",
+  "price": 110,
+  "items": [
+   "11 girasoles con eucalipto chino",
+   "Globo de 20\" con frase personalizada",
+   "Tarjeta con foto y dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores",
+  "cumple": 18
+ },
+ {
+  "id": "fl-vibtul",
+  "name": "Vibranza y Tulipanes",
+  "sub": "Girasoles",
+  "price": 165,
+  "items": [
+   "Arreglo de girasoles, eucalipto chino y 6 tulipanes",
+   "Globo de 20\" con frase personalizada",
+   "Tarjeta con foto y dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores",
+  "cumple": 17
+ },
+ {
+  "id": "fl-stitch",
+  "name": "Modelo Stitch",
+  "sub": "Girasoles",
+  "price": 235,
+  "items": [
+   "20 girasoles, claveles blancos y 10 rosas azules en caja cilíndrica",
+   "Peluche de Stitch de 35 cm",
+   "Dedicatoria"
+  ],
+  "grp": "flores",
+  "home": "flores"
+ },
+ {
+  "id": "gb-joyero",
+  "name": "Detalle Joyero",
+  "sub": "Detalles",
+  "price": 45,
+  "items": [
+   "Joyero con compartimientos y nombre grabado",
+   "Ramo de flores secas",
+   "Dedicatoria",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX001",
+  "grp": "ella",
+  "home": "ella"
+ },
+ {
+  "id": "gb-valiosa",
+  "name": "Valiosa",
+  "sub": "Detalles",
+  "price": 45,
+  "items": [
+   "Jar con contenido a elección",
+   "Ramo de flores secas",
+   "Dedicatoria",
+   "Fotografía (opcional)",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX002",
+  "grp": "ella",
+  "home": "ella"
+ },
+ {
+  "id": "gb-divina",
+  "name": "Divina",
+  "sub": "Detalles",
+  "price": 45,
+  "items": [
+   "Taza transparente con nombre",
+   "Ramo de flores secas con bombón Ferrero Rocher",
+   "Dedicatoria",
+   "Caja de cartón con lazo"
+  ],
+  "code": "BOX003",
+  "grp": "ella",
+  "home": "ella",
+  "cumple": 39
+ },
+ {
+  "id": "gb-divina2",
+  "name": "Divina 2",
+  "sub": "Detalles",
+  "price": 49,
+  "items": [
+   "Taza transparente con nombre",
+   "Ramo de flores secas con bombón Ferrero Rocher",
+   "Frutos secos",
+   "Dedicatoria",
+   "Caja de cartón con lazo"
+  ],
+  "code": "BOX073",
+  "grp": "ella",
+  "home": "ella"
+ },
+ {
+  "id": "gb-ideal",
+  "name": "Ideal",
+  "sub": "Detalles",
+  "price": 49,
+  "items": [
+   "Vaso cafetero personalizado reutilizable",
+   "Jar con contenido a elección",
+   "Dedicatoria",
+   "Ramito de flores secas y foto (opcional)",
+   "Caja de cartón con lazo"
+  ],
+  "code": "BOX004",
+  "grp": "ella",
+  "home": "ella",
+  "cumple": 38
+ },
+ {
+  "id": "gb-esencial",
+  "name": "Esencial",
+  "sub": "Boxes laborales",
+  "price": 49,
+  "items": [
+   "Libreta con nombre",
+   "Lapicero de acero en estuche acrílico",
+   "Dedicatoria",
+   "Ramo de flores secas",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX005",
+  "grp": "corporativo",
+  "home": "corporativo",
+  "cumple": 33
+ },
+ {
+  "id": "gb-kitoffice",
+  "name": "Kit Office",
+  "sub": "Boxes laborales",
+  "price": 65,
+  "items": [
+   "Neceser con nombre",
+   "Scrunchie de gamuza",
+   "Jar con contenido a elección",
+   "Ramo de flores secas",
+   "Dedicatoria",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX076",
+  "grp": "corporativo",
+  "home": "corporativo",
+  "cumple": 34
+ },
+ {
+  "id": "gb-ideal2",
+  "name": "Ideal 2",
+  "sub": "Detalles",
+  "price": 55,
+  "items": [
+   "Vaso cafetero personalizado reutilizable",
+   "Jar con contenido a elección",
+   "Dedicatoria",
+   "Ramito de flores secas y foto (opcional)",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX007",
+  "grp": "ella",
+  "home": "ella"
+ },
+ {
+  "id": "gb-confianza",
+  "name": "Confianza",
+  "sub": "Detalles",
+  "price": 75,
+  "items": [
+   "Vaso cafetero personalizado reutilizable",
+   "Libreta A6",
+   "Jar con contenido a elección",
+   "Dedicatoria",
+   "Fotografía (opcional) y ramito de flores secas",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX008",
+  "grp": "ella",
+  "home": "ella"
+ },
+ {
+  "id": "gb-delicada",
+  "name": "Delicada",
+  "sub": "Detalles",
+  "price": 79,
+  "items": [
+   "Vaso cafetero personalizado reutilizable",
+   "Pulsera de murano con dije de acero",
+   "Jar con contenido a elección",
+   "Dedicatoria",
+   "Fotografía (opcional) y ramito de flores secas",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX009",
+  "grp": "ella",
+  "home": "ella"
+ },
+ {
+  "id": "gb-consentida",
+  "name": "Consentida",
+  "sub": "Detalles",
+  "price": 59,
+  "items": [
+   "Joyero con compartimientos y nombre grabado",
+   "Pulsera de murano con accesorio dorado",
+   "Ramo de flores secas",
+   "Dedicatoria",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX010",
+  "grp": "ella",
+  "home": "ella"
+ },
+ {
+  "id": "gb-especial",
+  "name": "Especial",
+  "sub": "Detalles",
+  "price": 65,
+  "items": [
+   "Ramo de flores secas con bombón Ferrero Rocher",
+   "Pulsera de murano",
+   "Joyero con nombre",
+   "Dedicatoria",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX011",
+  "grp": "ella",
+  "home": "ella"
+ },
+ {
+  "id": "gb-bienestar",
+  "name": "Bienestar",
+  "sub": "Boxes",
+  "price": 69,
+  "items": [
+   "Vaso bambú de 350 ml con sorbete de vidrio y nombre",
+   "Jar con contenido a elección",
+   "Suculenta artificial",
+   "Dedicatoria",
+   "Fotografía (opcional) y ramo de flores secas",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX012",
+  "grp": "ella",
+  "home": "ella",
+  "cumple": 32
+ },
+ {
+  "id": "gb-sonrie",
+  "name": "Sonríe",
+  "sub": "Boxes",
+  "price": 75,
+  "items": [
+   "Vaso bambú con sorbete de vidrio y nombre",
+   "Jar con contenido a elección",
+   "Libreta A6 y Ferrero Rocher en mini ramito",
+   "Dedicatoria",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX013",
+  "grp": "ella",
+  "home": "ella"
+ },
+ {
+  "id": "gb-amelia",
+  "name": "Amelia",
+  "sub": "Boxes",
+  "price": 65,
+  "items": [
+   "Vaso bambú de 350 ml con sorbete de vidrio y nombre",
+   "Neceser con nombre grabado",
+   "Dedicatoria",
+   "Ramo de flores secas",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX014",
+  "grp": "ella",
+  "home": "ella"
+ },
+ {
+  "id": "gb-olivia",
+  "name": "Olivia",
+  "sub": "Boxes",
+  "price": 75,
+  "items": [
+   "Vaso bambú de 350 ml con sorbete de vidrio y nombre",
+   "Scrunchie de gamuza y Ferrero Rocher",
+   "Joyero con nombre",
+   "Dedicatoria",
+   "Ramo de flores secas",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX015",
+  "grp": "ella",
+  "home": "ella"
+ },
+ {
+  "id": "gb-preferida",
+  "name": "Preferida",
+  "sub": "Boxes",
+  "price": 75,
+  "items": [
+   "Vaso térmico de 500 ml",
+   "Jar con contenido a elección",
+   "Dedicatoria",
+   "Ramito de flores secas",
+   "Caja de madera con lazo, nombre y frase temática"
+  ],
+  "code": "BOX045",
+  "grp": "ella",
+  "home": "ella",
+  "cumple": 31
+ },
+ {
+  "id": "gb-op19",
+  "name": "Opción 19",
+  "sub": "Boxes",
+  "price": 95,
+  "items": [
+   "Vaso térmico de 500 ml personalizado",
+   "Libreta A5",
+   "Joyero viajero personalizado",
+   "Dedicatoria",
+   "Fotografía (opcional) y ramito de flores secas",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX019",
+  "grp": "ella",
+  "home": "ella"
+ },
+ {
+  "id": "gb-dama",
+  "name": "Dama",
+  "sub": "Boxes",
+  "price": 69,
+  "items": [
+   "Taza transparente con nombre",
+   "Joyero viajero o neceser (a elección)",
+   "Jar con contenido a elección",
+   "Dedicatoria",
+   "Fotografía (opcional) y ramito de flores secas",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX016",
+  "grp": "ella",
+  "home": "ella"
+ },
+ {
+  "id": "gb-gratitud",
+  "name": "Gratitud",
+  "sub": "Boxes",
+  "price": 65,
+  "items": [
+   "Neceser con nombre",
+   "Scrunchie de gamuza",
+   "Jar con contenido a elección",
+   "Ramo de flores secas",
+   "Dedicatoria",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX017",
+  "grp": "ella",
+  "home": "ella"
+ },
+ {
+  "id": "gb-contigo",
+  "name": "Contigo",
+  "sub": "Boxes",
+  "price": 95,
+  "items": [
+   "Taza de porcelana o transparente con nombre",
+   "Neceser con nombre",
+   "Jar con contenido a elección",
+   "Ferrero de 3 bombones",
+   "Dedicatoria",
+   "Globo burbuja con frase",
+   "Caja de pino estilo canasta"
+  ],
+  "code": "BOX074",
+  "grp": "ella",
+  "home": "ella",
+  "cumple": 25
+ },
+ {
+  "id": "gb-sweetgirl",
+  "name": "Sweet Girl",
+  "sub": "Boxes",
+  "price": 85,
+  "items": [
+   "Neceser con nombre",
+   "Diadema para skincare, muñequeras y gancho",
+   "Vela aromática en cubo",
+   "Jar con contenido a elección",
+   "Ramito de flores secas y foto (opcional)",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX020",
+  "grp": "ella",
+  "home": "ella",
+  "cumple": 26
+ },
+ {
+  "id": "gb-generosa",
+  "name": "Generosa",
+  "sub": "Boxes",
+  "price": 85,
+  "items": [
+   "Vaso térmico de 500 ml con nombre",
+   "Joyero viajero con nombre",
+   "Jar con contenido a elección",
+   "Dedicatoria",
+   "Ramo de flores y foto (opcional)",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX021",
+  "grp": "ella",
+  "home": "ella",
+  "cumple": 28
+ },
+ {
+  "id": "gb-precisa",
+  "name": "Precisa",
+  "sub": "Boxes",
+  "price": 99,
+  "items": [
+   "Vaso térmico de 500 ml",
+   "Neceser con nombre",
+   "Lapicero con estuche acrílico y nombre",
+   "Libreta A6",
+   "Dedicatoria",
+   "Ramo de flores secas con bombón Ferrero Rocher",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX022",
+  "grp": "ella",
+  "home": "ella"
+ },
+ {
+  "id": "gb-packlaboral",
+  "name": "Pack Laboral",
+  "sub": "Boxes laborales",
+  "price": 99,
+  "items": [
+   "Taza de porcelana o transparente con nombre",
+   "Lapicero con estuche acrílico y nombre",
+   "Jar con contenido a elección",
+   "Libreta A5 con nombre grabado",
+   "Dedicatoria",
+   "Globo burbuja con frase",
+   "Caja de pino estilo canasta"
+  ],
+  "code": "BOX023",
+  "grp": "corporativo",
+  "home": "corporativo",
+  "cumple": 35
+ },
+ {
+  "id": "gb-packlaboral2",
+  "name": "Pack Laboral 2",
+  "sub": "Boxes laborales",
+  "price": 115,
+  "items": [
+   "Vaso térmico de 500 ml",
+   "Lapicero con estuche acrílico y nombre",
+   "Jar con contenido a elección",
+   "Libreta A5 con nombre grabado",
+   "Dedicatoria",
+   "Globo burbuja con frase",
+   "Caja de pino estilo canasta"
+  ],
+  "code": "BOX024",
+  "grp": "corporativo",
+  "home": "corporativo",
+  "cumple": 36
+ },
+ {
+  "id": "gb-inspira",
+  "name": "Inspira",
+  "sub": "Boxes",
+  "price": 115,
+  "items": [
+   "Termo de acero",
+   "Ferrero Rocher (4 bombones)",
+   "Joyero viajero personalizado",
+   "Pulsera de acero o murano",
+   "Mini ramo de flores secas",
+   "Dedicatoria",
+   "Caja de madera con mensaje en tapa"
+  ],
+  "code": "BOX025",
+  "grp": "ella",
+  "home": "ella"
+ },
+ {
+  "id": "gb-bondad",
+  "name": "Bondad",
+  "sub": "Boxes",
+  "price": 125,
+  "items": [
+   "Termo digital personalizado",
+   "Ferrero Rocher (4 bombones)",
+   "Cuadro de foto o collage de 10×15 cm",
+   "Libreta A6",
+   "Jar con contenido a elección",
+   "Suculenta artificial",
+   "Dedicatoria",
+   "Caja de madera con mensaje en tapa"
+  ],
+  "code": "BOX026",
+  "grp": "ella",
+  "home": "ella"
+ },
+ {
+  "id": "gb-mejoramiga",
+  "name": "Mejor Amiga",
+  "sub": "Boxes",
+  "price": 99,
+  "items": [
+   "Vaso cafetero personalizado",
+   "Vincha para limpieza facial",
+   "Vela aromática",
+   "Neceser personalizado",
+   "Libreta A6",
+   "Dedicatoria",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX027",
+  "grp": "ella",
+  "home": "ella",
+  "cumple": 29
+ },
+ {
+  "id": "gb-brindis",
+  "name": "Brindis",
+  "sub": "Para ella",
+  "price": 85,
+  "items": [
+   "Vino Riccadonna 275 ml",
+   "Copa de vidrio personalizada",
+   "Jar con contenido a elección",
+   "Dedicatoria",
+   "Foto (opcional) y ramito de flores secas",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX028",
+  "grp": "brindis",
+  "home": "ella",
+  "cumple": 30
+ },
+ {
+  "id": "gb-lider",
+  "name": "Líder",
+  "sub": "Para ella",
+  "price": 69,
+  "items": [
+   "Vino Viña Vieja Rosé 355 ml",
+   "Copa de vidrio personalizada",
+   "1 bombón Ferrero Rocher",
+   "Dedicatoria",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX029",
+  "grp": "brindis",
+  "home": "ella"
+ },
+ {
+  "id": "gb-isabel",
+  "name": "Isabel",
+  "sub": "Para ella",
+  "price": 79,
+  "items": [
+   "Vino tinto español Mayoral 187 ml",
+   "Copa de vidrio personalizada",
+   "Pulsera de murano",
+   "Dedicatoria",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX072",
+  "grp": "brindis",
+  "home": "ella"
+ },
+ {
+  "id": "gb-op30",
+  "name": "Opción 30",
+  "sub": "Para ella",
+  "price": 95,
+  "items": [
+   "Espumante Freixenet 200 ml",
+   "Caja de 4 bombones Ferrero Rocher",
+   "Jar con contenido a elección",
+   "Dedicatoria",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX030",
+  "grp": "brindis",
+  "home": "ella"
+ },
+ {
+  "id": "gb-elegante",
+  "name": "Elegante",
+  "sub": "Para ella",
+  "price": 105,
+  "items": [
+   "Vino Intipalka 375 ml",
+   "Caja de 4 bombones Ferrero Rocher",
+   "Jar con contenido a elección",
+   "Copa de vidrio con nombre",
+   "Dedicatoria",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX031",
+  "grp": "brindis",
+  "home": "ella"
+ },
+ {
+  "id": "gb-nuevocomienzo",
+  "name": "Nuevo Comienzo",
+  "sub": "Para ella",
+  "price": 125,
+  "items": [
+   "Cuadro de 10×15 cm con foto o collage",
+   "Copa de vidrio con nombre",
+   "Vino blanco Tabernero 375 ml",
+   "3 bombones Ferrero Rocher",
+   "Jar con contenido a elección",
+   "Cajita de alfajores o mini pretzels",
+   "Vela aromática en cubo",
+   "Dedicatoria"
+  ],
+  "code": "BOX032",
+  "grp": "brindis",
+  "home": "ella"
+ },
+ {
+  "id": "gb-sweetgirl2",
+  "name": "Sweet Girl 2",
+  "sub": "Para ella",
+  "price": 129,
+  "items": [
+   "Neceser con nombre",
+   "Riccadonna 200 ml",
+   "Vela aromática en cubo",
+   "Jar con contenido a elección",
+   "Ferrero Rocher de 4 bombones",
+   "Dedicatoria",
+   "Caja de madera con lazo, nombre y frase"
+  ],
+  "code": "BOX033",
+  "grp": "brindis",
+  "home": "ella",
+  "cumple": 27
+ },
+ {
+  "id": "gb-op34",
+  "name": "Opción 34",
+  "sub": "Para ella",
+  "price": 155,
+  "items": [
+   "Vino Intipalka 750 ml",
+   "Dos copas personalizadas",
+   "Hielera de acero",
+   "Ramito de flores secas",
+   "Caja de pino"
+  ],
+  "code": "BOX034",
+  "lead": 1,
+  "tag": "Solicitar con anticipación",
+  "grp": "brindis",
+  "home": "ella"
+ },
+ {
+  "id": "gb-selecta",
+  "name": "Selecta",
+  "sub": "Para ella",
+  "price": 135,
+  "items": [
+   "Vino Riccadonna 275 ml",
+   "Copa de vidrio personalizada",
+   "Jar con contenido a elección",
+   "Piqueo de cabanossi, queso y jamón",
+   "Dedicatoria",
+   "Caja de madera estilo canasta"
+  ],
+  "code": "BOX035",
+  "tag": "Incluye piqueo",
+  "grp": "brindis",
+  "home": "ella"
+ },
+ {
+  "id": "gb-recuerdos",
+  "name": "Recuerdos",
+  "sub": "Aniversario y amor",
+  "price": 75,
+  "items": [
+   "Cuadro con foto de 10×15 cm",
+   "Chocolates diversos (Sublime, Bon o Bon, galletas, Inka Chips)",
+   "Ramito de flores secas",
+   "Dedicatoria",
+   "Contratapa con frase y 4 fotos con ganchito"
+  ],
+  "code": "BOX036",
+  "grp": "ocasiones",
+  "home": "aniversarios"
+ },
+ {
+  "id": "gb-union",
+  "name": "Unión",
+  "sub": "Aniversario y amor",
+  "price": 165,
+  "items": [
+   "Riccadonna personalizado 750 ml",
+   "Dos fotos estilo polaroid",
+   "Caja de Ferrero Rocher de 4 bombones",
+   "Jar con contenido a elección",
+   "Dos copas de vidrio personalizadas",
+   "Dedicatoria"
+  ],
+  "code": "BOX037",
+  "grp": "ocasiones",
+  "home": "aniversarios"
+ },
+ {
+  "id": "gb-forever",
+  "name": "Forever",
+  "sub": "Aniversario y amor",
+  "price": 145,
+  "items": [
+   "Dos Riccadonnas",
+   "Dos copas de vidrio personalizadas",
+   "Caja de Ferrero Rocher de 8 bombones",
+   "Dedicatoria",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX038",
+  "grp": "ocasiones",
+  "home": "aniversarios"
+ },
+ {
+  "id": "gb-merito",
+  "name": "Mérito",
+  "sub": "Graduación",
+  "price": 110,
+  "items": [
+   "Osito de peluche de graduación",
+   "Dos cervezas de marca a elección",
+   "Chocolate Lindt o Ferrero Rocher de 4 bombones",
+   "Jar con contenido a elección",
+   "Panel acrílico personalizado",
+   "Dedicatoria",
+   "Caja de madera con lazo"
+  ],
+  "grp": "ocasiones",
+  "home": "ocasiones"
+ },
+ {
+  "id": "gb-honor",
+  "name": "Honor",
+  "sub": "Graduación",
+  "price": 62,
+  "items": [
+   "Vaso cafetero personalizado",
+   "Jar con contenido a elección",
+   "Scrunchie de gamuza",
+   "Ramito de flores secas",
+   "Caja con lazo y nombre",
+   "Dedicatoria"
+  ],
+  "grp": "ocasiones",
+  "home": "ocasiones"
+ },
+ {
+  "id": "gb-damahonor",
+  "name": "Dama de Honor",
+  "sub": "Bodas",
+  "price": 75,
+  "items": [
+   "Joyero personalizado con nombre",
+   "Agenda A5",
+   "Dos bombones Ferrero Rocher",
+   "Mini ramito de flores secas",
+   "Dedicatoria"
+  ],
+  "code": "BOX040",
+  "grp": "ocasiones",
+  "home": "bodas"
+ },
+ {
+  "id": "gb-condolencias",
+  "name": "Condolencias",
+  "sub": "Condolencias",
+  "price": 79,
+  "items": [
+   "Jar con contenido a elección",
+   "Rosario de acero en frasco de vidrio con paloma",
+   "Cuadro de foto con mensaje",
+   "Dedicatoria",
+   "Caja de madera con mensaje \"El alma trasciende, el amor permanece\""
+  ],
+  "code": "BOX041",
+  "grp": "ocasiones",
+  "home": "ocasiones"
+ },
+ {
+  "id": "gb-damahonor2",
+  "name": "Dama de Honor 2",
+  "sub": "Bodas",
+  "price": 150,
+  "items": [
+   "Riccadonna",
+   "Copa de vidrio personalizada",
+   "Scrunchie",
+   "Chocolate Ferrero Rocher",
+   "Gafas de sol en forma de corazón",
+   "Brazalete con dije de corazón grabado",
+   "Manual de dama de honor"
+  ],
+  "code": "BOX060",
+  "variants": [
+   [
+    "Caja material couché",
+    150
+   ],
+   [
+    "Caja tapa dura",
+    165
+   ]
+  ],
+  "grp": "ocasiones",
+  "home": "bodas"
+ },
+ {
+  "id": "gb-pregunta",
+  "name": "Pregunta Especial",
+  "sub": "Bodas",
+  "price": 69,
+  "items": [
+   "Vaso térmico de 330 ml con nombre permanente",
+   "3 chocolates Ferrero Rocher",
+   "Ramito de flores secas y dedicatoria",
+   "Caja de madera con mensaje"
+  ],
+  "code": "BOX075",
+  "tag": "Para padrinos y damas de honor",
+  "grp": "ocasiones",
+  "home": "bodas"
+ },
+ {
+  "id": "gb-op77",
+  "name": "Opción 77",
+  "sub": "Bodas",
+  "price": 105,
+  "items": [
+   "Vaso térmico de 500 ml con nombre",
+   "Riccadonna 185 ml",
+   "Cuadro de 10×15 cm con foto",
+   "Ramito de flores secas y dedicatoria",
+   "Caja de madera"
+  ],
+  "code": "BOX077",
+  "grp": "ocasiones",
+  "home": "bodas"
+ },
+ {
+  "id": "gb-globosbienv",
+  "name": "Globos de Bienvenida",
+  "sub": "Bienvenida bebé",
+  "price": 130,
+  "items": [
+   "10 globos de helio circulares",
+   "Globo de oso teddy",
+   "Estrella metálica con frase personalizada",
+   "Dedicatoria",
+   "3 pesas"
+  ],
+  "code": "GDH001",
+  "grp": "ocasiones",
+  "home": "ocasiones",
+  "pm": 1
+ },
+ {
+  "id": "pe-op42",
+  "name": "Opción 42",
+  "sub": "Boxes",
+  "price": 43,
+  "items": [
+   "Vaso cafetero reutilizable con nombre",
+   "Ramito de flores secas, dos nueces y naranja deshidratada",
+   "Dedicatoria",
+   "Caja de cartón con lazo"
+  ],
+  "code": "BOX042",
+  "grp": "el",
+  "home": "el",
+  "cumple": 40
+ },
+ {
+  "id": "pe-op43",
+  "name": "Opción 43",
+  "sub": "Boxes",
+  "price": 75,
+  "items": [
+   "Vaso térmico de 500 ml con grabado láser",
+   "Ramito de flores secas, dos nueces y naranja deshidratada",
+   "Dedicatoria",
+   "Caja de cartón con lazo"
+  ],
+  "code": "BOX043",
+  "lead": 2,
+  "tag": "Pedir con 2 días de anticipación",
+  "grp": "el",
+  "home": "el"
+ },
+ {
+  "id": "pe-neceser",
+  "name": "Neceser",
+  "sub": "Boxes",
+  "price": 47,
+  "items": [
+   "Neceser de biocuero con nombre personalizado",
+   "Ramito de flores secas y dedicatoria",
+   "Caja de cartón con lazo y etiqueta"
+  ],
+  "code": "BOX044",
+  "grp": "el",
+  "home": "el"
+ },
+ {
+  "id": "pe-ideal2",
+  "name": "Ideal 2 (para él)",
+  "sub": "Boxes",
+  "price": 59,
+  "items": [
+   "Vaso cafetero personalizable de 473 ml",
+   "Jar con contenido a elección",
+   "Ramo de flores secas",
+   "Dedicatoria",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX007",
+  "grp": "el",
+  "home": "el"
+ },
+ {
+  "id": "pe-preferido",
+  "name": "Preferido",
+  "sub": "Boxes",
+  "price": 75,
+  "items": [
+   "Vaso térmico de 500 ml",
+   "Jar con contenido a elección",
+   "Dedicatoria",
+   "Ramito de flores secas",
+   "Caja de madera con lazo, nombre y frase"
+  ],
+  "code": "BOX045",
+  "grp": "el",
+  "home": "el",
+  "cumple": 11
+ },
+ {
+  "id": "pe-op46",
+  "name": "Opción 46",
+  "sub": "Boxes",
+  "price": 45,
+  "items": [
+   "Jar de 210 ml con contenido a elección",
+   "Llavero de biocuero con nombre",
+   "Ramito de flores secas y dedicatoria",
+   "Caja de cartón con lazo"
+  ],
+  "code": "BOX046",
+  "grp": "el",
+  "home": "el"
+ },
+ {
+  "id": "pe-op47",
+  "name": "Opción 47",
+  "sub": "Boxes",
+  "price": 50,
+  "items": [
+   "Jar de 210 ml con contenido a elección",
+   "Libreta A6 con nombre",
+   "Ramito de flores secas y dedicatoria",
+   "Caja de cartón con lazo y etiqueta"
+  ],
+  "code": "BOX047",
+  "grp": "el",
+  "home": "el"
+ },
+ {
+  "id": "pe-op48",
+  "name": "Opción 48",
+  "sub": "Boxes",
+  "price": 59,
+  "items": [
+   "Libreta A6",
+   "Monedero de biocuero con inicial grabada",
+   "Dos chocolates Ferrero Rocher",
+   "Ramito de flores secas y dedicatoria",
+   "Caja de cartón con lazo"
+  ],
+  "code": "BOX048",
+  "grp": "el",
+  "home": "el"
+ },
+ {
+  "id": "pe-op49",
+  "name": "Opción 49",
+  "sub": "Boxes",
+  "price": 79,
+  "items": [
+   "Vaso cafetero personalizable de 473 ml",
+   "Jar con contenido a elección",
+   "Caja de Ferrero Rocher de 4 bombones",
+   "Foto (opcional), flores secas y dedicatoria",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX049",
+  "grp": "el",
+  "home": "el"
+ },
+ {
+  "id": "pe-ideal",
+  "name": "Ideal (para él)",
+  "sub": "Boxes",
+  "price": 55,
+  "items": [
+   "Vaso cafetero personalizado reutilizable",
+   "Jar con contenido a elección",
+   "Dedicatoria",
+   "Ramito de flores secas y foto (opcional)",
+   "Caja de cartón con lazo"
+  ],
+  "code": "BOX004",
+  "grp": "el",
+  "home": "el",
+  "cumple": 43
+ },
+ {
+  "id": "pe-op50",
+  "name": "Opción 50",
+  "sub": "Boxes",
+  "price": 55,
+  "items": [
+   "Taza transparente personalizada a vinil",
+   "Jar con contenido a elección",
+   "Mensaje y ramito de flores secas",
+   "Caja de cartón con lazo"
+  ],
+  "code": "BOX050",
+  "grp": "el",
+  "home": "el"
+ },
+ {
+  "id": "pe-op51",
+  "name": "Opción 51",
+  "sub": "Boxes",
+  "price": 49,
+  "items": [
+   "Taza transparente con nombre",
+   "3 chocolates Ferrero Rocher",
+   "Ramito de flores secas y dedicatoria",
+   "Caja de cartón con lazo"
+  ],
+  "code": "BOX051",
+  "grp": "el",
+  "home": "el",
+  "cumple": 41
+ },
+ {
+  "id": "pe-op52",
+  "name": "Opción 52",
+  "sub": "Boxes",
+  "price": 65,
+  "items": [
+   "Vaso térmico de 330 ml con nombre",
+   "3 chocolates Ferrero Rocher",
+   "Ramito de flores secas y dedicatoria",
+   "Caja de cartón con lazo"
+  ],
+  "code": "BOX052",
+  "grp": "el",
+  "home": "el",
+  "cumple": 42
+ },
+ {
+  "id": "pe-leal",
+  "name": "Leal",
+  "sub": "Boxes",
+  "price": 75,
+  "items": [
+   "Taza transparente personalizada",
+   "Libreta A6 con diploma al \"Mejor Padre del Mundo\"",
+   "Jar con contenido a elección",
+   "Cuadro con fotografía",
+   "Dedicatoria y ramito de flores secas",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX053",
+  "grp": "el",
+  "home": "el"
+ },
+ {
+  "id": "pe-confianza",
+  "name": "Confianza (para él)",
+  "sub": "Boxes",
+  "price": 75,
+  "items": [
+   "Vaso cafetero personalizable reutilizable",
+   "Libreta A6",
+   "Jar con contenido a elección",
+   "Foto (opcional) y ramito de flores secas",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX008",
+  "grp": "el",
+  "home": "el"
+ },
+ {
+  "id": "pe-caballero",
+  "name": "Caballero",
+  "sub": "Boxes",
+  "price": 75,
+  "items": [
+   "Taza transparente con nombre",
+   "Dos jar con contenido a elección",
+   "Dedicatoria",
+   "Ramito de flores secas y foto (opcional)",
+   "Caja de madera con lazo, nombre y frase"
+  ],
+  "code": "BOX054",
+  "grp": "el",
+  "home": "el",
+  "cumple": 12
+ },
+ {
+  "id": "pe-sonrie",
+  "name": "Sonríe (para él)",
+  "sub": "Boxes",
+  "price": 75,
+  "items": [
+   "Vaso cafetero personalizable reutilizable",
+   "Libreta A6",
+   "Jar con contenido a elección",
+   "Foto (opcional) y ramito de flores secas",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX013",
+  "grp": "el",
+  "home": "el"
+ },
+ {
+  "id": "pe-op55",
+  "name": "Opción 55",
+  "sub": "Boxes",
+  "price": 69,
+  "items": [
+   "Taza térmica de acero inoxidable",
+   "Neceser de biocuero con nombre",
+   "Ramito de flores secas y dedicatoria",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX055",
+  "grp": "el",
+  "home": "el"
+ },
+ {
+  "id": "pe-cafetero1",
+  "name": "Cafetero 1",
+  "sub": "Cafeteros",
+  "price": 69,
+  "items": [
+   "Cafetera francesa",
+   "Taza transparente con nombre",
+   "Mini pretzels",
+   "Ramito de flores secas y dedicatoria",
+   "Caja de cartón con lazo"
+  ],
+  "code": "BOX056",
+  "grp": "el",
+  "home": "el"
+ },
+ {
+  "id": "pe-cafetero2",
+  "name": "Cafetero 2",
+  "sub": "Cafeteros",
+  "price": 75,
+  "items": [
+   "Taza térmica de acero",
+   "Cafetera francesa de 350 ml",
+   "Ramito de flores secas y dedicatoria",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX057",
+  "grp": "el",
+  "home": "el"
+ },
+ {
+  "id": "pe-cafetero3",
+  "name": "Cafetero 3",
+  "sub": "Cafeteros",
+  "price": 75,
+  "items": [
+   "Cafetera francesa",
+   "Jar de 210 ml con contenido a elección",
+   "Café molido",
+   "Ramito de flores secas y dedicatoria",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX058",
+  "grp": "el",
+  "home": "el"
+ },
+ {
+  "id": "pe-cafetero4",
+  "name": "Cafetero 4",
+  "sub": "Cafeteros",
+  "price": 85,
+  "items": [
+   "Cafetera francesa",
+   "Vaso térmico con nombre",
+   "Chocolate Ferrero Rocher",
+   "Ramito de flores secas y dedicatoria",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX059",
+  "grp": "el",
+  "home": "el",
+  "cumple": 4
+ },
+ {
+  "id": "pe-packlaboral",
+  "name": "Pack Laboral (para él)",
+  "sub": "Boxes laborales",
+  "price": 99,
+  "items": [
+   "Taza de porcelana o transparente con nombre",
+   "Lapicero con estuche acrílico y nombre",
+   "Jar con contenido a elección",
+   "Libreta A6 con nombre grabado",
+   "Dedicatoria",
+   "Globo burbuja con frase",
+   "Caja de pino estilo canasta"
+  ],
+  "code": "BOX023",
+  "grp": "corporativo",
+  "home": "corporativo",
+  "cumple": 37
+ },
+ {
+  "id": "pe-ideal3",
+  "name": "Ideal 3",
+  "sub": "Edición especial",
+  "price": 89,
+  "items": [
+   "Vaso térmico de 500 ml con nombre",
+   "Jar con contenido a elección",
+   "Cuadro de 10×15 cm con fotografía",
+   "Ramito de flores secas y dedicatoria",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX061",
+  "grp": "el",
+  "home": "el",
+  "cumple": 1
+ },
+ {
+  "id": "pe-rey",
+  "name": "Para el Rey",
+  "sub": "Edición especial",
+  "price": 95,
+  "items": [
+   "Vaso térmico de 500 ml",
+   "Jar con contenido a elección",
+   "Cuadro de 10×15 cm",
+   "Taza de vidrio personalizable",
+   "Dedicatoria y ramito de flores secas",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX062",
+  "grp": "el",
+  "home": "el",
+  "cumple": 3
+ },
+ {
+  "id": "pe-mejor",
+  "name": "Para el Mejor",
+  "sub": "Edición especial",
+  "price": 110,
+  "items": [
+   "Vaso térmico de 500 ml con nombre",
+   "Jar con contenido a elección",
+   "Chocolate Montblanc (7 bombones)",
+   "Taza de vidrio personalizable",
+   "Dedicatoria y ramito de flores secas",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX063",
+  "grp": "el",
+  "home": "el",
+  "cumple": 2
+ },
+ {
+  "id": "pe-alianza",
+  "name": "Box Alianza Lima",
+  "sub": "Edición especial",
+  "price": 110,
+  "items": [
+   "Vaso térmico de 500 ml con nombre",
+   "Jar con contenido a elección",
+   "Chocolate Montblanc (7 bombones)",
+   "Taza de vidrio personalizable",
+   "Dedicatoria y ramito de flores secas",
+   "Caja de madera con lazo"
+  ],
+  "grp": "el",
+  "home": "el",
+  "cumple": 6
+ },
+ {
+  "id": "pe-universitario",
+  "name": "Box Universitario",
+  "sub": "Edición especial",
+  "price": 110,
+  "items": [
+   "Vaso térmico de 500 ml con nombre",
+   "Jar con contenido a elección",
+   "Chocolate Montblanc (7 bombones)",
+   "Taza de vidrio personalizable",
+   "Dedicatoria y ramito de flores secas",
+   "Caja de madera con lazo"
+  ],
+  "grp": "el",
+  "home": "el",
+  "cumple": 7
+ },
+ {
+  "id": "pe-bondad",
+  "name": "Bondad (para él)",
+  "sub": "Edición especial",
+  "price": 125,
+  "items": [
+   "Termo de acero",
+   "Jar con contenido a elección",
+   "Ferrero Rocher de 4 unidades",
+   "Cuadro de 10×15 cm",
+   "Libreta A6 \"Eres capaz de todo\"",
+   "Suculenta en maceta de porcelana",
+   "Caja de madera con tapa personalizable"
+  ],
+  "code": "BOX026",
+  "grp": "el",
+  "home": "el"
+ },
+ {
+  "id": "pe-bondad2",
+  "name": "Bondad 2",
+  "sub": "Edición especial",
+  "price": 125,
+  "items": [
+   "Termo de 500 ml con nombre permanente",
+   "Libreta A6",
+   "Caja de Ferrero Rocher de 4 bombones",
+   "Suculenta artificial",
+   "Vino Intipalka 375 ml",
+   "Ramito de flores secas y dedicatoria",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX064",
+  "grp": "el",
+  "home": "el"
+ },
+ {
+  "id": "pe-preciso",
+  "name": "Preciso",
+  "sub": "Edición especial",
+  "price": 99,
+  "items": [
+   "Vaso térmico de 500 ml con nombre",
+   "Neceser de cuerina con nombre",
+   "Libreta A6",
+   "Lapicero de metal en estuche acrílico con nombre",
+   "Dedicatoria y flores secas con bombón Ferrero",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX065",
+  "grp": "el",
+  "home": "el"
+ },
+ {
+  "id": "pe-artesanal",
+  "name": "Artesanal",
+  "sub": "Para él",
+  "price": 79,
+  "items": [
+   "Cerveza artesanal (marca a elección)",
+   "Llavero con destapador",
+   "Chifles",
+   "Ramito de flores secas, mantel de cuadritos y dedicatoria",
+   "Hielera de metal con lazo"
+  ],
+  "code": "BOX066",
+  "grp": "brindis",
+  "home": "el",
+  "cumple": 9
+ },
+ {
+  "id": "pe-vikingo",
+  "name": "Vikingo",
+  "sub": "Para él",
+  "price": 69,
+  "items": [
+   "Cerveza Heineken",
+   "Jar con contenido a elección",
+   "Dos Hershey de chocolate",
+   "Vaso cervecero personalizable",
+   "Dedicatoria y ramito de flores secas",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX067",
+  "grp": "brindis",
+  "home": "el",
+  "cumple": 8
+ },
+ {
+  "id": "pe-op68",
+  "name": "Opción 68",
+  "sub": "Para él",
+  "price": 95,
+  "items": [
+   "Riccadonna",
+   "Jar con contenido a elección",
+   "Libreta A5 personalizada",
+   "Dedicatoria",
+   "Flores secas y foto (opcional)",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX068",
+  "grp": "brindis",
+  "home": "el"
+ },
+ {
+  "id": "pe-op69",
+  "name": "Opción 69",
+  "sub": "Para él",
+  "price": 99,
+  "items": [
+   "Riccadonna 200 ml",
+   "Copa de vidrio con nombre",
+   "Caja de cartón con mini pretzels",
+   "Jar con contenido a elección",
+   "Ramito de flores secas y mensaje",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX069",
+  "grp": "brindis",
+  "home": "el"
+ },
+ {
+  "id": "pe-pisquero",
+  "name": "Pisquero",
+  "sub": "Para él",
+  "price": 85,
+  "items": [
+   "Pisco Rotondo de 185 ml",
+   "Medidor de onzas",
+   "Vaso pisquero con nombre",
+   "Ramito de flores secas y dedicatoria",
+   "Caja de madera con lazo"
+  ],
+  "code": "BOX070",
+  "grp": "brindis",
+  "home": "el",
+  "cumple": 10
+ },
+ {
+  "id": "pe-selecto2",
+  "name": "Selecto 2",
+  "sub": "Para él",
+  "price": 120,
+  "items": [
+   "Vino Intipalka 375 ml",
+   "Jar con contenido a elección",
+   "Degustación de jamón inglés, cabanossi y queso edam",
+   "Copa de vino personalizable",
+   "Topper temático, dedicatoria y planta decorativa",
+   "Bandeja de pino con lazo"
+  ],
+  "code": "BOX071",
+  "tag": "Incluye piqueo",
+  "grp": "brindis",
+  "home": "el"
+ },
+ {
+  "id": "pe-amigo",
+  "name": "Amigo",
+  "sub": "Para él",
+  "price": 130,
+  "items": [
+   "Vino Gran Tinto Tabernero 350 ml",
+   "Jar con contenido a elección",
+   "Degustación de jamón inglés, cabanossi y queso edam",
+   "Copa de vino personalizable",
+   "Foto estilo polaroid y dedicatoria",
+   "Caja con panel y arco de globos"
+  ],
+  "code": "BOX072",
+  "grp": "brindis",
+  "home": "el",
+  "cumple": 5
+ },
+ {
+  "id": "pe-amorazul",
+  "name": "Amor Azul",
+  "sub": "Para él",
+  "price": 145,
+  "items": [
+   "6 rosas azules con follaje",
+   "1 Riccadonna de 185 ml",
+   "2 chocolates Ferrero Rocher",
+   "Globo metálico de corazón personalizado",
+   "Caja negra cilíndrica",
+   "Dedicatoria"
+  ],
+  "grp": "brindis",
+  "home": "el"
+ },
+ {
+  "id": "pe-merienda",
+  "name": "Merienda",
+  "sub": "Aniversario y amor",
+  "price": 99,
+  "items": [
+   "Cerveza Heineken",
+   "Chocolate Ferrero Rocher",
+   "Free tea y tartaleta",
+   "Jar con contenido a elección",
+   "Caja de pino con panel y arco de globos",
+   "Dedicatoria"
+  ],
+  "grp": "ocasiones",
+  "home": "aniversarios"
+ },
+ {
+  "id": "ad-ferrero3",
+  "name": "Ferrero Rocher × 3",
+  "sub": "Chocolates",
+  "price": 12,
+  "items": [
+   "Chocolate Ferrero Rocher de 3 unidades"
+  ],
+  "grp": "extras",
+  "home": "extras"
+ },
+ {
+  "id": "ad-ferrero4",
+  "name": "Ferrero Rocher × 4",
+  "sub": "Chocolates",
+  "price": 20,
+  "items": [
+   "Caja de Ferrero Rocher de 4 unidades"
+  ],
+  "grp": "extras",
+  "home": "extras"
+ },
+ {
+  "id": "ad-kisses",
+  "name": "Kisses 102 g",
+  "sub": "Chocolates",
+  "price": 12,
+  "items": [
+   "Chocolates Kisses 102 g"
+  ],
+  "grp": "extras",
+  "home": "extras"
+ },
+ {
+  "id": "ad-ferrero8",
+  "name": "Ferrero Rocher × 8",
+  "sub": "Chocolates",
+  "price": 35,
+  "items": [
+   "Caja de Ferrero Rocher de 8 unidades"
+  ],
+  "grp": "extras",
+  "home": "extras"
+ },
+ {
+  "id": "ad-ferrero12",
+  "name": "Ferrero Rocher × 12",
+  "sub": "Chocolates",
+  "price": 50,
+  "items": [
+   "Caja de Ferrero Rocher de 12 unidades"
+  ],
+  "grp": "extras",
+  "home": "extras"
+ },
+ {
+  "id": "ad-hellokitty",
+  "name": "Peluche Hello Kitty 22 cm",
+  "sub": "Peluches",
+  "price": 35,
+  "items": [
+   "Hello Kitty importado de 22 cm"
+  ],
+  "grp": "extras",
+  "home": "extras"
+ },
+ {
+  "id": "ad-cordero",
+  "name": "Cordero de corazón 24 cm",
+  "sub": "Peluches",
+  "price": 30,
+  "items": [
+   "Peluche de cordero con corazón, 24 cm"
+  ],
+  "grp": "extras",
+  "home": "extras"
+ },
+ {
+  "id": "ad-lotso",
+  "name": "Peluche Lotso 29 cm",
+  "sub": "Peluches",
+  "price": 30,
+  "items": [
+   "Peluche Lotso de 29 cm"
+  ],
+  "grp": "extras",
+  "home": "extras"
+ },
+ {
+  "id": "ad-oso",
+  "name": "Oso parchudo 12 cm",
+  "sub": "Peluches",
+  "price": 25,
+  "items": [
+   "Oso de peluche de 12 cm"
+  ],
+  "grp": "extras",
+  "home": "extras"
+ },
+ {
+  "id": "ad-pulsera",
+  "name": "Pulsera de Murano",
+  "sub": "Accesorios",
+  "price": 18,
+  "items": [
+   "Pulsera de murano con dije y accesorios de acero",
+   "Incluye bolsa de regalo"
+  ],
+  "grp": "extras",
+  "home": "extras"
+ },
+ {
+  "id": "ad-spotify",
+  "name": "Cuadro Spotify",
+  "sub": "Cuadros",
+  "price": 25,
+  "items": [
+   "Cuadro de 10×15 cm con foto y código Spotify/QR que reproduce su canción"
+  ],
+  "grp": "extras",
+  "home": "extras"
+ },
+ {
+  "id": "ad-google",
+  "name": "Cuadro Google",
+  "sub": "Cuadros",
+  "price": 35,
+  "items": [
+   "Cuadro de 13×18 cm estilo búsqueda de Google",
+   "Fotos, frase personalizada y fecha especial"
+  ],
+  "grp": "extras",
+  "home": "extras"
+ },
+ {
+  "id": "ad-netflix",
+  "name": "Cuadro Netflix",
+  "sub": "Cuadros",
+  "price": 35,
+  "items": [
+   "Cuadro de 13×18 cm estilo Netflix",
+   "Nombres, fecha especial y sinopsis romántica"
+  ],
+  "grp": "extras",
+  "home": "extras"
+ },
+ {
+  "id": "ad-cuadro",
+  "name": "Cuadro con foto o collage",
+  "sub": "Cuadros",
+  "price": 20,
+  "items": [
+   "Cuadro con foto o collage"
+  ],
+  "variants": [
+   [
+    "10×15 cm (hasta 4 fotos)",
+    20
+   ],
+   [
+    "13×18 cm",
+    25
+   ]
+  ],
+  "grp": "extras",
+  "home": "extras"
+ },
+ {
+  "id": "ad-tematico",
+  "name": "Cuadro Temático",
+  "sub": "Cuadros",
+  "price": 35,
+  "items": [
+   "Cuadro de 13×18 cm con diseño personalizado",
+   "Dedicatoria y bolsa de regalo"
+  ],
+  "grp": "extras",
+  "home": "extras"
+ },
+ {
+  "id": "ad-firma",
+  "name": "Cuadro Firma",
+  "sub": "Cuadros",
+  "price": 99,
+  "items": [
+   "Marco de 48×38 cm con foto de 15×21 cm",
+   "Plumón indeleble negro"
+  ],
+  "grp": "corporativo",
+  "home": "corporativo"
+ },
+ {
+  "id": "ad-llavero",
+  "name": "Llavero de biocuero",
+  "sub": "Llaveros",
+  "price": 10,
+  "items": [
+   "Llavero de biocuero con nombre",
+   "Tarjeta con frase y logo empresarial, en bolsa"
+  ],
+  "grp": "corporativo",
+  "home": "corporativo"
+ },
+ {
+  "id": "ad-llavero2",
+  "name": "Llavero destapador",
+  "sub": "Llaveros",
+  "price": 15,
+  "items": [
+   "Llavero de biocuero con destapador de metal y nombre",
+   "Tarjeta con frase y logo empresarial, en bolsa"
+  ],
+  "grp": "corporativo",
+  "home": "corporativo"
+ },
+ {
+  "id": "ad-setvino",
+  "name": "Set para vino",
+  "sub": "Accesorios",
+  "price": 40,
+  "items": [
+   "Estuche en forma de botella",
+   "Sacacorchos, anillo antigoteo y dosificador",
+   "Envuelto en gaza con tag y mini ramito de flores secas"
+  ],
+  "variants": [
+   [
+    "Por unidad",
+    40
+   ],
+   [
+    "Por docena (precio c/u)",
+    32
+   ]
+  ],
+  "grp": "corporativo",
+  "home": "corporativo"
+ }
+]
